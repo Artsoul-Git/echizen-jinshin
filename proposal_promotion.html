@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>越前刃心『刃心 朱-AKE-』ローンチプロモーション提案書 — プレスリリースでメディアを動かす</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@700;900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.0/dist/mermaid.min.js"></script>
+<style>
+:root{
+  --c-sumi:#1a1a1a;--c-sumi-2:#2c2c2c;
+  --c-red:#a52a2a;--c-red-2:#7a1f1f;--c-ake:#dc2626;
+  --c-gold:#b58a3b;--c-gold-soft:#d8b777;
+  --c-bg:#fafaf7;--c-card:#ffffff;
+  --c-text:#1a1a1a;--c-muted:#6b6661;--c-dim:#3a3631;
+  --c-border:#e4dfd6;--c-accent-bg:#f3ede2;
+  --c-tv:#0e6b75;
+  --shadow:0 2px 8px rgba(26,26,26,0.08);
+  --shadow-lg:0 8px 24px rgba(26,26,26,0.14);
+  --radius:8px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--c-bg);color:var(--c-text);line-height:1.85;font-size:clamp(14px,1.6vw,16px);letter-spacing:.015em}
+.serif{font-family:'Noto Serif JP',serif}
+a{color:var(--c-red-2);text-decoration:underline}
+a:hover{color:var(--c-gold)}
+
+.hero{background:linear-gradient(135deg,var(--c-sumi) 0%,var(--c-sumi-2) 50%,var(--c-red-2) 130%);color:#fff;padding:clamp(40px,6vw,80px) clamp(20px,5vw,60px);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-50%;right:-20%;width:80%;height:200%;background:radial-gradient(circle,rgba(220,38,38,.22),transparent 70%)}
+.hero-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1}
+.hero-tag{display:inline-block;background:rgba(220,38,38,.85);border:1px solid rgba(255,255,255,.3);padding:6px 14px;border-radius:2px;font-size:.85rem;margin-bottom:20px;letter-spacing:.05em;color:#fff;font-weight:700}
+.hero h1{font-family:'Noto Serif JP',serif;font-size:clamp(1.6rem,4vw,2.6rem);font-weight:900;line-height:1.45;margin-bottom:18px}
+.hero h1 .ake{color:#FDA4AF}
+.hero h1 .gold{color:var(--c-gold-soft)}
+.hero-sub{font-size:clamp(1rem,1.8vw,1.18rem);opacity:.92;max-width:760px;margin-bottom:32px;line-height:1.85}
+.hero-meta{display:flex;gap:20px;flex-wrap:wrap;font-size:.88rem;opacity:.85}
+.hero-meta span::before{content:"❖";margin-right:6px;color:var(--c-gold)}
+
+nav.toc{position:sticky;top:0;z-index:50;background:rgba(250,250,247,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--c-border);padding:10px clamp(20px,5vw,60px);overflow-x:auto;white-space:nowrap;transition:background .3s,box-shadow .3s,border-color .3s;display:flex;align-items:center;gap:12px}
+nav.toc.scrolled{background:#fff;box-shadow:0 4px 16px rgba(26,26,26,.12);border-bottom-color:var(--c-gold)}
+nav.toc ul{display:inline-flex;gap:8px;list-style:none;flex:1}
+nav.toc a{display:inline-block;padding:6px 12px;border-radius:4px;text-decoration:none;color:var(--c-sumi);font-size:.85rem;transition:all .2s}
+nav.toc a:hover{background:var(--c-accent-bg);color:var(--c-red-2)}
+nav.toc .portal-link{flex-shrink:0;padding:6px 14px;background:var(--c-gold);color:#fff!important;text-decoration:none;border-radius:4px;font-size:.8rem;font-weight:700}
+nav.toc .portal-link:hover{background:var(--c-red-2);color:#fff!important}
+
+.to-top{position:fixed;bottom:24px;right:24px;width:48px;height:48px;border-radius:50%;background:var(--c-sumi);color:#fff;border:2px solid var(--c-gold);font-size:1.4rem;cursor:pointer;box-shadow:0 4px 16px rgba(26,26,26,.35);opacity:0;pointer-events:none;transition:opacity .3s,transform .2s,background .2s;z-index:100;font-family:inherit;line-height:1}
+.to-top.show{opacity:1;pointer-events:auto}
+.to-top:hover{background:var(--c-red-2);transform:translateY(-3px)}
+
+main{max-width:1200px;margin:0 auto;padding:clamp(30px,5vw,60px) clamp(20px,5vw,60px)}
+section{margin-bottom:clamp(48px,7vw,80px);scroll-margin-top:80px}
+section h2{font-family:'Noto Serif JP',serif;font-size:clamp(1.4rem,2.8vw,2rem);font-weight:900;color:var(--c-sumi);position:relative;padding-left:18px;margin-bottom:14px;line-height:1.4}
+section h2::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:4px;background:linear-gradient(180deg,var(--c-ake),var(--c-gold));border-radius:2px}
+section h3{font-size:clamp(1.05rem,2vw,1.2rem);font-weight:700;color:var(--c-sumi);margin-top:24px;margin-bottom:12px;padding:6px 14px;background:var(--c-accent-bg);border-left:3px solid var(--c-ake);border-radius:0 4px 4px 0}
+section h4{font-size:1rem;font-weight:700;color:var(--c-sumi);margin:18px 0 10px}
+section .lead{font-size:clamp(.95rem,1.6vw,1.05rem);color:#444;margin-bottom:24px;max-width:900px}
+
+.grid{display:grid;gap:clamp(12px,2vw,20px)}
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.grid-4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.card{background:var(--c-card);border-radius:var(--radius);padding:clamp(16px,2.5vw,24px);box-shadow:var(--shadow);border:1px solid var(--c-border);transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.card h4{font-size:1.02rem;color:var(--c-sumi);margin-bottom:10px;font-weight:700}
+.card p{font-size:.92rem;color:var(--c-text);line-height:1.85}
+.card .stat{font-family:'Noto Serif JP',serif;font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:900;color:var(--c-ake);line-height:1.1;margin:8px 0}
+.card .stat-sub{font-size:.78rem;color:var(--c-muted)}
+.card.accent{background:var(--c-accent-bg);border-color:#d8cdb8}
+
+.key-message{background:linear-gradient(135deg,var(--c-sumi) 0%,var(--c-red-2) 100%);color:#fff;padding:clamp(24px,4vw,40px);border-radius:var(--radius);margin:24px 0;position:relative;overflow:hidden}
+.key-message::before{content:"発";position:absolute;top:-40px;right:-10px;font-family:'Noto Serif JP',serif;font-size:200px;opacity:.08;color:var(--c-gold)}
+.key-message .km-label{display:inline-block;background:var(--c-gold);color:#fff;padding:4px 12px;border-radius:2px;font-weight:700;font-size:.85rem;margin-bottom:12px}
+.km-text{font-size:clamp(1.05rem,2vw,1.3rem);font-weight:500;line-height:1.7}
+.km-text strong{color:var(--c-gold-soft);font-weight:900}
+
+.alert{padding:18px 22px;border-radius:8px;margin:16px 0;font-size:.95rem;line-height:1.85}
+.alert.warn{background:#fef3c7;border-left:5px solid #d97706;color:#78350f}
+.alert.info{background:#dbeafe;border-left:5px solid #1d4ed8;color:#1e3a8a}
+.alert.success{background:#dcfce7;border-left:5px solid #15803d;color:#14532d}
+.alert.danger{background:#fee2e2;border-left:5px solid #dc2626;color:#7f1d1d}
+.alert b{font-weight:800}
+
+.table-wrap{overflow-x:auto;border-radius:var(--radius);box-shadow:var(--shadow);margin:20px 0}
+table{width:100%;border-collapse:collapse;background:var(--c-card);min-width:600px;font-size:.9rem}
+table th{background:var(--c-sumi);color:#fff;padding:12px;text-align:left;font-weight:700;font-size:.85rem}
+table td{padding:12px;border-bottom:1px solid var(--c-border);vertical-align:top}
+table tr:nth-child(even) td{background:#fafaf7}
+table .num{text-align:right;font-variant-numeric:tabular-nums}
+.badge{display:inline-block;padding:3px 10px;border-radius:4px;font-size:.75rem;font-weight:700}
+.badge.high{background:#fee2e2;color:#991b1b}
+.badge.mid{background:#fef3c7;color:#92400e}
+.badge.low{background:#dcfce7;color:#166534}
+.badge.tv{background:#e3f1f3;color:var(--c-tv)}
+
+details{background:var(--c-card);border-radius:var(--radius);margin-bottom:12px;border:1px solid var(--c-border);overflow:hidden}
+details summary{padding:16px 20px;cursor:pointer;font-weight:700;color:var(--c-sumi);font-size:1rem;display:flex;align-items:center;gap:10px;list-style:none}
+details summary::-webkit-details-marker{display:none}
+details summary::before{content:"▶";color:var(--c-ake);font-size:.7rem;transition:transform .2s;flex-shrink:0}
+details[open] summary::before{transform:rotate(90deg)}
+details summary:hover{background:var(--c-accent-bg)}
+details .details-body{padding:0 22px 20px}
+details .details-body p{margin-bottom:10px}
+details .details-body ul{margin:10px 0 10px 20px}
+details .details-body li{margin-bottom:6px}
+
+.tv-card{background:#fff;border:2px solid var(--c-tv);border-radius:12px;padding:24px;margin:18px 0;position:relative;overflow:hidden}
+.tv-card.nhk{border-color:#dc2626}
+.tv-card::before{content:"📺 TV";position:absolute;top:0;right:0;background:var(--c-tv);color:#fff;padding:5px 14px;border-radius:0 0 0 8px;font-size:.78rem;font-weight:700}
+.tv-card.nhk::before{content:"📺 NHK";background:#dc2626}
+.tv-card h4{font-family:'Noto Serif JP',serif;color:var(--c-sumi);font-size:1.15rem;margin-bottom:8px;padding-right:80px}
+.tv-card .channel-meta{font-size:.85rem;color:var(--c-muted);margin-bottom:14px}
+.tv-card .approach{background:#fafaf7;padding:14px;border-radius:6px;margin-top:14px;font-size:.9rem;border-left:3px solid var(--c-tv)}
+.tv-card.nhk .approach{border-left-color:#dc2626}
+.tv-card .approach b{color:var(--c-tv)}
+.tv-card.nhk .approach b{color:#dc2626}
+
+.timeline{position:relative;padding-left:40px;margin:24px 0}
+.timeline::before{content:"";position:absolute;left:14px;top:10px;bottom:10px;width:3px;background:linear-gradient(180deg,var(--c-ake),var(--c-gold));border-radius:2px}
+.tl-item{position:relative;padding-bottom:30px}
+.tl-dot{position:absolute;left:-32px;top:8px;width:24px;height:24px;border-radius:50%;background:var(--c-sumi);color:#fff;border:3px solid var(--c-gold);display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:700}
+.tl-week{font-size:.78rem;color:var(--c-ake);font-weight:700;letter-spacing:.08em;margin-bottom:4px;text-transform:uppercase}
+.tl-title{font-family:'Noto Serif JP',serif;font-weight:700;font-size:1.05rem;color:var(--c-sumi);margin-bottom:6px}
+.tl-body{font-size:.93rem;color:var(--c-dim);line-height:1.85;max-width:780px}
+
+.checklist{background:var(--c-card);border-radius:8px;padding:24px;border:1px solid var(--c-border);margin:16px 0}
+.checklist-item{display:flex;gap:12px;padding:10px 0;border-bottom:1px dashed var(--c-border)}
+.checklist-item:last-child{border-bottom:none}
+.checklist-item::before{content:"✓";display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--c-gold);color:#fff;font-weight:900;font-size:.75rem;flex-shrink:0;margin-top:2px}
+.checklist-item .text{font-size:.93rem;color:var(--c-text);line-height:1.85}
+
+.flow-wrap{background:var(--c-card);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);overflow-x:auto;margin:18px 0;border:1px solid var(--c-border)}
+.mermaid{font-family:'Noto Sans JP',sans-serif!important}
+
+.demo-banner{background:#fff3cd;border:2px solid var(--c-gold);padding:12px 20px;margin:20px auto;max-width:1200px;border-radius:var(--radius);font-size:.88rem;text-align:center;font-weight:500}
+.demo-banner b{color:var(--c-red-2)}
+
+.chart-box{background:var(--c-card);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);margin:16px 0;border:1px solid var(--c-border)}
+.chart-box h4{font-size:.95rem;color:var(--c-sumi);margin-bottom:10px;font-weight:700}
+.chart-canvas-wrap{position:relative;width:100%;height:320px}
+
+footer{background:var(--c-sumi);color:#fff;padding:32px clamp(20px,5vw,60px);text-align:center;font-size:.85rem}
+footer a{color:var(--c-gold)}
+</style>
+</head>
+<body>
+
+<div id="password-gate" style="position:fixed;inset:0;background:linear-gradient(135deg,#1a1a1a 0%,#7a1f1f 60%,#dc2626 100%);color:#fff;display:flex;align-items:center;justify-content:center;z-index:9999;flex-direction:column;padding:20px;text-align:center">
+  <div style="background:rgba(255,255,255,.05);padding:40px 32px;border-radius:8px;border:1px solid rgba(181,138,59,.4);max-width:420px;width:100%">
+    <h2 style="margin-bottom:8px;font-size:1.3rem;font-weight:700;font-family:'Noto Serif JP',serif">越前刃心『刃心 朱-AKE-』<br>ローンチプロモーション提案書</h2>
+    <p style="font-size:.85rem;opacity:.8;margin-bottom:24px;color:#b58a3b">DEMO ｜ 閲覧にはパスワードが必要です</p>
+    <input type="password" id="pwd-input" style="padding:12px 16px;font-size:1rem;border-radius:4px;border:none;width:100%;text-align:center;margin-bottom:12px;color:#1a1a1a" placeholder="パスワード" autofocus>
+    <button id="pwd-btn" style="padding:12px 24px;background:#b58a3b;color:#fff;border:none;border-radius:4px;font-size:1rem;cursor:pointer;font-weight:700;width:100%">閲覧する</button>
+    <p id="pwd-err" style="color:#fca5a5;margin-top:12px;font-size:.85rem;display:none">パスワードが正しくありません</p>
+  </div>
+</div>
+<script>
+(function(){var PASS='demo2026';var gate=document.getElementById('password-gate');var input=document.getElementById('pwd-input');var btn=document.getElementById('pwd-btn');var err=document.getElementById('pwd-err');if(sessionStorage.getItem('echizen_auth')==='ok'){gate.style.display='none';return;}document.body.style.overflow='hidden';function check(){if(input.value===PASS){sessionStorage.setItem('echizen_auth','ok');gate.style.display='none';document.body.style.overflow='';}else{err.style.display='block';input.value='';input.focus();}}btn.addEventListener('click',check);input.addEventListener('keypress',function(e){if(e.key==='Enter')check();});})();
+</script>
+
+<header class="hero">
+  <div class="hero-inner">
+    <span class="hero-tag">PROMOTION PROPOSAL ｜ DEMO 2026-04-10</span>
+    <h1>新商品『刃心 <span class="ake">朱-AKE-</span>』ローンチを、<br><span class="gold">プレスリリースでTVが動く</span>仕掛けで。</h1>
+    <p class="hero-sub">越前打刃物 × 家庭の食卓 を主題とした家庭プレミアム新ラインを、テレビ・新聞・WEB・SNSの多元連動で確実に届けるための、ローンチプロモーション戦略提案書。<br>「プレスリリースは準備が9割」を体系化し、WBS『トレンドたまご』『NHKおはよう日本 まちかど情報室』への露出を勝ち取る、6ヶ月実行設計。</p>
+    <div class="hero-meta">
+      <span>v1 詳細版</span>
+      <span>広告代理店式提案書</span>
+      <span>DEMOデータ</span>
+    </div>
+  </div>
+</header>
+
+<div class="demo-banner">⚠️ 本資料は <b>アートソウル社内デモ用</b> に作成された完全架空の提案書です。実在の越前刃物業界・各企業との直接的関係はありません。</div>
+
+<nav class="toc" id="navToc">
+  <ul>
+    <li><a href="#summary">サマリー</a></li>
+    <li><a href="#market">市場環境</a></li>
+    <li><a href="#product">製品ポジ</a></li>
+    <li><a href="#target">ターゲット</a></li>
+    <li><a href="#strategy">戦略全体像</a></li>
+    <li><a href="#pr">PR戦略（核）</a></li>
+    <li><a href="#tv">TV露出施策</a></li>
+    <li><a href="#interview">取材対応準備</a></li>
+    <li><a href="#sns">SNS連動</a></li>
+    <li><a href="#kpi">KPI・ROI</a></li>
+    <li><a href="#roadmap">6ヶ月ロードマップ</a></li>
+    <li><a href="#sources">出典</a></li>
+  </ul>
+  <a href="index.html" class="portal-link">📋 ポータル</a>
+</nav>
+
+<main>
+
+<!-- ===== Section 1 ===== -->
+<section id="summary">
+  <h2>1. エグゼクティブサマリー</h2>
+  <p class="lead">越前刃心の家庭プレミアム新ライン『刃心 朱-AKE-』のローンチを、<strong>プレスリリース起点のメディア多元連動</strong>で実現する戦略です。</p>
+
+  <div class="key-message">
+    <span class="km-label">戦略の核</span>
+    <p class="km-text">
+      プレスリリースは <strong>発信が1割、準備が9割</strong>。<br>
+      発信した瞬間から、TVディレクターは <strong>30分以内に「撮影できる絵」</strong> があるか調べます。<br>
+      その時、すべてが揃っていれば取材は決まります。
+    </p>
+  </div>
+
+  <div class="grid grid-3">
+    <div class="card accent">
+      <span class="badge tv">最優先</span>
+      <h4>① プレスリリース戦略</h4>
+      <p>PR TIMES配信（260媒体超に転載）＋直接送付（500社）。リリース前2ヶ月の準備を体系化。</p>
+    </div>
+    <div class="card accent">
+      <span class="badge tv">最優先</span>
+      <h4>② TV番組別アプローチ</h4>
+      <p>WBS『トレンドたまご』とNHK『おはよう日本 まちかど情報室』に、番組別の切り口で挑む。</p>
+    </div>
+    <div class="card accent">
+      <span class="badge tv">最優先</span>
+      <h4>③ 取材対応準備</h4>
+      <p>Q&A集／撮影対応手順／担当者ロープレ／プレスキット5点セットを、リリース2週間前に完成。</p>
+    </div>
+  </div>
+
+  <div class="alert info">
+    <b>想定成果（DEMO仮置）：</b>6ヶ月で TVオンエア1〜2回／新聞掲載5媒体／WEBニュース30本／SNS インプレッション100万＋ /『朱-AKE-』初年度売上 5,000〜8,000万円
+  </div>
+</section>
+
+<!-- ===== Section 2 ===== -->
+<section id="market">
+  <h2>2. 市場環境分析</h2>
+  <p class="lead">家庭用包丁市場・メディア環境・PR業界トレンドの3軸から、ローンチタイミングを分析します。</p>
+
+  <h3>2-1. 家庭用包丁市場（実データ）</h3>
+  <div class="grid grid-3">
+    <div class="card">
+      <h4>世界市場規模（2025）</h4>
+      <div class="stat">USD 1.81<span style="font-size:1rem">B</span></div>
+      <div class="stat-sub">CAGR 6.25%・2035年予測 USD 3.32B<br><span style="font-size:.7rem">出典：Global Growth Insights</span></div>
+    </div>
+    <div class="card">
+      <h4>海外日本食市場</h4>
+      <div class="stat">18.1<span style="font-size:1rem">万店</span></div>
+      <div class="stat-sub">2025年・海外日本食レストラン（農水省2025）</div>
+    </div>
+    <div class="card">
+      <h4>家庭用ハイエンド需要</h4>
+      <div class="stat">在宅料理</div>
+      <div class="stat-sub">コロナ後の「自宅で本格料理」志向の継続。SNSの料理動画も後押し</div>
+    </div>
+  </div>
+
+  <h3>2-2. メディア環境（実データ）</h3>
+  <div class="grid grid-2">
+    <div class="card">
+      <h4>PR TIMES の影響力</h4>
+      <p>累計 <strong>12.4万社</strong> 利用、上場企業利用率 <strong>65%超</strong>。配信1本で月間PV1億超の媒体含む <strong>260媒体以上</strong> に転載。朝日新聞デジタル／毎日新聞デジタル／産経ニュース／FNNプライムオンライン／TBS NEWS DIG／日テレNEWS NNN等を経由。</p>
+    </div>
+    <div class="card">
+      <h4>WBS「トレンドたまご」採用基準</h4>
+      <p><strong>①他にない面白いネタ／②動画で撮って面白いか</strong>に集約。発売前の新商品が望ましく、2分程度の放送枠。番組への直接情報募集は年間6万件超だが、<strong>公式投稿フォーム経由が採用率最高</strong>。</p>
+    </div>
+  </div>
+
+  <h3>2-3. PR業界トレンド</h3>
+  <ul style="margin-left:20px;font-size:.95rem;line-height:2">
+    <li><strong>「動画素材」が採用率を左右</strong>：TV番組は「撮れる絵」があるかで判断する</li>
+    <li><strong>「ストーリー」が刺さる</strong>：1928年創業の歴史・3代目の挑戦・職人の手仕事</li>
+    <li><strong>BtoBもBtoBtoCに翻訳</strong>：プロ用→家庭用ラインへの転換は「身近に感じる」要素</li>
+    <li><strong>SNS連動が必須</strong>：TV放映後の検索流入をSNS・LPで受け止める設計</li>
+  </ul>
+</section>
+
+<!-- ===== Section 3 ===== -->
+<section id="product">
+  <h2>3. 製品ポジショニング — 『刃心 朱-AKE-』</h2>
+  <p class="lead">96年の越前打刃物の職人技を、家庭の食卓に届ける「家庭プレミアム」第1号モデル。</p>
+
+  <div class="grid grid-2">
+    <div class="card">
+      <h4>商品概要</h4>
+      <ul style="margin-left:18px;font-size:.93rem;line-height:1.95">
+        <li><strong>商品名</strong>：刃心 朱-AKE-（あけ）</li>
+        <li><strong>ライン</strong>：3本セット（三徳・牛刀・ペティ）／単品販売も対応</li>
+        <li><strong>価格</strong>：3本セット 29,800円〜／単品最高 78,000円</li>
+        <li><strong>素材</strong>：高炭素ステンレス×越前打刃物</li>
+        <li><strong>特徴</strong>：朱の柄＋桐箱＋3年保証＋研ぎ直しサービス</li>
+        <li><strong>発売日</strong>：（DEMO）2026年9月15日（リリース予定日）</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>独自価値（USP）3点</h4>
+      <ul style="margin-left:18px;font-size:.93rem;line-height:1.95">
+        <li>🔥 <strong>越前打刃物のプロ仕様を家庭に</strong>：プロ用『刃心』ライン同等の鋼材使用</li>
+        <li>🎨 <strong>朱の柄が「特別」を演出</strong>：他社にない朱色のG10樹脂ハンドル</li>
+        <li>📦 <strong>桐箱と修理保証で「贈り物」適性</strong>：結婚祝・退職祝の定番候補に</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>競合との位置取り</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>ブランド</th><th>価格帯</th><th>強み</th><th>朱-AKE-との違い</th></tr>
+      <tr><td>ヘンケルス（Twin Fin等）</td><td>1.5〜3万円</td><td>独製造・量販</td><td>「越前打刃物産地」のストーリー</td></tr>
+      <tr><td>GLOBAL（吉田金属）</td><td>1〜3万円</td><td>オールステン・流線美</td><td>「朱の柄」「桐箱」の和テイスト</td></tr>
+      <tr><td>関孫六（貝印）</td><td>5,000〜2万円</td><td>大手量販・ブランド力</td><td>1928年の職人技ストーリー</td></tr>
+      <tr><td>タダフサ</td><td>1.5〜3万円</td><td>新潟・直販EC</td><td>越前打刃物の伝統的工芸品ブランド</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ===== Section 4 ===== -->
+<section id="target">
+  <h2>4. ターゲット設計</h2>
+  <p class="lead">「贈り物」と「自分へのご褒美」の2軸でメインターゲットを設計します。</p>
+
+  <div class="grid grid-2">
+    <div class="card">
+      <h4>👩 メインターゲット A：料理好き主婦（45-65歳）</h4>
+      <p><strong>田中真理さん（52歳）</strong>。子供独立、夫と二人暮らし。料理が趣味、月1で懐石風メニュー。WMF・GLOBAL所有、次は「日本の包丁」に興味。3〜5万円までは出す。「自分へのご褒美」「夫婦の食卓を豊かに」。Instagram料理研究家の動画を毎晩視聴。</p>
+    </div>
+    <div class="card">
+      <h4>🎁 メインターゲット B：贈り物選び（30-60歳）</h4>
+      <p><strong>結婚祝（同期からの贈り物）／退職祝（先輩への贈り物）／親への60歳祝</strong>。3万円〜の贈り物予算で、「実用的＋特別感＋日本製」を求める層。百貨店ギフトカウンターで選ぶ／伊勢丹オンラインで購入。</p>
+    </div>
+  </div>
+
+  <h3>サブターゲット</h3>
+  <div class="grid grid-3">
+    <div class="card"><h4>👨 料理好き男性（35-55歳）</h4><p>キャンプブーム継続。週末料理を楽しむ層。アウトドアシーンへの転用も意識。</p></div>
+    <div class="card"><h4>📺 メディア視聴層</h4><p>WBSやNHK朝の視聴者（40-60代、可処分所得高）への直接アプローチ。</p></div>
+    <div class="card"><h4>🌍 越境EC・インバウンド</h4><p>海外の和包丁愛好家、日本食ブームの追い風。海外ニュース転載で世界へ。</p></div>
+  </div>
+</section>
+
+<!-- ===== Section 5 ===== -->
+<section id="strategy">
+  <h2>5. コミュニケーション戦略全体像</h2>
+  <p class="lead">プレスリリースを中核に、TV・新聞・WEB・SNSを多元連動させる4ヶ月の波状攻撃設計。</p>
+
+  <div class="flow-wrap">
+    <h4 style="margin-bottom:14px;text-align:center;color:var(--c-sumi)">📡 メディア多元連動の全体像</h4>
+    <div class="mermaid">
+flowchart LR
+  classDef pr fill:#a52a2a,color:#fff,stroke:#7a1f1f,stroke-width:2px
+  classDef tv fill:#0e6b75,color:#fff,stroke:#0a4f56,stroke-width:2px
+  classDef np fill:#1a1a1a,color:#fff,stroke:#1a1a1a,stroke-width:2px
+  classDef web fill:#b58a3b,color:#fff,stroke:#b58a3b,stroke-width:2px
+  classDef sns fill:#dc2626,color:#fff,stroke:#dc2626,stroke-width:2px
+
+  PR[プレスリリース<br/>PR TIMES＋直接送付<br/>500社]:::pr
+  TV[TV取材<br/>WBS / NHK]:::tv
+  NP[新聞掲載<br/>朝日・毎日・産経]:::np
+  WEB[WEB転載<br/>260媒体超]:::web
+  SNS[SNS拡散<br/>Insta・X・TikTok]:::sns
+  LP[LP誘導<br/>購買コンバージョン]:::pr
+
+  PR --> TV & NP & WEB
+  TV --> SNS
+  NP --> WEB
+  WEB --> SNS
+  SNS --> LP
+  TV --> LP
+    </div>
+  </div>
+
+  <h3>4ヶ月の波状攻撃</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>フェーズ</th><th>期間</th><th>主要メディア</th><th>狙い</th></tr>
+      <tr><td>① Pre-Buzz</td><td>リリース前1ヶ月</td><td>SNS／専門誌</td><td>「何か出る」の期待値醸成</td></tr>
+      <tr><td>② Launch</td><td>リリース日〜2週間</td><td>PR TIMES／TV／新聞</td><td>「正式発売」の認知獲得</td></tr>
+      <tr><td>③ Amplify</td><td>2週間〜2ヶ月</td><td>WEB／SNS・KOL</td><td>口コミ・レビューで拡散</td></tr>
+      <tr><td>④ Sustain</td><td>2〜4ヶ月</td><td>料理研究家・YouTube</td><td>「使ってみた」の継続露出</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ===== Section 6 PR Strategy ===== -->
+<section id="pr">
+  <h2>6. プレスリリース戦略 — 「発信は1割、準備が9割」</h2>
+  <p class="lead">配信ボタンを押す瞬間までに、リリース原稿・プレスキット・取材対応・SNS素材・LPがすべて揃っている状態を作ります。</p>
+
+  <div class="alert warn">
+    <b>⚠️ 失敗事例から学ぶ：</b>「プレスリリース打ったのに何も反応なかった」の9割は、発信のタイミング不適切＋プレスキット未整備＋取材対応準備不足が原因。リリース当日にディレクターから電話があっても、対応できなければチャンスを失います。
+  </div>
+
+  <h3>6-1. リリース原稿の構成（A4 2枚以内が鉄則）</h3>
+  <div class="checklist">
+    <h4 style="font-family:'Noto Serif JP',serif;font-size:1.1rem;color:var(--c-sumi);margin-bottom:14px;font-weight:700">プレスリリース必須9要素</h4>
+    <div class="checklist-item"><div class="text"><strong>① タイトル（30字以内）</strong>：「越前打刃物の老舗が、家庭プレミアム『刃心 朱-AKE-』を発売」のように、見出しだけで価値が伝わる</div></div>
+    <div class="checklist-item"><div class="text"><strong>② リード文（200字以内）</strong>：5W2H＋ニュース性（「初」「日本一」「ユニーク」）</div></div>
+    <div class="checklist-item"><div class="text"><strong>③ 商品の独自性</strong>：他社との明確な違いを3点</div></div>
+    <div class="checklist-item"><div class="text"><strong>④ ストーリー</strong>：1928年創業／3代目の挑戦／職人の手仕事</div></div>
+    <div class="checklist-item"><div class="text"><strong>⑤ 数値根拠</strong>：市場規模・成長率・実績（出典付き）</div></div>
+    <div class="checklist-item"><div class="text"><strong>⑥ 画像5枚以上</strong>：商品単体／使用シーン／製造工程／代表者顔写真／桐箱開封</div></div>
+    <div class="checklist-item"><div class="text"><strong>⑦ 動画30秒</strong>：職人手仕事＋商品全景＋使用シーンの3カット構成</div></div>
+    <div class="checklist-item"><div class="text"><strong>⑧ 取材対応の窓口</strong>：担当者名・直通電話・メール・対応可能時間帯</div></div>
+    <div class="checklist-item"><div class="text"><strong>⑨ 発売情報</strong>：価格／発売日／販売チャネル／公式LP URL</div></div>
+  </div>
+
+  <h3>6-2. プレスキット5点セット</h3>
+  <p>取材依頼があった瞬間に、ZIPファイル1つで全てを渡せる状態にします。</p>
+  <div class="grid grid-3">
+    <div class="card">
+      <h4>① 企業概要</h4>
+      <p>会社名・所在地・代表者・設立年・事業内容・ミッション・沿革。代表者プロフィール＋顔写真。「対応可能な取材テーマ」リスト。</p>
+    </div>
+    <div class="card">
+      <h4>② 製品情報シート</h4>
+      <p>商品仕様・価格・特長・ターゲット・ストーリー。プロ用ライン『刃心』との関係性も整理。</p>
+    </div>
+    <div class="card">
+      <h4>③ 高解像度画像10枚</h4>
+      <p>商品単体・使用シーン・製造工程・代表者・職人。300dpi以上・印刷用にも対応。各画像にクレジット表記。</p>
+    </div>
+    <div class="card">
+      <h4>④ 動画素材3本</h4>
+      <p>30秒版（SNS用）／60秒版（WEB用）／2分版（TV取材時の素材提供用）。職人技と完成品の対比構成。</p>
+    </div>
+    <div class="card">
+      <h4>⑤ Q&A集</h4>
+      <p>想定質問30問への回答テンプレ。「なぜ朱色？」「価格設定の根拠は？」「職人さんの想いは？」「環境への配慮は？」など。</p>
+    </div>
+    <div class="card accent">
+      <h4>⑥ 取材対応マニュアル（社内専用）</h4>
+      <p>誰が・いつ・どこで・何を答えるか。代表者／製造責任者／広報担当の役割分担。NG事項・伝えるべきメッセージ3点。</p>
+    </div>
+  </div>
+
+  <h3>6-3. 配信先設計</h3>
+  <div class="grid grid-2">
+    <div class="card">
+      <h4>📨 PR TIMES配信</h4>
+      <p><strong>1配信 30,000円〜（プラン次第）</strong>。月間PV1億超の260媒体に転載される可能性。リリース本文＋画像5枚＋動画1本をセット。配信タイミングは火・水・木の10:00または14:00が反応高い（経験則）。</p>
+    </div>
+    <div class="card">
+      <h4>📮 直接送付（500社）</h4>
+      <p>配信サービスに頼らず、編集者・記者個人宛に直送するリスト。①TV番組（20番組）／②新聞（経済部・生活部 40記者）／③雑誌（料理・ライフスタイル 30誌）／④WEBメディア（食・カルチャー 60媒体）／⑤地元メディア（福井 50社）／⑥業界誌（300社）。</p>
+    </div>
+  </div>
+
+  <div class="alert success">
+    <b>✅ ポイント：</b>PR TIMESと直接送付の併用が定石。PR TIMESで「公式に発信した」記録を作りながら、直接送付で「あなたに送りました」の個別アプローチを並走。
+  </div>
+</section>
+
+<!-- ===== Section 7 TV ===== -->
+<section id="tv">
+  <h2>7. TV露出施策 — WBS『トレンドたまご』とNHK『おはよう日本 まちかど情報室』</h2>
+  <p class="lead">2大ターゲット番組の「採用される条件」を逆算し、番組別の切り口でアプローチします。</p>
+
+  <div class="tv-card">
+    <h4>WBS『トレンドたまご』（テレビ東京）</h4>
+    <div class="channel-meta">📺 放送：月〜金 23:00台／2分枠／対象：経済性・新商品・革新性</div>
+    <div class="alert info" style="margin:14px 0;font-size:.88rem">
+      <b>採用基準（番組デスク公式）：</b>
+      <ul style="margin:6px 0 0 20px">
+        <li>① 他にない面白いネタ（卵）かどうか</li>
+        <li>② 動画で撮って面白いかどうか</li>
+        <li>③ 発売前の新商品が望ましい</li>
+        <li>④ 2分程度の放送ができる「展開」がある</li>
+        <li>⑤ BtoBでもBtoBtoCで間接的にコンシューマーに役立つ視点</li>
+      </ul>
+    </div>
+    <div class="approach">
+      <b>朱-AKE-の切り口</b>：「越前打刃物700年の歴史を、家庭の3本セットに凝縮。朱色のハンドルが特徴的で、桐箱付き贈り物として大ヒットの予感」を <strong>動画で見せる</strong> アプローチ。職人さんの手仕事（火花散る鍛造）→ 朱の柄が完成 → 家庭で使うシーンの3カット構成。
+    </div>
+    <div class="approach" style="margin-top:10px">
+      <b>応募経路</b>：番組HPの「商品情報募集中」<strong>公式投稿フォーム</strong>から応募（採用率最高）。あわせて担当ディレクターへ直接送付。<a href="https://www.tv-tokyo.co.jp/wbs/trend_tamago/" target="_blank">番組公式</a>
+    </div>
+  </div>
+
+  <div class="tv-card nhk">
+    <h4>NHK『おはよう日本 まちかど情報室』</h4>
+    <div class="channel-meta">📺 放送：月〜金 7:35頃／対象：生活に役立つアイデア商品</div>
+    <div class="alert info" style="margin:14px 0;font-size:.88rem">
+      <b>採用傾向：</b>
+      <ul style="margin:6px 0 0 20px">
+        <li>① 生活に役立つアイデア・便利グッズ</li>
+        <li>② 一般家庭の課題を解決する商品</li>
+        <li>③ 値段・入手方法が明確</li>
+        <li>④ ストーリー（誕生秘話・地域貢献）がある</li>
+        <li>⑤ 朝の時間帯にふさわしい「明るい」トーン</li>
+      </ul>
+    </div>
+    <div class="approach">
+      <b>朱-AKE-の切り口</b>：「贈り物に困っている方へ／自宅で本格料理を始めたい方へ／96年の老舗が初めて家庭に届けるプレミアム包丁。<strong>朱の柄</strong>と<strong>桐箱</strong>で『特別感』、<strong>3年保証＋研ぎ直し</strong>で『安心』」。朝の主婦層に刺さるストーリー。
+    </div>
+    <div class="approach" style="margin-top:10px">
+      <b>応募経路</b>：NHK公式の <strong>視聴者ふれあいセンター</strong> から番組宛に送付。あわせて担当ディレクターへ商品サンプル＋プレスキット送付。
+    </div>
+  </div>
+
+  <h3>その他TV番組リスト</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>番組名</th><th>放送局</th><th>採用可能性</th><th>切り口</th></tr>
+      <tr><td>がっちりマンデー！！</td><td>TBS</td><td><span class="badge mid">中</span></td><td>越前刃物業界の儲かるビジネス</td></tr>
+      <tr><td>カンブリア宮殿</td><td>TV東京</td><td><span class="badge low">長期</span></td><td>3代目社長密着、業界変革</td></tr>
+      <tr><td>ヒルナンデス！</td><td>日テレ</td><td><span class="badge mid">中</span></td><td>家庭の便利・贈り物特集</td></tr>
+      <tr><td>news every.</td><td>日テレ</td><td><span class="badge mid">中</span></td><td>地方発・伝統工芸の今</td></tr>
+      <tr><td>ZIP!</td><td>日テレ</td><td><span class="badge mid">中</span></td><td>朝の主婦層・新商品コーナー</td></tr>
+      <tr><td>福井TV系列</td><td>地元</td><td><span class="badge high">高</span></td><td>地元密着・地元発の挑戦</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ===== Section 8 ===== -->
+<section id="interview">
+  <h2>8. 取材対応準備 — 30分以内に取材決定する仕組み</h2>
+  <p class="lead">プレスリリース配信から30分以内に、TVディレクターは「撮影できる絵があるか」を判断します。その時間内にすべてを揃えるための事前準備。</p>
+
+  <h3>8-1. 取材対応のフロー</h3>
+  <div class="flow-wrap">
+    <div class="mermaid">
+sequenceDiagram
+  autonumber
+  participant D as TV ディレクター
+  participant E as 越前刃心 広報担当
+  participant C as 越前刃心 代表
+  participant K as 越前刃心 職人頭
+
+  D->>E: プレスリリースから30分以内に連絡<br/>「素材ある？取材できる？」
+  E->>D: 即返信（30分以内）<br/>プレスキット ZIP送付
+  D->>E: 素材を確認、撮影可能か検討
+  D->>E: 撮影日程の打診
+  E->>C: 代表者の撮影スケジュール確認
+  E->>K: 職人撮影の段取り確認（鍛造シーン）
+  E->>D: 撮影日程確定（リリース後3日以内）
+  Note over D,K: 取材実施 → 放映
+    </div>
+  </div>
+
+  <h3>8-2. 取材対応Q&A集（30問）</h3>
+  <details open>
+    <summary>商品に関する質問（10問）</summary>
+    <div class="details-body">
+      <ul>
+        <li><strong>Q. なぜ「朱-AKE-」という名前？</strong><br>A. 越前打刃物の「鋼の色」を朱で象徴。日本の伝統色の朱は「魔除け」「祝い」の意味も持ち、贈り物にふさわしい色です。</li>
+        <li><strong>Q. プロ用『刃心』との違いは？</strong><br>A. 鋼材はプロ用同等。違いは柄の素材（朱のG10樹脂）と価格帯。家庭で扱いやすい重さに調整しています。</li>
+        <li><strong>Q. 価格設定の根拠は？</strong><br>A. 3本セット29,800円は、贈り物の予算ゾーン3万円台を意識。職人の手仕事を維持できる最低ラインでもあります。</li>
+        <li><strong>Q. 朱色の柄が剥げたりしませんか？</strong><br>A. G10樹脂は最高級素材で、業界トップクラスの耐久性。10年使用しても色落ちしません。</li>
+        <li><strong>Q. 子供がいる家庭でも安全？</strong><br>A. 鞘付きで保管時の安全性を確保。包丁の切れ味は素人でも扱える設計です。</li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>会社・職人に関する質問（10問）</summary>
+    <div class="details-body">
+      <ul>
+        <li><strong>Q. なぜ家庭ラインを始めた？</strong><br>A. 越前打刃物の素晴らしさを、もっと多くの家庭で感じてほしい。3代目になってから、家庭の食卓を豊かにする使命を感じています。</li>
+        <li><strong>Q. 職人さんは何人？</strong><br>A. （DEMO）27名。最年長は68歳、最年少は28歳。後継者育成も並行して進めています。</li>
+        <li><strong>Q. 越前打刃物の歴史は？</strong><br>A. 700年。1979年に刃物産地として全国初の国の伝統的工芸品指定を受けました。</li>
+      </ul>
+    </div>
+  </details>
+  <details>
+    <summary>市場・戦略に関する質問（10問）</summary>
+    <div class="details-body">
+      <ul>
+        <li><strong>Q. 想定販売数は？</strong><br>A. （DEMO）初年度 2,000セット、3年で1万セットを目標としています。</li>
+        <li><strong>Q. ライバルブランドは？</strong><br>A. グローバル・タダフサ・ヘンケルスを参考にしつつ、「越前打刃物の家庭ライン」という独自ポジションを確立します。</li>
+        <li><strong>Q. 海外展開は？</strong><br>A. 並行して進めます。和包丁への海外注目は高く、家庭ラインも英語版LPを準備中です。</li>
+      </ul>
+    </div>
+  </details>
+
+  <h3>8-3. 撮影対応の段取り</h3>
+  <div class="grid grid-2">
+    <div class="card">
+      <h4>📍 撮影スポット3か所事前確保</h4>
+      <ul style="margin-left:18px;font-size:.92rem;line-height:1.85">
+        <li>本社工場（鍛造シーン・職人手仕事）</li>
+        <li>ショールーム（商品全景・桐箱開封）</li>
+        <li>家庭シミュレーション空間（使用シーン）</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>👥 出演候補のロープレ済み</h4>
+      <ul style="margin-left:18px;font-size:.92rem;line-height:1.85">
+        <li>代表者（経営／ストーリー語り）</li>
+        <li>職人頭（手仕事の継承）</li>
+        <li>若手職人（次世代への希望）</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>🎬 「絵になる動作」3パターン</h4>
+      <ul style="margin-left:18px;font-size:.92rem;line-height:1.85">
+        <li>鋼を打ち火花を散らすシーン</li>
+        <li>朱の柄を装着する瞬間</li>
+        <li>桐箱を開ける贈り物シーン</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>🚗 取材時の動線</h4>
+      <ul style="margin-left:18px;font-size:.92rem;line-height:1.85">
+        <li>福井駅 → 本社車送迎（15分）</li>
+        <li>工場見学（30分）→ ショールーム（30分）</li>
+        <li>家庭シミュ撮影（30分）→ インタビュー</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Section 9 SNS ===== -->
+<section id="sns">
+  <h2>9. SNS・WEB連動拡散</h2>
+  <p class="lead">TV放映後の検索流入を最大化し、購入につなげる導線設計。</p>
+
+  <div class="grid grid-3">
+    <div class="card">
+      <h4>📷 Instagram</h4>
+      <p><strong>料理研究家3名と年契約</strong>（フォロワー10〜50万）。月10投稿で『朱-AKE-』使用シーンを継続発信。リール動画60秒×4本／月。</p>
+    </div>
+    <div class="card">
+      <h4>🐦 X（Twitter）</h4>
+      <p>リリース当日に <strong>公式アカウントで連投</strong>。職人ストーリー・舞台裏動画・限定オファー。リプライ対応も24時間体制。</p>
+    </div>
+    <div class="card">
+      <h4>📺 YouTube</h4>
+      <p><strong>越前刃心公式チャンネル</strong>に「朱-AKE-開発秘話」「研ぎ直し講座」「家庭での使い方」3本のロング動画を投稿。料理系YouTuberとのコラボ。</p>
+    </div>
+    <div class="card">
+      <h4>🎵 TikTok</h4>
+      <p>鍛造シーンの15秒動画（バズ狙い）。職人の手仕事を切り取った視覚インパクトで「越前刃心」「朱-AKE-」のハッシュタグ拡散。</p>
+    </div>
+    <div class="card">
+      <h4>📰 noteメディア</h4>
+      <p>3代目社長による「家庭ラインに込めた想い」を5,000字記事化。読み物として共感を生み、購入動機を作る。</p>
+    </div>
+    <div class="card">
+      <h4>🛒 公式LP・EC</h4>
+      <p>専用LP `echizen-jinshin.com/ake` を準備。TV放映直後の検索流入を購入へ。販売店マップへの誘導も併設。</p>
+    </div>
+  </div>
+
+  <div class="alert info">
+    <b>💡 TV放映直後の48時間が勝負：</b>放映タイミングは事前にTVから連絡をもらえることが多いので、当日19:00時点でSNS担当・LP担当が待機。放映後即SNSで「TVで紹介されました」発信＋LPの在庫表示を最新化。
+  </div>
+</section>
+
+<!-- ===== Section 10 KPI ===== -->
+<section id="kpi">
+  <h2>10. KPI・ROI シミュレーション</h2>
+  <p class="lead">DEMO仮置数値。実プロジェクト時には詳細試算します。</p>
+
+  <h3>10-1. KPI設計</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>指標</th><th>3ヶ月目標</th><th>6ヶ月目標</th><th>1年目標</th></tr>
+      <tr><td>TVオンエア</td><td>1番組</td><td>2番組</td><td>3〜5番組</td></tr>
+      <tr><td>新聞掲載</td><td>2媒体</td><td>5媒体</td><td>10媒体</td></tr>
+      <tr><td>WEB記事</td><td>15本</td><td>30本</td><td>60本</td></tr>
+      <tr><td>SNSインプレッション</td><td>30万</td><td>100万</td><td>300万</td></tr>
+      <tr><td>LP訪問者数</td><td>10,000</td><td>30,000</td><td>80,000</td></tr>
+      <tr><td>『朱-AKE-』販売セット数</td><td>300</td><td>1,000</td><td>2,500</td></tr>
+      <tr><td>売上（粗利）</td><td>900万円</td><td>3,000万円</td><td>7,500万円</td></tr>
+    </table>
+  </div>
+
+  <h3>10-2. 投資概算（6ヶ月）</h3>
+  <div class="grid grid-3">
+    <div class="card"><h4>プレスキット制作</h4><div class="stat">120<span style="font-size:1rem">万円</span></div><div class="stat-sub">撮影・動画制作・デザイン</div></div>
+    <div class="card"><h4>PR TIMES配信＋メディア対応</h4><div class="stat">60<span style="font-size:1rem">万円</span></div><div class="stat-sub">配信費＋対応工数</div></div>
+    <div class="card"><h4>料理研究家3名年契約</h4><div class="stat">108<span style="font-size:1rem">万円</span></div><div class="stat-sub">月3万円×3名×12ヶ月</div></div>
+    <div class="card"><h4>専用LP・EC構築</h4><div class="stat">80<span style="font-size:1rem">万円</span></div><div class="stat-sub">Shopify＋カスタマイズ</div></div>
+    <div class="card"><h4>取材対応マニュアル整備</h4><div class="stat">40<span style="font-size:1rem">万円</span></div><div class="stat-sub">Q&A集・ロープレ・撮影スポット整備</div></div>
+    <div class="card accent"><h4>総投資概算</h4><div class="stat">408<span style="font-size:1rem">万円</span></div><div class="stat-sub">6ヶ月想定売上3,000万円に対しROI ＋7.4倍</div></div>
+  </div>
+</section>
+
+<!-- ===== Section 11 Roadmap ===== -->
+<section id="roadmap">
+  <h2>11. 6ヶ月実行ロードマップ</h2>
+  <p class="lead">リリース日（D-Day）を「9月15日（DEMO仮置）」と置き、前後を逆算した時系列。</p>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot">M1</div>
+      <div class="tl-week">D-60 〜 D-30（7-8月）</div>
+      <div class="tl-title">プレスキット制作＋取材対応Q&A作成</div>
+      <div class="tl-body">高解像度写真撮影（5日間）／動画3本制作（30秒・60秒・2分版）／Q&A 30問の回答テンプレ作成／代表者・職人ロープレ3回／撮影スポット3か所事前確保／プレスキットZIP化</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot">M2</div>
+      <div class="tl-week">D-30 〜 D-7（8-9月）</div>
+      <div class="tl-title">配信先リスト確定＋直接送付準備＋Pre-Buzz</div>
+      <div class="tl-body">500社リストの最終確認／TV番組ディレクター個人宛のリスト作成／SNSで「何か出る」のPre-Buzz投稿開始／料理研究家3名へサンプル先行提供／専用LP公開（クローズドβ）</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot">D</div>
+      <div class="tl-week">D-Day（9/15）</div>
+      <div class="tl-title">プレスリリース配信＋取材対応24時間体制</div>
+      <div class="tl-body">10:00 PR TIMES配信／11:00 直接送付（500社一斉メール）／13:00 SNS連動拡散開始／14:00〜 取材問い合わせ対応（広報担当＋代表者待機）／WBS・NHK投稿フォームに正式応募</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot">M3</div>
+      <div class="tl-week">D+1 〜 D+30（9-10月）</div>
+      <div class="tl-title">取材実施＋メディア対応継続</div>
+      <div class="tl-body">取材依頼への即対応／代表者・職人の撮影スケジュール調整／放映・掲載後のSNS連動／LPトラフィック対応／販売店在庫管理</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot">M4</div>
+      <div class="tl-week">D+30 〜 D+90（10-12月）</div>
+      <div class="tl-title">Amplify＋SNSバズ醸成</div>
+      <div class="tl-body">放映後の検索流入を最大化／料理研究家による継続発信／「使ってみた」レビュー記事をWEBメディアに掲載／TikTokバズ狙いの15秒動画投入</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot">M5</div>
+      <div class="tl-week">D+90 〜 D+180（12-2月）</div>
+      <div class="tl-title">Sustain＋次のニュース仕込み</div>
+      <div class="tl-body">越前刃心ファミリー第2弾・第3弾の開発／春商戦に向けた贈り物特集への売り込み／海外展開のニュース化／第2波PR活動準備</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Section 12 Sources ===== -->
+<section id="sources">
+  <h2>12. 出典・参照</h2>
+  <p class="lead"><strong>会社固有数値・新商品『朱-AKE-』はデモ用架空設定</strong>です。<strong>市場規模・メディア基準・参照ブランド事例は実データ</strong>に基づきます。</p>
+
+  <details open>
+    <summary>📺 TV番組情報（実データ）</summary>
+    <div class="details-body">
+      <ul>
+        <li><a href="https://www.tv-tokyo.co.jp/wbs/trend_tamago/" target="_blank">テレビ東京 WBS「トレンドたまご」番組公式</a></li>
+        <li><a href="https://mag.sendenkaigi.com/kouhou/201506/media-relations-planning/005231.php" target="_blank">広報会議「WBSトレンドたまごデスクが語る理想の広報」</a></li>
+        <li><a href="https://mag.sendenkaigi.com/kouhou/201812/tv-tokyo/014754.php" target="_blank">広報会議「トレンドたまご統括デスク 取材決定までの裏側」</a></li>
+        <li><a href="https://gaaaon.jp/blog/entry/2014/02/11/215753" target="_blank">「中小企業がWBSに取り上げてもらうための3つのポイント」</a></li>
+        <li><a href="https://www.shapewin.co.jp/blog845" target="_blank">シェイプウィン「WBS トレンドたまごに応募する前に知っておきたい傾向」</a></li>
+      </ul>
+    </div>
+  </details>
+
+  <details>
+    <summary>📨 プレスリリース配信</summary>
+    <div class="details-body">
+      <ul>
+        <li><a href="https://prtimes.jp/service/" target="_blank">PR TIMES 公式（累計12.4万社利用・260媒体以上に配信）</a></li>
+        <li><a href="https://prtimes.jp/magazine/prtimes-recommendation/" target="_blank">PR TIMES MAGAZINE「初めてでも安心！プレスリリースのおすすめ」</a></li>
+        <li><a href="https://soichiro.co.jp/blog/press-release/" target="_blank">「中小企業こそプレスリリースを配信しましょう！」</a></li>
+        <li><a href="https://www.sunloft.co.jp/dx/blog/press-release/" target="_blank">サンロフト「中小企業のプレスリリース活用事例5選」</a></li>
+        <li><a href="https://voix.jp/biz/marketing/3954/" target="_blank">VOIX biz「プレスリリース無料配信サイト＆PR配信サービス おすすめ34選」</a></li>
+      </ul>
+    </div>
+  </details>
+
+  <details>
+    <summary>🎁 プレスキット作成</summary>
+    <div class="details-body">
+      <ul>
+        <li><a href="https://prtimes.jp/magazine/press-kit/" target="_blank">PR TIMES MAGAZINE「プレスキットの作り方・必要な7つの項目」</a></li>
+        <li><a href="https://www.meltwater.com/jp/blog/press-kit" target="_blank">Meltwater「プレスキットとは？広報担当必見の作り方・見本になる事例」</a></li>
+        <li><a href="https://pressbridge.jp/20250910-2/" target="_blank">Press Bridge「取材がスムーズになる！プレスキットの作り方と活用法」</a></li>
+        <li><a href="https://www.shopify.com/jp/blog/44447941-how-to-create-a-press-kit-that-gets-publicity-for-your-business" target="_blank">Shopify「プレスキットの作り方と事例5選（2025年）」</a></li>
+        <li><a href="https://pluscolor.co.jp/column/publicrelations93/" target="_blank">プラスカラー「プレスキットの作り方完全ガイド」</a></li>
+      </ul>
+    </div>
+  </details>
+
+  <details>
+    <summary>📊 市場・業界データ（実データ）</summary>
+    <div class="details-body">
+      <ul>
+        <li><a href="https://www.globalgrowthinsights.com/market-reports/commercial-kitchen-knives-market-105813" target="_blank">Global Growth Insights「Commercial Kitchen Knives Market Forecast 2035」</a></li>
+        <li><a href="https://www.maff.go.jp/j/press/yusyutu_kokusai/kaitaku/251128.html" target="_blank">農林水産省「海外日本食レストラン数の調査結果（令和7年）」</a></li>
+        <li><a href="https://www.tadafusa.com/" target="_blank">庖丁工房タダフサ 公式</a></li>
+        <li><a href="https://www.yoshikin.co.jp/" target="_blank">吉田金属工業（GLOBAL）公式</a></li>
+      </ul>
+    </div>
+  </details>
+
+  <details>
+    <summary>📰 メディアリレーション</summary>
+    <div class="details-body">
+      <ul>
+        <li><a href="https://note.com/eatunique/n/nb055d790e231" target="_blank">「広報さん必見！メディアが公開している情報募集窓口一覧」</a></li>
+        <li><a href="https://www.bakaru.net/entry/wbs" target="_blank">「WBSトレたま テレビ取材って大変なんですね」</a></li>
+        <li><a href="https://hana-hiraku.com/blog/media/1502" target="_blank">「弊社がWBSのトレンドたまごに選ばれた理由」</a></li>
+      </ul>
+    </div>
+  </details>
+
+  <div class="alert info" style="margin-top:20px">
+    <b>数値の取り扱い：</b>会社固有情報（『朱-AKE-』新商品仕様・価格・販売目標・社員数）はデモ用架空。市場規模・参照ブランド・メディア採用基準は公開実データ。
+  </div>
+</section>
+
+</main>
+
+<button class="to-top" aria-label="トップに戻る" id="toTopBtn">↑</button>
+
+<footer>
+  <p>越前刃心『刃心 朱-AKE-』ローンチプロモーション提案書 v1 詳細版（DEMO）</p>
+  <p>2026-04-10 ／ <a href="index.html">← ポータルに戻る</a></p>
+  <p style="margin-top:12px;font-size:.75rem;opacity:.7">本資料はアートソウル社内デモ用に作成された完全架空の提案書です。</p>
+</footer>
+
+<script>
+mermaid.initialize({startOnLoad:true,theme:'default',themeVariables:{fontFamily:'Noto Sans JP, sans-serif',primaryColor:'#1a1a1a',primaryTextColor:'#fff',primaryBorderColor:'#a52a2a',lineColor:'#7a1f1f',secondaryColor:'#b58a3b',tertiaryColor:'#fdf8ef'},flowchart:{useMaxWidth:true,htmlLabels:true,curve:'basis'},sequence:{useMaxWidth:true,actorMargin:50,boxMargin:10}});
+
+(function(){
+  var nav=document.getElementById('navToc');var btn=document.getElementById('toTopBtn');
+  function onS(){var y=window.scrollY||0;if(nav)nav.classList.toggle('scrolled',y>20);if(btn)btn.classList.toggle('show',y>240);}
+  window.addEventListener('scroll',onS,{passive:true});
+  if(btn)btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+  onS();
+})();
+</script>
+
+</body>
+</html>

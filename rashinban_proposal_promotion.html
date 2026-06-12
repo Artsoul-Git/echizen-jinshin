@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<title>🧭 『刃心 朱-AKE-』ローンチPR攻略 — 越前刃心様 プロモコンパス</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #fafbfc; --surface: #ffffff; --surface2: #ffffff;
+  --border: #e2e8f0; --text: #0f172a; --muted: #475569; --dim: #334155;
+  --primary: #a52a2a; --primary-glow: rgba(165,42,42,.18);
+  --secondary: #7a1f1f; --success: #059669; --warn: #d97706;
+  --danger: #dc2626;
+  --kai-bg: #fdf5e6; --kai-border: #d8cdb8; --kai-text: #7a1f1f; --kai-hi: #1a1a1a;
+  --gold: #b58a3b;
+}
+html { font-size: 17px; }
+body { background:var(--bg); color:var(--text); font-family:-apple-system,'Hiragino Sans','Yu Gothic UI','Noto Sans JP',sans-serif; font-size:17px; line-height:1.8; letter-spacing:.015em; min-height:100vh; }
+h2 { font-size:26px; font-weight:800; }
+h3 { font-size:19px; font-weight:700; }
+
+/* HEADER */
+.hdr { position:sticky; top:0; z-index:100; background:rgba(255,255,255,.95); backdrop-filter:blur(12px);
+       border-bottom:1px solid var(--border); padding:0 20px; height:56px;
+       display:flex; align-items:center; gap:14px; box-shadow:0 1px 3px rgba(0,0,0,.04); transition:box-shadow .3s,border-color .3s; }
+.hdr.scrolled { box-shadow:0 4px 16px rgba(26,26,26,.12); border-bottom-color:var(--gold); }
+.hdr-logo { font-size:18px; font-weight:800; background:linear-gradient(135deg,#a52a2a,#7a1f1f,#b58a3b); -webkit-background-clip:text; -webkit-text-fill-color:transparent; white-space:nowrap; }
+.hdr-theme { flex:1; font-size:13px; color:var(--dim); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.hdr-prog { display:flex; align-items:center; gap:8px; }
+.prog-bar { width:100px; height:5px; background:var(--border); border-radius:3px; overflow:hidden; }
+.prog-fill { height:100%; border-radius:3px; background:linear-gradient(90deg,#a52a2a,#b58a3b); transition:width .4s; }
+.prog-pct { font-size:11px; color:var(--muted); min-width:30px; text-align:right; }
+.hdr-btn { background:var(--surface); border:1px solid var(--border); color:var(--dim); padding:5px 11px; border-radius:6px; cursor:pointer; font-size:12px; transition:all .15s; }
+.hdr-btn:hover { background:#fdf5e6; color:var(--secondary); }
+.hdr-btn.portal { background:var(--gold); color:#fff; border-color:var(--gold); font-weight:700; }
+.hdr-btn.portal:hover { background:var(--secondary); color:#fff; }
+
+/* NAV */
+.nav { display:flex; gap:2px; padding:10px 20px 0; border-bottom:1px solid var(--border); overflow-x:auto; background:var(--bg); }
+.tab { padding:10px 18px; border-radius:10px 10px 0 0; cursor:pointer; font-size:14.5px; font-weight:500; color:var(--muted); border:1px solid transparent; border-bottom:none; white-space:nowrap; position:relative; bottom:-1px; transition:all .15s; }
+.tab:hover { color:var(--text); background:var(--surface); }
+.tab.on { color:var(--primary); background:var(--surface); border-color:var(--border); border-bottom-color:var(--surface); }
+
+/* VIEWS */
+.view { display:none; padding:20px; max-width:1300px; margin:0 auto; width:100%; }
+.view.on { display:block; }
+
+/* CARDS */
+.card { background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:24px; }
+.goal-card { background:linear-gradient(135deg,#ffffff 0%,#fdf5e6 100%); border:1px solid #d8cdb8; border-radius:18px; padding:28px; margin-bottom:20px; }
+.goal-tag { display:inline-block; background:rgba(181,138,59,.18); color:var(--secondary); padding:5px 14px; border-radius:999px; font-size:12.5px; font-weight:600; margin-bottom:8px; }
+.goal-title { font-size:30px; font-weight:800; margin-bottom:6px; }
+.goal-meta { font-size:14.5px; color:var(--dim); }
+.goal-bg { font-size:17px; color:var(--dim); margin-top:10px; line-height:1.9; }
+
+/* STATS */
+.stats { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-bottom:20px; }
+@media(max-width:600px){.stats{grid-template-columns:repeat(2,1fr);}}
+.stat { background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:22px; }
+.stat-v { font-size:38px; font-weight:800; color:var(--primary); }
+.stat-l { font-size:14px; color:var(--dim); margin-top:6px; }
+
+/* KAI */
+.kai-card { background:var(--kai-bg); border:1px solid var(--kai-border); border-radius:16px; padding:24px; margin-bottom:20px; position:relative; overflow:hidden; }
+.kai-card::before { content:''; position:absolute; top:-60px; right:-60px; width:200px; height:200px; border-radius:50%; background:radial-gradient(circle,rgba(165,42,42,.08) 0%,transparent 70%); }
+.kai-hdr { display:flex; align-items:center; gap:10px; margin-bottom:12px; }
+.kai-av { width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,#a52a2a,#b58a3b); display:flex; align-items:center; justify-content:center; font-size:18px; font-weight:800; color:#fff; flex-shrink:0; }
+.kai-nm { font-weight:700; color:var(--kai-hi); font-size:15.5px; }
+.kai-rl { font-size:12.5px; color:var(--kai-text); }
+.kai-sum { color:var(--kai-text); line-height:1.95; font-size:17px; }
+.kai-verd { margin-top:12px; padding:14px 18px; background:rgba(220,38,38,.06); border-left:3px solid var(--danger); border-radius:0 6px 6px 0; color:#991b1b; font-size:15.5px; line-height:1.75; font-weight:500; font-style:italic; }
+.kai-tags { display:flex; flex-wrap:wrap; gap:6px; margin-top:12px; }
+.ktag { padding:5px 12px; border-radius:999px; font-size:13px; font-weight:700; }
+.ktag.ok { background:#d1fae5; color:#065f46; border:1px solid rgba(5,150,105,.3); }
+.ktag.ng { background:#fee2e2; color:#991b1b; border:1px solid rgba(220,38,38,.30); }
+
+/* SECTION */
+.sec { font-size:14px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:1px; margin-bottom:16px; display:flex; align-items:center; gap:8px; }
+.sec::after { content:''; flex:1; height:1px; background:var(--border); }
+
+/* ACTIONS */
+.act-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:8px; }
+.act-item { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:14px 16px; cursor:pointer; display:flex; align-items:flex-start; gap:10px; transition:all .15s; }
+.act-item:hover { background:#fdf5e6; border-color:var(--primary); transform:translateY(-1px); }
+.act-dot { width:11px; height:11px; border-radius:50%; flex-shrink:0; margin-top:4px; }
+.act-tx { font-size:14px; }
+.act-sub { font-size:12.5px; color:var(--muted); margin-top:4px; }
+
+/* MANDALA */
+.mandala-note { font-size:13.5px; color:var(--muted); margin-bottom:18px; }
+.mandala-wrap { overflow-x:auto; }
+.m-grid { display:grid; grid-template-columns:repeat(9,1fr); gap:4px; width:100%; max-width:1180px; margin:0 auto; aspect-ratio:16/10; }
+.mc { display:flex; align-items:center; justify-content:center; text-align:center; font-size:12.5px; line-height:1.4; border-radius:6px; padding:5px; transition:transform .12s, box-shadow .12s; overflow:hidden; word-break:break-word; }
+.mc.cp { cursor:pointer; }
+.mc.cp:hover { transform:scale(1.09); z-index:10; box-shadow:0 4px 18px rgba(0,0,0,.3); }
+.mc.center { background:linear-gradient(135deg,#1a1a1a,#7a1f1f); color:#fff; font-weight:900; font-size:16px; z-index:5; box-shadow:0 2px 6px rgba(165,42,42,.3); }
+.mc.theme, .mc.tr { color:#fff; font-weight:800; font-size:14.5px; }
+.mc.item { font-size:12.5px; color:#1f2937; font-weight:500; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+.mc.empty { background:var(--surface); opacity:.25; }
+.m-grid .mc:nth-child(9n+3),
+.m-grid .mc:nth-child(9n+6) { margin-right:7px; }
+.m-grid .mc:nth-child(n+19):nth-child(-n+27),
+.m-grid .mc:nth-child(n+46):nth-child(-n+54) { margin-bottom:7px; }
+
+/* MATRIX */
+.bc { display:flex; align-items:center; gap:7px; font-size:13.5px; color:var(--muted); margin-bottom:14px; flex-wrap:wrap; }
+.bc a { color:var(--muted); cursor:pointer; text-decoration:none; }
+.bc a:hover { color:var(--primary); }
+.bc .cur { color:var(--text); }
+.bc-sep { opacity:.4; }
+.t-pills { display:flex; gap:5px; flex-wrap:wrap; margin-bottom:14px; position:relative; padding-bottom:4px; overflow:visible !important; }
+.t-pill { padding:6px 14px; border-radius:999px; font-size:13.5px; cursor:pointer; border:1px solid transparent; color:#fff; opacity:.78; transition:all .15s; position:relative; z-index:1; }
+.t-pill.on { opacity:1; box-shadow:0 2px 10px rgba(0,0,0,.3); }
+.t-pill:hover { opacity:1; z-index:1000; }
+.t-pill[data-tip]:hover::after { content:attr(data-tip); position:absolute; top:calc(100% + 12px); left:50%; transform:translateX(-50%); background:#1e293b; color:#f1f5f9; padding:12px 16px; border-radius:10px; font-size:13px; font-weight:500; width:320px; max-width:90vw; text-align:left; line-height:1.7; z-index:9999; box-shadow:0 10px 24px rgba(0,0,0,.22); white-space:normal; pointer-events:none; }
+.t-pill[data-tip]:hover::before { content:''; position:absolute; top:calc(100% + 5px); left:50%; transform:translateX(-50%); border:7px solid transparent; border-bottom-color:#1e293b; z-index:9999; pointer-events:none; }
+.mx-wrap { display:flex; gap:14px; align-items:stretch; overflow:visible !important; }
+.mx-ay { font-size:15px; padding:14px 6px; display:flex; flex-direction:column; justify-content:space-between; align-items:center; background:linear-gradient(180deg,rgba(239,68,68,.10) 0%,transparent 50%,rgba(37,99,235,.10) 100%); border-radius:12px; min-width:76px; gap:8px; line-height:1.4; }
+.mx-ay .ax-pole { font-weight:800; color:var(--text); font-size:14.5px; white-space:nowrap; letter-spacing:.03em; }
+.mx-ay .ax-pole.high { color:#b91c1c; }
+.mx-ay .ax-pole.low { color:#1d4ed8; }
+.mx-ay .ax-label { writing-mode:vertical-lr; background:linear-gradient(135deg,#a52a2a,#7a1f1f); color:#fff; padding:12px 7px; border-radius:999px; font-weight:800; font-size:14px; letter-spacing:.1em; box-shadow:0 2px 6px rgba(165,42,42,.3); }
+.mx-inner { flex:1; background:#fff; padding:6px; border-radius:14px; overflow:visible !important; }
+.mx-grid { display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:3px; min-height:460px; background:#cbd5e1; border:2px solid #94a3b8; border-radius:12px; overflow:hidden; position:relative; }
+.mx-cross::before, .mx-cross::after { content:''; position:absolute; background:#94a3b8; z-index:2; pointer-events:none; }
+.mx-cross::before { left:50%; top:0; bottom:0; width:2px; }
+.mx-cross::after { top:50%; left:0; right:0; height:2px; }
+.quad { padding:18px; display:flex; flex-direction:column; gap:6px; min-height:200px; }
+.quad-lbl { font-size:16px; font-weight:800; margin-bottom:2px; }
+.quad-desc { font-size:12.5px; color:var(--muted); margin-bottom:10px; }
+.quad.q-tr { background:#fef2f2; }
+.quad.q-tl { background:#fdf5e6; }
+.quad.q-br { background:#fffbeb; }
+.quad.q-bl { background:#f8fafc; }
+.qi { background:var(--bg); border:1px solid var(--border); border-radius:10px; padding:12px 15px; cursor:pointer; font-size:15px; transition:all .15s; display:flex; align-items:flex-start; gap:10px; color:var(--text); }
+.qi:hover { background:#fdf5e6; transform:translateX(2px); border-color:var(--primary); box-shadow:0 2px 8px rgba(165,42,42,.15); }
+.qi-tx { flex:1; line-height:1.5; }
+.qi-dt { font-size:13px; color:var(--muted); margin-top:5px; }
+.qi-ar { color:var(--primary); font-size:14px; flex-shrink:0; margin-top:2px; font-weight:700; }
+.mx-ax { display:flex; justify-content:space-between; align-items:center; font-size:15px; padding:12px 18px; background:linear-gradient(90deg,rgba(37,99,235,.10) 0%,transparent 50%,rgba(239,68,68,.10) 100%); border-radius:12px; margin-top:12px; gap:16px; }
+.mx-ax .ax-pole { font-weight:800; color:var(--text); font-size:14.5px; white-space:nowrap; letter-spacing:.03em; }
+.mx-ax .ax-pole.low { color:#1d4ed8; }
+.mx-ax .ax-pole.high { color:#b91c1c; }
+.mx-ax .ax-label { background:linear-gradient(135deg,#b58a3b,#d97706); color:#fff; padding:7px 18px; border-radius:999px; font-weight:800; font-size:14px; letter-spacing:.1em; box-shadow:0 2px 6px rgba(181,138,59,.3); }
+.mx-kai { background:var(--kai-bg); border:1px solid var(--kai-border); border-radius:8px; padding:14px 18px; margin-top:14px; font-size:14.5px; color:var(--kai-text); line-height:1.75; }
+.mk-lbl { font-size:12px; font-weight:600; opacity:.7; margin-bottom:6px; }
+.mx-core { margin-top:12px; padding:14px 18px; background:#fff; border:1px solid var(--border); border-radius:10px; display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+@media (max-width:600px) { .mx-core { grid-template-columns:1fr; } }
+.mx-core-lbl { font-size:12px; font-weight:800; margin-bottom:6px; letter-spacing:.04em; text-transform:uppercase; }
+.mx-core-lbl.issue { color:var(--danger); }
+.mx-core-lbl.prio { color:var(--success); }
+.mx-core-tx { font-size:14px; color:var(--text); line-height:1.75; }
+
+/* FLOW */
+.fl-ctx { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px 18px; margin-bottom:18px; }
+.fl-ctx-l { font-size:12px; color:var(--muted); margin-bottom:3px; }
+.fl-ctx-t { font-size:17px; font-weight:700; }
+.fl-steps { position:relative; padding-left:38px; }
+.fl-step { position:relative; margin-bottom:14px; }
+.fl-step::before { content:''; position:absolute; left:-23px; top:30px; bottom:-14px; width:2px; background:var(--border); }
+.fl-step:last-child::before { display:none; }
+.fl-icon { position:absolute; left:-38px; top:8px; width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12px; z-index:1; font-weight:700; }
+.fl-card { background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:16px 18px; transition:all .15s; }
+.fl-card.done { opacity:.55; }
+.fl-card.done .fl-title { text-decoration:line-through; }
+.fl-ord { font-size:12px; color:var(--muted); margin-bottom:5px; }
+.fl-title { font-size:18px; font-weight:700; margin-bottom:10px; color:var(--text); }
+.fl-desc { font-size:16px; color:var(--dim); line-height:1.85; }
+.fl-meta { display:flex; flex-wrap:wrap; gap:6px; margin-top:7px; }
+.fbg { font-size:12.5px; padding:3px 10px; border-radius:5px; display:inline-flex; align-items:center; gap:3px; font-weight:700; }
+.fbg.fb-act { background:rgba(165,42,42,.10); color:#7a1f1f; border:1px solid rgba(165,42,42,.18); }
+.fbg.fb-dec { background:rgba(217,119,6,.14); color:#92400e; border:1px solid rgba(217,119,6,.25); }
+.fbg.fb-mil { background:rgba(5,150,105,.14); color:#065f46; border:1px solid rgba(5,150,105,.25); }
+.fbg.fb-wrn { background:rgba(220,38,38,.10); color:#991b1b; border:1px solid rgba(220,38,38,.20); }
+.fbg.fb-dur { background:rgba(71,85,105,.10); color:#1e293b; border:1px solid rgba(71,85,105,.18); }
+.fbg.fb-out { background:rgba(8,145,178,.14); color:#155e75; border:1px solid rgba(8,145,178,.25); }
+.fl-check { display:flex; align-items:center; gap:7px; margin-top:7px; cursor:pointer; font-size:13.5px; color:var(--muted); padding:6px 0; }
+.fl-check input { accent-color:var(--primary); cursor:pointer; }
+.fl-check.done { text-decoration:line-through; opacity:.5; }
+.fl-hint { margin-top:12px; padding:12px 16px; background:linear-gradient(90deg,#fff7ed 0%,#fffbeb 100%); border-left:4px solid #f59e0b; border-radius:6px; font-size:14.5px; color:#78350f; line-height:1.75; }
+.fl-hint::before { content:"⚠️ つまずきポイント　"; font-weight:800; color:#b45309; letter-spacing:.03em; }
+.fl-kai { background:var(--kai-bg); border:1px solid var(--kai-border); border-radius:8px; padding:14px 18px; margin-top:18px; }
+.fk-lbl { font-size:13px; color:var(--kai-text); font-weight:600; opacity:.7; margin-bottom:6px; }
+.fk-tx { font-size:14.5px; color:var(--kai-text); line-height:1.8; }
+
+/* FLOW PROMPT */
+.fl-prompt { margin-top:12px; border:1px solid var(--border); border-radius:10px; overflow:hidden; background:#fff; }
+.fl-prompt summary { padding:11px 16px; cursor:pointer; background:linear-gradient(90deg,#fdf5e6 0%,#fef9ec 100%); font-weight:700; font-size:14px; color:var(--secondary); list-style:none; display:flex; align-items:center; gap:8px; }
+.fl-prompt summary::-webkit-details-marker { display:none; }
+.fl-prompt summary::before { content:"▶"; color:var(--primary); font-size:10px; transition:transform .2s; flex-shrink:0; }
+.fl-prompt[open] summary::before { transform:rotate(90deg); }
+.fl-prompt summary:hover { background:linear-gradient(90deg,#fef0d5 0%,#fdf5e6 100%); }
+.fl-prompt-body { padding:14px 16px; background:#fafbfc; }
+.fl-prompt-desc { font-size:13px; color:var(--muted); margin-bottom:10px; line-height:1.65; }
+.fl-prompt-code { background:#1e293b; color:#e2e8f0; padding:14px 16px; border-radius:8px; font-family:'Menlo','Monaco','Courier New',monospace; font-size:12.5px; line-height:1.65; white-space:pre-wrap; word-break:break-word; max-height:320px; overflow-y:auto; border:1px solid #334155; }
+.fl-prompt-actions { display:flex; gap:8px; margin-top:10px; }
+.fl-prompt-btn { background:linear-gradient(135deg,#a52a2a,#7a1f1f); color:white; border:none; padding:9px 18px; border-radius:8px; font-weight:700; cursor:pointer; font-size:13.5px; transition:all .2s; box-shadow:0 2px 6px rgba(165,42,42,.25); }
+.fl-prompt-btn:hover { transform:translateY(-1px); box-shadow:0 4px 12px rgba(165,42,42,.4); }
+.fl-prompt-btn.copied { background:linear-gradient(135deg,#059669,#10b981); }
+
+/* GANTT */
+.gt-wrap { overflow-x:auto; }
+.gt-hdr { display:flex; padding-left:200px; margin-bottom:2px; }
+.gt-wk { flex:1; text-align:center; font-size:11px; color:var(--muted); padding:3px 0; border-left:1px solid var(--border); min-width:20px; }
+.gt-phase { font-size:13.5px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:.5px; padding:8px 0 4px; }
+.gt-row { display:flex; align-items:center; margin-bottom:3px; min-height:30px; border-bottom:1px dashed rgba(148,163,184,.2); padding:1px 0; }
+.gt-row:last-child { border-bottom:none; }
+.gt-name { width:200px; min-width:200px; font-size:13.5px; padding-right:10px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:var(--dim); }
+.gt-bars { flex:1; position:relative; height:28px; }
+.gt-bar { position:absolute; height:18px; top:5px; border-radius:4px; padding:0 6px; font-size:11px; color:#fff; font-weight:500; display:flex; align-items:center; overflow:hidden; white-space:nowrap; transition:opacity .15s; cursor:pointer; z-index:1; }
+.gt-bar:hover { opacity:.85; box-shadow:0 3px 10px rgba(0,0,0,.18); }
+.gt-bar.crit { box-shadow:0 0 8px rgba(239,68,68,.45); }
+.gt-bar.ms { width:18px !important; border-radius:50%; padding:0; justify-content:center; font-size:11px; }
+.gt-legend { display:flex; gap:12px; font-size:13px; color:var(--muted); }
+.gt-leg-dot { width:10px; height:10px; border-radius:2px; display:inline-block; margin-right:4px; }
+.gt-exec-badge { display:inline-flex; align-items:center; gap:6px; margin-left:14px; background:linear-gradient(135deg,#a52a2a,#7a1f1f); color:#fff; padding:4px 12px; border-radius:999px; font-size:12px; font-weight:800; letter-spacing:.03em; box-shadow:0 2px 8px rgba(165,42,42,.28); }
+.gt-exec-badge::before { content:"▶"; font-size:9px; }
+
+/* TO TOP */
+.to-top { position:fixed; bottom:24px; right:24px; width:48px; height:48px; border-radius:50%; background:var(--text); color:#fff; border:2px solid var(--gold); font-size:1.4rem; cursor:pointer; box-shadow:0 4px 16px rgba(26,26,26,.35); opacity:0; pointer-events:none; transition:opacity .3s,transform .2s,background .2s; z-index:100; font-family:inherit; line-height:1; }
+.to-top.show { opacity:1; pointer-events:auto; }
+.to-top:hover { background:var(--secondary); transform:translateY(-3px); }
+
+/* UTIL */
+.btn { padding:7px 14px; border-radius:7px; cursor:pointer; font-size:12px; font-weight:500; border:none; transition:all .15s; }
+.btn-g { background:transparent; color:var(--muted); border:1px solid var(--border); }
+.btn-g:hover { background:#fdf5e6; color:var(--secondary); }
+.empty-s { text-align:center; padding:50px 20px; color:var(--muted); }
+.empty-s-i { font-size:40px; margin-bottom:10px; }
+::-webkit-scrollbar { width:5px; height:5px; }
+::-webkit-scrollbar-thumb { background:var(--border); border-radius:3px; }
+
+.demo-banner { background:#fff3cd; border:2px solid var(--gold); padding:10px 20px; font-size:13px; text-align:center; font-weight:500; }
+.demo-banner b { color:var(--primary); }
+
+@media (max-width:600px) {
+  html body { font-size:15px; }
+  .m-grid { aspect-ratio:1; max-width:100%; }
+  .mc { font-size:10px; }
+  .mc.center { font-size:11.5px; }
+  .mc.theme, .mc.tr { font-size:11px; }
+  .mc.item { font-size:10px; }
+}
+@media print {
+  @page { size:A4 landscape; margin:8mm; }
+  .hdr, .nav, #password-gate, .hdr-btn, .hdr-prog, .to-top { display:none !important; }
+  .view { display:none !important; }
+  .view.on { display:block !important; padding:0 !important; max-width:100% !important; }
+}
+</style>
+</head>
+<body>
+
+<div id="password-gate" style="position:fixed;inset:0;background:linear-gradient(135deg,#1a1a1a 0%,#7a1f1f 60%,#b58a3b 130%);color:#fff;display:flex;align-items:center;justify-content:center;z-index:9999;flex-direction:column;padding:20px;text-align:center">
+  <div style="background:rgba(255,255,255,0.05);padding:40px 32px;border-radius:16px;border:1px solid rgba(255,255,255,0.15);max-width:420px;width:100%">
+    <h2 style="margin-bottom:8px;font-size:1.3rem;font-weight:700">越前刃心『朱-AKE-』プロモコンパス</h2>
+    <p style="font-size:0.85rem;opacity:0.8;margin-bottom:24px;color:#b58a3b">DEMO ｜ 閲覧にはパスワードが必要です</p>
+    <input type="password" id="pwd-input" style="padding:12px 16px;font-size:1rem;border-radius:8px;border:none;width:100%;text-align:center;margin-bottom:12px;color:#1a1a1a" placeholder="パスワード" autofocus>
+    <button id="pwd-btn" style="padding:12px 24px;background:#b58a3b;color:#fff;border:none;border-radius:8px;font-size:1rem;cursor:pointer;font-weight:700;width:100%">閲覧する</button>
+    <p id="pwd-err" style="color:#fca5a5;margin-top:12px;font-size:0.85rem;display:none">パスワードが正しくありません</p>
+  </div>
+</div>
+<script>
+(function(){var PASS='demo2026';var gate=document.getElementById('password-gate');var input=document.getElementById('pwd-input');var btn=document.getElementById('pwd-btn');var err=document.getElementById('pwd-err');if(sessionStorage.getItem('echizen_auth')==='ok'){gate.style.display='none';return;}document.body.style.overflow='hidden';function check(){if(input.value===PASS){sessionStorage.setItem('echizen_auth','ok');gate.style.display='none';document.body.style.overflow='';}else{err.style.display='block';input.value='';input.focus();}}btn.addEventListener('click',check);input.addEventListener('keypress',function(e){if(e.key==='Enter')check();});})();
+</script>
+
+<header class="hdr" id="hdr">
+  <div class="hdr-logo">🧭 目標達成コンパス</div>
+  <div class="hdr-theme" id="hTheme"></div>
+  <div class="hdr-prog">
+    <span class="prog-pct" id="hPct">0%</span>
+    <div class="prog-bar"><div class="prog-fill" id="hFill" style="width:0%"></div></div>
+  </div>
+  <a class="hdr-btn portal" href="index.html">📋 ポータル</a>
+  <button class="hdr-btn" onclick="window.print()">🖨️ 印刷</button>
+</header>
+<div class="demo-banner">⚠️ 本資料は <b>アートソウル社内デモ用</b> に作成された完全架空の構造分解資料です。</div>
+
+<nav class="nav">
+  <div class="tab on" onclick="go('dashboard',this)">📊 ダッシュボード</div>
+  <div class="tab" onclick="go('mandala',this)">🌸 マンダラ</div>
+  <div class="tab" onclick="go('matrix',this)">⊞ マトリクス</div>
+  <div class="tab" onclick="go('flow',this)">→ フロー</div>
+  <div class="tab" onclick="go('gantt',this)">📅 ガント</div>
+</nav>
+
+<div id="v-dashboard" class="view on">
+  <div class="goal-card">
+    <div class="goal-tag">目標テーマ</div>
+    <div class="goal-title" id="dTheme"></div>
+    <div class="goal-meta" id="dMeta"></div>
+    <div class="goal-bg" id="dBg"></div>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="stat-v">8</div><div class="stat-l">主要テーマ</div></div>
+    <div class="stat"><div class="stat-v">64</div><div class="stat-l">アクション項目</div></div>
+    <div class="stat"><div class="stat-v" id="sFlows">0</div><div class="stat-l">フロー図</div></div>
+    <div class="stat"><div class="stat-v" id="sPct">0%</div><div class="stat-l">実行進捗</div></div>
+  </div>
+  <div class="kai-card">
+    <div class="kai-hdr">
+      <div class="kai-av">📊</div>
+      <div><div class="kai-nm">分析サマリー</div><div class="kai-rl">目標達成までの構造と最短ルート</div></div>
+    </div>
+    <div class="kai-sum" id="kSum"></div>
+    <div class="kai-verd" id="kVerd"></div>
+    <div class="kai-tags" id="kTags"></div>
+  </div>
+  <div class="sec">最優先で着手すべきアクション</div>
+  <div class="act-grid" id="dActs"></div>
+</div>
+
+<div id="v-mandala" class="view">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+    <h2>マンダラチャート</h2>
+    <button class="btn btn-g" onclick="go('matrix',null)">マトリクスを見る →</button>
+  </div>
+  <div class="mandala-note">テーマセル（色付き）をクリック → 優先度マトリクスへ遷移します</div>
+  <div class="mandala-wrap"><div class="m-grid" id="mGrid"></div></div>
+</div>
+
+<div id="v-matrix" class="view">
+  <div class="bc">
+    <a onclick="go('mandala',null)">マンダラ</a>
+    <span class="bc-sep">›</span>
+    <span class="cur" id="mxBcTh">マトリクス</span>
+  </div>
+  <div class="t-pills" id="tPills"></div>
+  <div class="mx-kai" id="mxKai" style="display:none;">
+    <div class="mk-lbl">💡 ワンポイントアドバイス</div>
+    <div id="mxKaiTx"></div>
+    <div class="mx-core" id="mxCore" style="display:none;">
+      <div><div class="mx-core-lbl issue">🎯 コアイシュー</div><div class="mx-core-tx" id="mxCoreIssue"></div></div>
+      <div><div class="mx-core-lbl prio">⚡ 最優先アクション</div><div class="mx-core-tx" id="mxTopPrio"></div></div>
+    </div>
+  </div>
+  <div class="mx-wrap">
+    <div class="mx-ay" id="mxAy"></div>
+    <div class="mx-inner">
+      <div class="mx-grid" id="mxGrid"><div class="mx-cross"></div></div>
+      <div class="mx-ax" id="mxAx"></div>
+    </div>
+  </div>
+  <p style="margin-top:14px;font-size:13.5px;color:var(--muted)">💡 各項目をクリック → 詳細フローと実行ステップを表示します</p>
+</div>
+
+<div id="v-flow" class="view">
+  <div class="bc">
+    <a onclick="go('mandala',null)">マンダラ</a>
+    <span class="bc-sep">›</span>
+    <a onclick="go('matrix',null)" id="flBcTh">マトリクス</a>
+    <span class="bc-sep">›</span>
+    <span class="cur" id="flBcIt">フロー</span>
+  </div>
+  <div class="fl-ctx"><div class="fl-ctx-l">対象アクション</div><div class="fl-ctx-t" id="flCtx">—</div></div>
+  <div id="flEmpty" class="empty-s">
+    <div class="empty-s-i">→</div>
+    <div>マトリクスの項目をクリックするとフローが表示されます</div>
+  </div>
+  <div class="fl-steps" id="flSteps"></div>
+  <div class="fl-kai" id="flKai" style="display:none;">
+    <div class="fk-lbl">💡 ワンポイントアドバイス</div>
+    <div class="fk-tx" id="flKaiTx"></div>
+  </div>
+</div>
+
+<div id="v-gantt" class="view">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:10px;">
+    <h2 id="gtTitle">実行タイムライン</h2>
+    <div class="gt-legend">
+      <span><span class="gt-leg-dot" style="background:var(--danger)"></span>クリティカル</span>
+      <span><span class="gt-leg-dot" style="background:var(--primary)"></span>通常</span>
+      <span><span class="gt-leg-dot" style="background:var(--success);border-radius:50%"></span>マイルストーン</span>
+    </div>
+  </div>
+  <p style="font-size:13.5px;color:var(--muted);margin-bottom:14px">💡 タスクバーをクリック → 関連マトリクス／フローへ飛びます</p>
+  <div class="gt-wrap"><div id="gtChart"></div></div>
+</div>
+
+<button class="to-top" aria-label="トップに戻る" id="toTopBtn">↑</button>
+
+<script>
+const DATA = {
+  meta: {
+    theme: "『刃心 朱-AKE-』ローンチPR攻略 ─ プレスリリースは準備が9割",
+    background: "新ブランド『刃心 朱-AKE-』（家庭プレミアム／三徳・ペティ・パン切り3型）を2026年10月ローンチ。狙いはWBSトレンドたまご／NHKおはよう日本「まちかど情報室」への露出と、その後の口コミ連鎖。1928年・100年弱の歴史、漆塗り朱柄、職人頭・川口直筆メッセージという固有の物語を、TVが拾える『3秒で分かる絵』に組み替える。プレス発信は当日勝負ではなく、準備で勝敗が決まる。",
+    targetPeriod: "8ヶ月（D-60準備3ヶ月＋ローンチ前後1ヶ月＋拡散・改善4ヶ月）",
+    constraints: "代理店との関係を壊さない（家庭層のみ／推奨小売価格以上）／TV局へのギフト禁止／薬機法・景表法配慮",
+    createdAt: "2026-06-12"
+  },
+  kai: {
+    summary: "TV採用基準は『新しい・面白い・絵になる』の3点。これに刃心の『100年×漆×職人手書き』を寄せ込めば、WBSトレンドたまご・NHKまちかど情報室の食卓系コーナーに高確率で乗る。鍵は①プレスキット（A4×1＋高解像写真5枚＋15秒動画＋ストーリー要旨）を発信60日前に完成、②番組別ピッチ文面を別案で用意、③発信後72時間の取材対応Q&A30問を社長・職人・広報の3者で共有、の3点同時実行。SNSはX→Instagram→noteの順で連動し、メディア視聴者の二次検索を取りこぼさない。",
+    coreIssue: "良い商品＋良い物語があるのに『TVが3秒で拾える形』に編集されていない。露出機会ロスが最大の損失。",
+    topPriority: "①プレスキット完全版D-60完成 ②WBS/NHK別ピッチレター ③取材対応Q&A30問共有",
+    consultantVerdict: "プレスリリースは『送れば載る』ではない。番組別の編集者目線でデザインする準備が9割。今すぐD-60カウントダウン開始。",
+    strengths: ["100年弱の老舗ストーリー", "漆塗り朱柄の絵力", "職人頭・川口さんの語り手", "代理店480社の店頭波及力"],
+    risks: ["TV採用は確約できない＝複数番組同時アプローチ必須", "発信前リーク事故", "取材時の薬機法・誇大表現リスク", "SNS炎上（職人軽視等）"],
+    themeInsights: [
+      { index: 0, insight: "市場リサーチは過去6ヶ月のTV番組キーワードを毎週Excel化。WBSなら『中小×伝統×革新』、NHKまちかど情報室なら『家事ラク・新発想・季節』が頻出。" },
+      { index: 1, insight: "プレスリリース本文は『見出し＋3秒で分かる絵＋5W1H＋連絡先』の4ブロック。本文1ページ厳守。PR TIMES配信は1配信3万円から、12.4万社・上場65%が利用。" },
+      { index: 2, insight: "プレスキットは紙より『DropboxリンクA4PDF＋写真5枚＋動画15秒』形式が記者に喜ばれる。データ容量警告必須。" },
+      { index: 3, insight: "発信先は40〜60媒体に絞る。一斉送信より番組別カスタム文面の方が3倍開封される。" },
+      { index: 4, insight: "WBSトレンドたまご採用率は3〜5%（推定）。同時にNHKまちかど情報室・関西ローカルへも別文面で出すリスク分散が必須。" },
+      { index: 5, insight: "取材Q&Aは30問用意。社長・職人頭・広報の3者で答弁すり合わせ。NG表現リスト（『日本一』『絶対』等）を明文化。" },
+      { index: 6, insight: "SNSは発信日午前9時に一斉投稿しない。X 9:00→Instagram 12:00→note 18:00の時差連動が拡散を伸ばす。" },
+      { index: 7, insight: "KPIはPV・フォロワー増・問い合わせ件数の3軸。週次レビューで改善ループ。発信30日後に振り返り会議を必修化。" }
+    ]
+  },
+  mandala: {
+    center: "刃心朱-AKEローンチPR",
+    themes: [
+      {
+        index: 0, name: "市場リサーチ", description: "TV番組・雑誌・SNSトレンドを毎週Excel化。WBS/NHKの過去採用パターンを徹底分析し、刃心朱-AKEを『どの編集者の手に渡せば刺さるか』を仮説化。",
+        color: "#EF4444", bgLight: "rgba(239,68,68,.13)",
+        items: [
+          { id: "t0-0", text: "WBSトレンドたまご6ヶ月分析", description: "採用商品の業界・価格・特徴を全件Excel化", priority: 1 },
+          { id: "t0-1", text: "NHKまちかど情報室分析", description: "家事ラク・新発想・季節モチーフの頻度カウント", priority: 1 },
+          { id: "t0-2", text: "競合キッチン刃物SNS分析", description: "貝印・関孫六・グローバルの直近6ヶ月投稿傾向", priority: 2 },
+          { id: "t0-3", text: "雑誌「dancyu」「料理王国」分析", description: "編集者名・直近特集テーマを抽出", priority: 2 },
+          { id: "t0-4", text: "PR TIMES類似事例検索", description: "包丁・伝統工芸の高反響PR例を10件抽出", priority: 2 },
+          { id: "t0-5", text: "テレ朝・MBSローカル枠調査", description: "関西・福井地元枠の編集方針確認", priority: 3 },
+          { id: "t0-6", text: "Twitterトレンド週次モニタ", description: "#新生活 #母の日 等の家事系タグ追跡", priority: 3 },
+          { id: "t0-7", text: "ターゲット読者像3パターン", description: "30代主婦・40代男性料理好き・50代贈答層", priority: 2 }
+        ]
+      },
+      {
+        index: 1, name: "プレスリリースライティング", description: "本文1ページ厳守の鉄則。見出し＋3秒で分かる絵＋5W1H＋連絡先の4ブロック構成で、編集者が拾いやすい『編集前提』の原稿を仕上げる。",
+        color: "#F97316", bgLight: "rgba(249,115,22,.13)",
+        items: [
+          { id: "t1-0", text: "見出し30案ブレスト", description: "編集者目線で『3秒で意味伝わる』案を量産", priority: 1 },
+          { id: "t1-1", text: "リード文100字版作成", description: "WHO/WHAT/WHEN/WHEREを冒頭2行に圧縮", priority: 1 },
+          { id: "t1-2", text: "本文1ページ厳守版", description: "A4×1枚ピッタリ。改行・余白で読みやすく", priority: 1 },
+          { id: "t1-3", text: "ストーリー版（雑誌向け）", description: "100年史・職人物語2,000字版", priority: 2 },
+          { id: "t1-4", text: "数字版（経済紙向け）", description: "売上目標・市場規模・価格・販売台数を明記", priority: 2 },
+          { id: "t1-5", text: "FAQ別添資料", description: "10問テンプレで疑問先回り", priority: 2 },
+          { id: "t1-6", text: "校正・薬機法チェック", description: "『絶対』『日本一』『治る』等NGワード除去", priority: 1 },
+          { id: "t1-7", text: "弁護士・社内法務確認", description: "発信前72時間以内に最終承認取得", priority: 1 }
+        ]
+      },
+      {
+        index: 2, name: "プレスキット作成", description: "写真5枚＋15秒動画＋ストーリー要旨＋会社概要をDropboxリンクで一括提供。記者が『そのまま使える』素材を完成させる。",
+        color: "#EAB308", bgLight: "rgba(234,179,8,.13)",
+        items: [
+          { id: "t2-0", text: "商品写真5枚撮影", description: "白背景・俯瞰・職人手持ち・調理シーン・桐箱", priority: 1 },
+          { id: "t2-1", text: "15秒紹介動画制作", description: "音なし可・テロップ付き・SNS転載前提", priority: 1 },
+          { id: "t2-2", text: "職人インタビュー動画3分", description: "川口さん・社長の人柄が伝わる構成", priority: 2 },
+          { id: "t2-3", text: "100年史タイムライン", description: "1928年から年表化・歴代逸話3点", priority: 2 },
+          { id: "t2-4", text: "Dropboxリンク発行", description: "容量警告つき・有効期限90日", priority: 1 },
+          { id: "t2-5", text: "高解像漆塗り柄アップ", description: "朱の色合いがTV画面で映える画角", priority: 1 },
+          { id: "t2-6", text: "工房ロケ用地図", description: "取材依頼時の所在地・駐車場情報", priority: 3 },
+          { id: "t2-7", text: "公式ロゴ・カラーガイド", description: "色番・フォント指定で誤用防止", priority: 3 }
+        ]
+      },
+      {
+        index: 3, name: "発信計画・配信先選定", description: "PR TIMES＋自社配信＋FAX配信の3ルート併用。40〜60媒体に絞り込み、番組別カスタム文面で送付。",
+        color: "#22C55E", bgLight: "rgba(34,197,94,.13)",
+        items: [
+          { id: "t3-0", text: "PR TIMES配信契約", description: "1配信3万円〜・12.4万社・上場65%利用", priority: 1 },
+          { id: "t3-1", text: "媒体リスト60本作成", description: "TV15／新聞10／雑誌10／Web20／ラジオ5", priority: 1 },
+          { id: "t3-2", text: "番組別連絡先確認", description: "WBS・まちかど情報室の投稿フォーム特定", priority: 1 },
+          { id: "t3-3", text: "FAX配信業者選定", description: "メディア向けFAXは依然有効", priority: 3 },
+          { id: "t3-4", text: "発信日決定", description: "月曜午前10時が記者開封率最高", priority: 1 },
+          { id: "t3-5", text: "ブログ・自社サイト連動", description: "発信15分後に公開予約", priority: 2 },
+          { id: "t3-6", text: "代理店事前告知", description: "代理店480社にも同時報告（情報統制）", priority: 2 },
+          { id: "t3-7", text: "禁輸日（エンバーゴ）管理", description: "事前リーク防止のための社内ルール", priority: 1 }
+        ]
+      },
+      {
+        index: 4, name: "TV番組別アプローチ", description: "WBSトレンドたまご・NHKまちかど情報室・ローカル局の3軸で個別ピッチ文面を用意。同時アプローチでリスク分散。",
+        color: "#06B6D4", bgLight: "rgba(6,182,212,.13)",
+        items: [
+          { id: "t4-0", text: "WBS向けピッチ文面", description: "中小企業×伝統×革新の切り口で1ページ", priority: 1 },
+          { id: "t4-1", text: "NHKまちかど情報室向け", description: "家事ラク・季節・新発想の切り口", priority: 1 },
+          { id: "t4-2", text: "ガイアの夜明け対策案", description: "経営者奮闘ストーリーで別案用意", priority: 2 },
+          { id: "t4-3", text: "テレ朝モーニングショー", description: "暮らしコーナー向け1分尺対応", priority: 2 },
+          { id: "t4-4", text: "MBS関西ローカル", description: "福井発・関西広域での話題作り", priority: 2 },
+          { id: "t4-5", text: "ピッチメール3案", description: "件名／本文／署名のテンプレ3パターン", priority: 1 },
+          { id: "t4-6", text: "フォロワーアップDM", description: "発信3日後・1週間後の追加連絡", priority: 2 },
+          { id: "t4-7", text: "編集者リスト管理", description: "返信履歴・反応をkintoneで一元化", priority: 3 }
+        ]
+      },
+      {
+        index: 5, name: "取材対応Q&A", description: "発信後72時間が勝負。社長・職人頭・広報の3者で答弁すり合わせ。30問Q&A＋NG表現リストを事前共有。",
+        color: "#6366F1", bgLight: "rgba(99,102,241,.13)",
+        items: [
+          { id: "t5-0", text: "Q&A 30問テンプレ作成", description: "価格／製法／競合／在庫／配送／保証等", priority: 1 },
+          { id: "t5-1", text: "NG表現リスト明文化", description: "『日本一』『絶対』『治る』『癌に効く』禁止", priority: 1 },
+          { id: "t5-2", text: "社長答弁の練習", description: "想定問答ロールプレイ2回実施", priority: 1 },
+          { id: "t5-3", text: "職人頭答弁の練習", description: "川口さんが緊張せず話せる練習会", priority: 1 },
+          { id: "t5-4", text: "広報窓口の一本化", description: "問い合わせは広報担当に集約", priority: 1 },
+          { id: "t5-5", text: "対応マニュアル印刷", description: "全関係者デスクに常備", priority: 2 },
+          { id: "t5-6", text: "ロケ受け入れ準備", description: "工房・撮影動線・休憩室手配", priority: 2 },
+          { id: "t5-7", text: "クライシス対応フロー", description: "炎上・誤報時の対応手順書", priority: 3 }
+        ]
+      },
+      {
+        index: 6, name: "SNS連動拡散", description: "発信当日のX→Instagram→noteの時差連動で二次検索を取りこぼさない。代理店・職人個人アカウントも巻き込む。",
+        color: "#8B5CF6", bgLight: "rgba(139,92,246,.13)",
+        items: [
+          { id: "t6-0", text: "X発信文面作成", description: "9:00投稿・写真1枚・公式ハッシュタグ3個", priority: 1 },
+          { id: "t6-1", text: "Instagram投稿準備", description: "12:00投稿・カルーセル5枚・ストーリーズ連動", priority: 1 },
+          { id: "t6-2", text: "noteストーリー記事", description: "18:00公開・職人物語2,000字", priority: 2 },
+          { id: "t6-3", text: "代理店向け拡散依頼文", description: "上位50社に投稿用素材を事前配布", priority: 2 },
+          { id: "t6-4", text: "職人個人アカウント連動", description: "川口さん個人Instagramで職人視点投稿", priority: 2 },
+          { id: "t6-5", text: "ハッシュタグ戦略", description: "#包丁 #漆 #越前 #職人 を組み合わせ", priority: 2 },
+          { id: "t6-6", text: "インフルエンサー試送", description: "料理系YouTuber5名に試用品送付（PR表記必須）", priority: 2 },
+          { id: "t6-7", text: "炎上モニタリング", description: "Yahoo!リアルタイム検索を1時間ごと監視", priority: 1 }
+        ]
+      },
+      {
+        index: 7, name: "KPI測定・改善", description: "PV・フォロワー増・問い合わせ件数の3軸で週次レビュー。発信30日後に振り返り会議を必修化し、Year2 PRに知見蓄積。",
+        color: "#EC4899", bgLight: "rgba(236,72,153,.13)",
+        items: [
+          { id: "t7-0", text: "GA4・PR Analytics設定", description: "発信前に計測タグ設置", priority: 1 },
+          { id: "t7-1", text: "週次KPIダッシュボード", description: "PV／問い合わせ／媒体露出を一画面化", priority: 1 },
+          { id: "t7-2", text: "メディア露出記録", description: "TV録画・新聞切り抜きをアーカイブ", priority: 2 },
+          { id: "t7-3", text: "代理店問い合わせ集計", description: "店頭来店者の質問内容を全件記録", priority: 2 },
+          { id: "t7-4", text: "売上連動分析", description: "発信前後30日の売上比較", priority: 2 },
+          { id: "t7-5", text: "30日後振り返り会議", description: "社長・職人頭・広報・代理店代表参加", priority: 1 },
+          { id: "t7-6", text: "Year2 PR企画立案", description: "母の日・敬老の日連動企画書", priority: 3 },
+          { id: "t7-7", text: "メディアリスト更新", description: "返信ありの編集者を優先リスト化", priority: 3 }
+        ]
+      }
+    ]
+  },
+  matrices: [
+    {
+      themeIndex: 0, title: "市場リサーチマトリクス",
+      kaiInsight: "リサーチは『TVが何を採用したか』の事実観察から始める。仮説ではなく、過去6ヶ月の採用パターンに刃心朱-AKEを寄せ込む順番で進める。",
+      xAxis: { label: "緊急度", highLabel: "高緊急", lowLabel: "低緊急" },
+      yAxis: { label: "重要度", highLabel: "高重要", lowLabel: "低重要" },
+      quadrants: [
+        { id: "q0-tr", pos: "tr", label: "🔴 今すぐ着手", desc: "高重要・高緊急", items: [
+          { text: "WBSトレンドたまご6ヶ月分析", detail: "採用商品100件を全Excel化" },
+          { text: "NHKまちかど情報室分析", detail: "頻度の高い切り口を抽出" }
+        ]},
+        { id: "q0-tl", pos: "tl", label: "🔵 計画的推進", desc: "高重要・低緊急", items: [
+          { text: "ターゲット読者像3パターン", detail: "30代主婦・40代男性・50代贈答" },
+          { text: "競合キッチン刃物SNS分析", detail: "貝印・関孫六の発信パターン" }
+        ]},
+        { id: "q0-br", pos: "br", label: "🟡 委任・効率化", desc: "低重要・高緊急", items: [
+          { text: "PR TIMES類似事例検索", detail: "包丁・伝統工芸の高反響10件" }
+        ]},
+        { id: "q0-bl", pos: "bl", label: "⚪ 保留・見直し", desc: "低重要・低緊急", items: [
+          { text: "テレ朝・MBSローカル枠調査", detail: "関西・福井地元枠の方針" },
+          { text: "Twitterトレンド週次モニタ", detail: "家事系タグの動向" }
+        ]}
+      ]
+    },
+    {
+      themeIndex: 1, title: "プレスリリースライティングマトリクス",
+      kaiInsight: "見出しと本文1ページ厳守は記者の生理。長文・修飾過剰は『編集する前に閉じる』理由になる。NG表現除去は校正ではなくリスク管理。",
+      xAxis: { label: "緊急度", highLabel: "高緊急", lowLabel: "低緊急" },
+      yAxis: { label: "重要度", highLabel: "高重要", lowLabel: "低重要" },
+      quadrants: [
+        { id: "q1-tr", pos: "tr", label: "🔴 今すぐ着手", desc: "高重要・高緊急", items: [
+          { text: "見出し30案ブレスト", detail: "編集者目線で3秒理解できる案" },
+          { text: "本文1ページ厳守版", detail: "A4×1枚ぴったり" },
+          { text: "校正・薬機法チェック", detail: "NGワード全件除去" }
+        ]},
+        { id: "q1-tl", pos: "tl", label: "🔵 計画的推進", desc: "高重要・低緊急", items: [
+          { text: "リード文100字版作成", detail: "5W1Hを冒頭2行に圧縮" },
+          { text: "弁護士・社内法務確認", detail: "発信72時間前に最終承認" }
+        ]},
+        { id: "q1-br", pos: "br", label: "🟡 委任・効率化", desc: "低重要・高緊急", items: [
+          { text: "FAQ別添資料", detail: "10問テンプレで先回り" }
+        ]},
+        { id: "q1-bl", pos: "bl", label: "⚪ 保留・見直し", desc: "低重要・低緊急", items: [
+          { text: "ストーリー版（雑誌向け）", detail: "100年史2,000字版" },
+          { text: "数字版（経済紙向け）", detail: "売上目標・市場規模" }
+        ]}
+      ]
+    },
+    {
+      themeIndex: 2, title: "プレスキット作成マトリクス",
+      kaiInsight: "プレスキットは『そのまま使える素材集』。記者の編集工数を1秒でも減らせば採用確率が跳ね上がる。Dropbox共有が現代の常識。",
+      xAxis: { label: "緊急度", highLabel: "高緊急", lowLabel: "低緊急" },
+      yAxis: { label: "重要度", highLabel: "高重要", lowLabel: "低重要" },
+      quadrants: [
+        { id: "q2-tr", pos: "tr", label: "🔴 今すぐ着手", desc: "高重要・高緊急", items: [
+          { text: "商品写真5枚撮影", detail: "白背景・俯瞰・職人手持ち他" },
+          { text: "15秒紹介動画制作", detail: "音なし可・SNS転載前提" },
+          { text: "Dropboxリンク発行", detail: "容量警告つき・有効90日" }
+        ]},
+        { id: "q2-tl", pos: "tl", label: "🔵 計画的推進", desc: "高重要・低緊急", items: [
+          { text: "職人インタビュー動画3分", detail: "川口さん・社長の人柄" },
+          { text: "高解像漆塗り柄アップ", detail: "朱の色合いが映える画角" }
+        ]},
+        { id: "q2-br", pos: "br", label: "🟡 委任・効率化", desc: "低重要・高緊急", items: [
+          { text: "100年史タイムライン", detail: "1928年から年表化" }
+        ]},
+        { id: "q2-bl", pos: "bl", label: "⚪ 保留・見直し", desc: "低重要・低緊急", items: [
+          { text: "工房ロケ用地図", detail: "取材時の所在地情報" },
+          { text: "公式ロゴ・カラーガイド", detail: "誤用防止" }
+        ]}
+      ]
+    },
+    {
+      themeIndex: 3, title: "発信計画・配信先選定マトリクス",
+      kaiInsight: "PR TIMES＋自社配信＋FAXの3ルート併用が安全。一斉送信より番組別カスタム文面の方が3倍開封される。エンバーゴ管理は社内ルール化必須。",
+      xAxis: { label: "緊急度", highLabel: "高緊急", lowLabel: "低緊急" },
+      yAxis: { label: "重要度", highLabel: "高重要", lowLabel: "低重要" },
+      quadrants: [
+        { id: "q3-tr", pos: "tr", label: "🔴 今すぐ着手", desc: "高重要・高緊急", items: [
+          { text: "PR TIMES配信契約", detail: "1配信3万円〜" },
+          { text: "媒体リスト60本作成", detail: "TV15/新聞10/雑誌10/Web20/ラジオ5" },
+          { text: "発信日決定", detail: "月曜午前10時が開封率最高" }
+        ]},
+        { id: "q3-tl", pos: "tl", label: "🔵 計画的推進", desc: "高重要・低緊急", items: [
+          { text: "番組別連絡先確認", detail: "WBS・まちかど情報室の投稿フォーム" },
+          { text: "禁輸日（エンバーゴ）管理", detail: "事前リーク防止" }
+        ]},
+        { id: "q3-br", pos: "br", label: "🟡 委任・効率化", desc: "低重要・高緊急", items: [
+          { text: "ブログ・自社サイト連動", detail: "発信15分後に公開予約" }
+        ]},
+        { id: "q3-bl", pos: "bl", label: "⚪ 保留・見直し", desc: "低重要・低緊急", items: [
+          { text: "FAX配信業者選定", detail: "メディア向けFAX" },
+          { text: "代理店事前告知", detail: "480社にも同時報告" }
+        ]}
+      ]
+    },
+    {
+      themeIndex: 4, title: "TV番組別アプローチマトリクス",
+      kaiInsight: "WBSは『中小×伝統×革新』、NHKまちかど情報室は『家事ラク・季節』。同じ商品でも切り口を変えるのが本質。1案に集中せず3案同時投入。",
+      xAxis: { label: "緊急度", highLabel: "高緊急", lowLabel: "低緊急" },
+      yAxis: { label: "重要度", highLabel: "高重要", lowLabel: "低重要" },
+      quadrants: [
+        { id: "q4-tr", pos: "tr", label: "🔴 今すぐ着手", desc: "高重要・高緊急", items: [
+          { text: "WBS向けピッチ文面", detail: "中小×伝統×革新の切り口" },
+          { text: "NHKまちかど情報室向け", detail: "家事ラク・季節の切り口" },
+          { text: "ピッチメール3案", detail: "件名／本文／署名テンプレ" }
+        ]},
+        { id: "q4-tl", pos: "tl", label: "🔵 計画的推進", desc: "高重要・低緊急", items: [
+          { text: "ガイアの夜明け対策案", detail: "経営者奮闘ストーリー版" },
+          { text: "テレ朝モーニングショー", detail: "暮らしコーナー1分尺" }
+        ]},
+        { id: "q4-br", pos: "br", label: "🟡 委任・効率化", desc: "低重要・高緊急", items: [
+          { text: "MBS関西ローカル", detail: "福井発・関西広域" }
+        ]},
+        { id: "q4-bl", pos: "bl", label: "⚪ 保留・見直し", desc: "低重要・低緊急", items: [
+          { text: "フォロワーアップDM", detail: "発信3日後・1週間後" },
+          { text: "編集者リスト管理", detail: "返信履歴をkintone化" }
+        ]}
+      ]
+    },
+    {
+      themeIndex: 5, title: "取材対応Q&Aマトリクス",
+      kaiInsight: "発信後72時間が勝負。社長・職人頭・広報の3者で答弁を揃えるロールプレイは絶対必修。クライシス対応フローまで先回り設計が事故ゼロの鍵。",
+      xAxis: { label: "緊急度", highLabel: "高緊急", lowLabel: "低緊急" },
+      yAxis: { label: "重要度", highLabel: "高重要", lowLabel: "低重要" },
+      quadrants: [
+        { id: "q5-tr", pos: "tr", label: "🔴 今すぐ着手", desc: "高重要・高緊急", items: [
+          { text: "Q&A 30問テンプレ作成", detail: "価格／製法／競合／在庫" },
+          { text: "NG表現リスト明文化", detail: "『日本一』『絶対』『治る』禁止" },
+          { text: "社長答弁の練習", detail: "想定問答ロープレ2回" }
+        ]},
+        { id: "q5-tl", pos: "tl", label: "🔵 計画的推進", desc: "高重要・低緊急", items: [
+          { text: "職人頭答弁の練習", detail: "川口さん緊張対策" },
+          { text: "広報窓口の一本化", detail: "問い合わせ集約" }
+        ]},
+        { id: "q5-br", pos: "br", label: "🟡 委任・効率化", desc: "低重要・高緊急", items: [
+          { text: "対応マニュアル印刷", detail: "全関係者デスクに常備" }
+        ]},
+        { id: "q5-bl", pos: "bl", label: "⚪ 保留・見直し", desc: "低重要・低緊急", items: [
+          { text: "ロケ受け入れ準備", detail: "工房・撮影動線・休憩室" },
+          { text: "クライシス対応フロー", detail: "炎上・誤報時の手順" }
+        ]}
+      ]
+    },
+    {
+      themeIndex: 6, title: "SNS連動拡散マトリクス",
+      kaiInsight: "発信当日9時に一斉投稿しない。X→Instagram→noteの時差連動で二次検索を取りこぼさない。代理店・職人個人アカも巻き込む。",
+      xAxis: { label: "緊急度", highLabel: "高緊急", lowLabel: "低緊急" },
+      yAxis: { label: "重要度", highLabel: "高重要", lowLabel: "低重要" },
+      quadrants: [
+        { id: "q6-tr", pos: "tr", label: "🔴 今すぐ着手", desc: "高重要・高緊急", items: [
+          { text: "X発信文面作成", detail: "9:00投稿・写真1枚・ハッシュ3個" },
+          { text: "Instagram投稿準備", detail: "12:00・カルーセル5枚" },
+          { text: "炎上モニタリング", detail: "Yahoo!リアルタイム検索を1時間ごと" }
+        ]},
+        { id: "q6-tl", pos: "tl", label: "🔵 計画的推進", desc: "高重要・低緊急", items: [
+          { text: "noteストーリー記事", detail: "18:00公開・職人物語2,000字" },
+          { text: "代理店向け拡散依頼文", detail: "上位50社に素材配布" }
+        ]},
+        { id: "q6-br", pos: "br", label: "🟡 委任・効率化", desc: "低重要・高緊急", items: [
+          { text: "職人個人アカウント連動", detail: "川口さんIG投稿" }
+        ]},
+        { id: "q6-bl", pos: "bl", label: "⚪ 保留・見直し", desc: "低重要・低緊急", items: [
+          { text: "ハッシュタグ戦略", detail: "#包丁#漆#越前#職人" },
+          { text: "インフルエンサー試送", detail: "料理系YouTuber5名" }
+        ]}
+      ]
+    },
+    {
+      themeIndex: 7, title: "KPI測定・改善マトリクス",
+      kaiInsight: "発信後30日のレビュー会議が翌年のPR強さを決める。Year2は本年の媒体露出記録・代理店問い合わせデータが資産。記録を取らないPRは消えるだけ。",
+      xAxis: { label: "緊急度", highLabel: "高緊急", lowLabel: "低緊急" },
+      yAxis: { label: "重要度", highLabel: "高重要", lowLabel: "低重要" },
+      quadrants: [
+        { id: "q7-tr", pos: "tr", label: "🔴 今すぐ着手", desc: "高重要・高緊急", items: [
+          { text: "GA4・PR Analytics設定", detail: "発信前に計測タグ設置" },
+          { text: "週次KPIダッシュボード", detail: "PV／問い合わせ／露出を一画面" }
+        ]},
+        { id: "q7-tl", pos: "tl", label: "🔵 計画的推進", desc: "高重要・低緊急", items: [
+          { text: "メディア露出記録", detail: "TV録画・新聞切り抜き保存" },
+          { text: "30日後振り返り会議", detail: "全関係者参加" }
+        ]},
+        { id: "q7-br", pos: "br", label: "🟡 委任・効率化", desc: "低重要・高緊急", items: [
+          { text: "代理店問い合わせ集計", detail: "店頭来店者質問を全件記録" }
+        ]},
+        { id: "q7-bl", pos: "bl", label: "⚪ 保留・見直し", desc: "低重要・低緊急", items: [
+          { text: "Year2 PR企画立案", detail: "母の日・敬老の日連動" },
+          { text: "メディアリスト更新", detail: "返信ありの編集者を優先化" }
+        ]}
+      ]
+    }
+  ],
+  flows: [
+    {
+      id: "fl-0", themeIndex: 4, quadrant: "q4-tr", sourceItem: "WBS向けピッチ文面",
+      title: "WBSトレンドたまご ピッチフロー（D-45 → 採用 → 放映）",
+      kaiComment: "WBS採用率は3〜5%（推定）。1発で当てる発想を捨て、3案同時並行＋媒体多面アプローチの数を打つ。採用率の数字を直視するのが本気のPR。",
+      steps: [
+        { order: 1, title: "WBS編集者向け文面確定", description: "中小企業×伝統×革新の切り口で『100年・漆・職人手書き』を打ち出す。本文A4×1枚厳守。", type: "action", duration: "5日", output: "ピッチレターv1", kaiHint: "WBSは『絵になるか』『面白い数字があるか』を見る。漆塗りの色×職人手書きで両方クリア。" },
+        { order: 2, title: "プレスキット添付準備", description: "Dropbox共有リンクで写真5枚＋15秒動画。社長コメント・職人プロフィールも同梱。", type: "action", duration: "3日", output: "Dropboxリンク", kaiHint: "メール本文に直接画像を貼らない。重くて開封されない事故が起こる。" },
+        { order: 3, title: "ピッチメール送信", description: "番組投稿フォーム＋ディレクター個人宛の2ルート。月曜10時送信が開封率最高。", type: "milestone", duration: "1日", output: "送信ログ", kaiHint: "送信後10分以内にCC内の社内2名で『着いた／文面OK』をチェック。誤送信修正の最終チャンス。" },
+        { order: 4, title: "1週間後フォローアップ", description: "返信なければ1週間後に追加情報（在庫・新写真）を提供する形で連絡。", type: "action", duration: "1日", output: "フォロー履歴", kaiHint: "『返事は？』と聞かない。新情報を提供する形で接触を続ける。" },
+        { order: 5, title: "採用連絡 → 取材調整", description: "採用連絡が来たら24時間以内に取材日・場所・必要素材を確認・回答。", type: "decision", duration: "即日", output: "取材スケジュール", kaiHint: "返答遅延=NO同然。電話番号は広報＋社長の2系統で常時繋がる体制に。" },
+        { order: 6, title: "ロケ受け入れ・放映", description: "工房・撮影動線・職人インタビュー準備。放映直後にSNS・自社サイトで連動。", type: "milestone", duration: "1日", output: "放映＋SNS連動", kaiHint: "放映中の画面キャプチャをリアルタイムで撮影。後日PR資産として無価。" }
+      ]
+    },
+    {
+      id: "fl-1", themeIndex: 4, quadrant: "q4-tr", sourceItem: "NHKまちかど情報室向け",
+      title: "NHKまちかど情報室 ピッチフロー（家事ラク・季節切り口）",
+      kaiComment: "まちかど情報室は『家事ラク・季節モチーフ・新発想』が必修3条件。漆塗り柄を『母の日・敬老の日のギフト×軽くて切れ味抜群』のストーリーで再編集する。",
+      steps: [
+        { order: 1, title: "切り口仮説3案作成", description: "①母の日ギフト ②家事ラク（軽量・切れ味）③福井伝統工芸の新提案 の3案を同時に用意。", type: "action", duration: "3日", output: "ピッチ案3本", kaiHint: "NHKは『公益性・新発想・季節』の3点で評価。商業色を抑えて素材として提案。" },
+        { order: 2, title: "投稿フォーム＋編集者問合せ", description: "NHK広報経由で『おはよう日本まちかど情報室』担当ディレクターへ。投稿フォームも併用。", type: "action", duration: "2日", output: "送信完了", kaiHint: "民放と違い、NHKは商品名連呼NG。『国産包丁の新発想』など中性的に。" },
+        { order: 3, title: "公益性・季節性の補強", description: "5月母の日・6月夏のギフト時期に合わせた素材セットを追加送付。", type: "milestone", duration: "1週間", output: "追加素材", kaiHint: "1回送って終わりは不採用フラグ。3週間で3回情報提供が目安。" },
+        { order: 4, title: "他局重複の事前通知", description: "WBSや他媒体に同時打診中であることを正直に伝える。NHKは独自性を重視。", type: "decision", duration: "即日", output: "事前通知メール", kaiHint: "嘘はNG。『WBSにも打診中』を伝えた上で『先に取り上げていただける場合は調整可』と添える。" },
+        { order: 5, title: "ロケ準備・放映", description: "ロケは半日程度。職人作業の絵が必修。漆塗りの色合いと軽量さの2点が見せ場。", type: "milestone", duration: "1日", output: "放映", kaiHint: "NHK放映後は問い合わせ電話が殺到する。事前に応答体制を組む。代理店にも事前共有。" }
+      ]
+    },
+    {
+      id: "fl-2", themeIndex: 5, quadrant: "q5-tr", sourceItem: "Q&A 30問テンプレ作成",
+      title: "取材対応Q&A 30問 設計フロー（社長・職人頭・広報の3者答弁すり合わせ）",
+      kaiComment: "発信後72時間が勝負。媒体取材は事前準備で9割決まる。Q&A・NG表現・ロールプレイの3点セットを発信前に完成させる。これがプロのPRの体制。",
+      steps: [
+        { order: 1, title: "Q&A 30問の起草", description: "価格／製法／競合／在庫／配送／保証／代理店／環境配慮／海外展開／薬機法等の10カテゴリ×3問。", type: "action", duration: "5日", output: "Q&A 30問ドラフト", kaiHint: "想定問答は『答えやすい質問』ではなく『一番怖い質問』を最初に書く。" },
+        { order: 2, title: "NG表現リスト明文化", description: "『日本一』『絶対』『治る』『癌に効く』『業界初』等10語以上。理由も併記。", type: "action", duration: "2日", output: "NG表現リスト", kaiHint: "景表法・薬機法の指摘事例を経済産業省サイトから5件引用すると説得力増。" },
+        { order: 3, title: "3者答弁すり合わせ会議", description: "社長・職人頭・広報の3名で2時間ミーティング。誰がどの質問を答えるか役割分担。", type: "milestone", duration: "1日", output: "答弁分担表", kaiHint: "職人頭の川口さんに『価格』を聞かれたら『広報に確認して回答します』と返す形で逃げる練習。" },
+        { order: 4, title: "ロールプレイ2回実施", description: "社内で記者役・回答役を分けて模擬取材。録画して後で見直す。", type: "action", duration: "2日", output: "ロープレ録画", kaiHint: "緊張で『えーと』『あの』が連発する。録画見ると本人が一番ショックを受ける。録画は必修。" },
+        { order: 5, title: "対応マニュアル印刷・配布", description: "Q&A・NG表現・連絡フロー・クライシス対応の4点セットを全関係者デスクに常備。", type: "action", duration: "3日", output: "対応マニュアル", kaiHint: "受付・倉庫スタッフにも配布。記者が裏口から来ることもある。" },
+        { order: 6, title: "クライシス対応フロー策定", description: "炎上・誤報・SNS拡散時の48時間対応手順。社長判断ルール明確化。", type: "milestone", duration: "3日", output: "クライシス手順書", kaiHint: "『悪意ある記事が出たら24時間以内に社長コメント発表』を事前合意。動けば沈静化が早い。" }
+      ]
+    }
+  ],
+  gantt: {
+    title: "8ヶ月PRロードマップ（D-60 → ローンチ → D+180／タスククリックで関連箇所へ）",
+    totalWeeks: 32,
+    phases: [
+      {
+        name: "Phase 1：準備（D-60 〜 D-30）", color: "#a52a2a",
+        tasks: [
+          { name: "WBS・NHK6ヶ月分析", startWeek: 1, endWeek: 3, isCritical: true, milestone: false, linkTo: { type: "matrix", themeIndex: 0 } },
+          { name: "見出し30案・本文ドラフト", startWeek: 2, endWeek: 4, isCritical: true, milestone: false, linkTo: { type: "matrix", themeIndex: 1 } },
+          { name: "商品写真5枚撮影", startWeek: 3, endWeek: 5, isCritical: true, milestone: false, linkTo: { type: "matrix", themeIndex: 2 } },
+          { name: "15秒動画＋3分インタビュー制作", startWeek: 4, endWeek: 6, isCritical: false, milestone: false, linkTo: { type: "matrix", themeIndex: 2 } },
+          { name: "PR TIMES契約・媒体リスト60本", startWeek: 5, endWeek: 7, isCritical: true, milestone: false, linkTo: { type: "matrix", themeIndex: 3 } },
+          { name: "プレスキット完成", startWeek: 8, endWeek: 8, isCritical: false, milestone: true, linkTo: { type: "matrix", themeIndex: 2 } }
+        ]
+      },
+      {
+        name: "Phase 2：ピッチ（D-30 〜 D-7）", color: "#7a1f1f",
+        tasks: [
+          { name: "WBS向けピッチ文面", startWeek: 9, endWeek: 11, isCritical: true, milestone: false, linkTo: { type: "flow", themeIndex: 4, quadrant: "q4-tr", sourceItem: "WBS向けピッチ文面" } },
+          { name: "NHKまちかど情報室向け", startWeek: 9, endWeek: 11, isCritical: true, milestone: false, linkTo: { type: "flow", themeIndex: 4, quadrant: "q4-tr", sourceItem: "NHKまちかど情報室向け" } },
+          { name: "Q&A 30問・NG表現リスト", startWeek: 10, endWeek: 12, isCritical: true, milestone: false, linkTo: { type: "flow", themeIndex: 5, quadrant: "q5-tr", sourceItem: "Q&A 30問テンプレ作成" } },
+          { name: "3者ロールプレイ2回", startWeek: 11, endWeek: 12, isCritical: false, milestone: false, linkTo: { type: "matrix", themeIndex: 5 } },
+          { name: "弁護士・法務最終承認", startWeek: 12, endWeek: 12, isCritical: false, milestone: true, linkTo: { type: "matrix", themeIndex: 1 } },
+          { name: "ピッチメール送信開始", startWeek: 13, endWeek: 13, isCritical: false, milestone: true, linkTo: { type: "matrix", themeIndex: 4 } }
+        ]
+      },
+      {
+        name: "Phase 3：発信〜放映（D-day 〜 D+30）", color: "#b58a3b",
+        tasks: [
+          { name: "PR TIMES配信", startWeek: 14, endWeek: 14, isCritical: true, milestone: true, linkTo: { type: "matrix", themeIndex: 3 } },
+          { name: "X→IG→note時差連動", startWeek: 14, endWeek: 14, isCritical: false, milestone: false, linkTo: { type: "matrix", themeIndex: 6 } },
+          { name: "炎上モニタリング（72時間）", startWeek: 14, endWeek: 14, isCritical: true, milestone: false, linkTo: { type: "matrix", themeIndex: 6 } },
+          { name: "TV局フォローアップ", startWeek: 15, endWeek: 17, isCritical: false, milestone: false, linkTo: { type: "matrix", themeIndex: 4 } },
+          { name: "取材受け入れ・ロケ", startWeek: 15, endWeek: 20, isCritical: false, milestone: false, linkTo: { type: "flow", themeIndex: 5, quadrant: "q5-tr", sourceItem: "Q&A 30問テンプレ作成" } },
+          { name: "週次KPIレビュー", startWeek: 15, endWeek: 18, isCritical: false, milestone: false, linkTo: { type: "matrix", themeIndex: 7 } },
+          { name: "30日後振り返り会議", startWeek: 18, endWeek: 18, isCritical: false, milestone: true, linkTo: { type: "dashboard" } }
+        ]
+      },
+      {
+        name: "Phase 4：拡散・改善（D+30 〜 D+180）", color: "#5b1414",
+        tasks: [
+          { name: "代理店問い合わせ集計", startWeek: 19, endWeek: 32, isCritical: false, milestone: false, linkTo: { type: "matrix", themeIndex: 7 } },
+          { name: "売上連動分析", startWeek: 19, endWeek: 26, isCritical: false, milestone: false, linkTo: { type: "matrix", themeIndex: 7 } },
+          { name: "メディア露出記録アーカイブ", startWeek: 19, endWeek: 32, isCritical: false, milestone: false, linkTo: { type: "matrix", themeIndex: 7 } },
+          { name: "母の日連動・追加PR企画", startWeek: 24, endWeek: 28, isCritical: false, milestone: false, linkTo: { type: "matrix", themeIndex: 7 } },
+          { name: "Year2 PR企画立案", startWeek: 28, endWeek: 32, isCritical: false, milestone: false, linkTo: { type: "matrix", themeIndex: 7 } },
+          { name: "180日総括レビュー", startWeek: 32, endWeek: 32, isCritical: false, milestone: true, linkTo: { type: "dashboard" } }
+        ]
+      }
+    ]
+  }
+};
+
+const TC = ['#EF4444','#F97316','#EAB308','#22C55E','#06B6D4','#6366F1','#8B5CF6','#EC4899'];
+const TBG = ['rgba(239,68,68,.13)','rgba(249,115,22,.13)','rgba(234,179,8,.13)','rgba(34,197,94,.13)','rgba(6,182,212,.13)','rgba(99,102,241,.13)','rgba(139,92,246,.13)','rgba(236,72,153,.13)'];
+let curTheme = 0;
+const SK = 'rsh_echizen_promo';
+const checks = () => { try { return JSON.parse(localStorage.getItem(SK)||'{}'); } catch { return {}; } };
+const saveCheck = (id, v) => { const c = checks(); c[id] = v; localStorage.setItem(SK, JSON.stringify(c)); updatePct(); };
+
+function go(name, tabEl) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('on'));
+  document.getElementById('v-' + name).classList.add('on');
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('on'));
+  if (tabEl) tabEl.classList.add('on');
+  else { const idx = {dashboard:0,mandala:1,matrix:2,flow:3,gantt:4}[name]; if (idx != null) document.querySelectorAll('.tab')[idx].classList.add('on'); }
+  if (name === 'mandala') renderMandala();
+  if (name === 'matrix') renderMatrix(curTheme);
+  if (name === 'gantt') renderGantt();
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function goMatrix(ti) { curTheme = ti; go('matrix', null); }
+function goFlow(ti, qid, itemTx) {
+  const fl = DATA.flows.find(f => f.themeIndex === ti && f.quadrant === qid && f.sourceItem === itemTx);
+  const th = DATA.mandala.themes[ti];
+  document.getElementById('flBcTh').textContent = th ? th.name : 'マトリクス';
+  document.getElementById('flBcIt').textContent = itemTx || 'フロー';
+  document.getElementById('flCtx').textContent = itemTx;
+  if (fl) renderFlow(fl); else renderDynamicFlow(ti, qid, itemTx);
+  go('flow', null);
+}
+
+function renderDynamicFlow(ti, qid, itemTx) {
+  const th=DATA.mandala.themes[ti], mx=DATA.matrices[ti];
+  const quad=mx?mx.quadrants.find(q=>q.id===qid):null;
+  const item=quad?quad.items.find(i=>i.text===itemTx):null;
+  document.getElementById('flEmpty').style.display='none';
+  const con=document.getElementById('flSteps'); con.innerHTML='';
+  if(item){
+    const fakeStep={ order:1, title:item.text, description:item.detail||'このアクションの詳細フローは未構築です。下の「🪄 詳細フロー作成プロンプト」を外部AIに投げると、Mermaid形式のフロー図＋実行ステップ＋チェックリストが得られます。', type:'action', duration:'要見積', output:'要定義', kaiHint:'実行前の3チェック：①担当者と期限は決まったか／②必要リソース（人・予算・ツール）は確保したか／③完了基準（成果物）は明確か' };
+    const si=SICO[fakeStep.type]||SICO.action;
+    const d=document.createElement('div'); d.className='fl-step';
+    const quadCls=quad?(quad.pos==='tr'?'fb-wrn':quad.pos==='tl'?'fb-act':quad.pos==='br'?'fb-dec':'fb-out'):'fb-dur';
+    d.innerHTML=`<div class="fl-icon" style="background:${si.bg};color:${si.col}">${si.ic}</div><div class="fl-card"><div class="fl-ord">STEP ${fakeStep.order}</div><div class="fl-title">${fakeStep.title}</div><div class="fl-desc">${fakeStep.description}</div><div class="fl-meta"><span class="fbg ${si.cls}">${si.lbl}</span>${th?`<span class="fbg fb-dur">📂 ${th.name}</span>`:''}${quad?`<span class="fbg ${quadCls}">${quad.label||''}</span>`:''}</div><div class="fl-hint">${fakeStep.kaiHint}</div>${buildFlowPromptHTML(fakeStep)}</div>`;
+    con.appendChild(d);
+  } else { con.innerHTML='<div class="empty-s"><div class="empty-s-i">→</div><div>項目情報が見つかりません</div></div>'; }
+  document.getElementById('flKaiTx').textContent=th?`「${th.name}」のテーマから選択したアクションです。下記プロンプトを Claude / ChatGPT / Gemini に投げると、詳細なフロー図と実行手順がその場で生成できます。`:'';
+  document.getElementById('flKai').style.display='block';
+}
+
+function initDash() {
+  const m=DATA.meta, k=DATA.kai;
+  document.getElementById('hTheme').textContent=m.theme;
+  document.getElementById('dTheme').textContent=m.theme;
+  document.getElementById('dMeta').textContent='作成日: '+m.createdAt+(m.targetPeriod?'　目標期間: '+m.targetPeriod:'');
+  document.getElementById('dBg').textContent=m.background;
+  document.getElementById('kSum').textContent=k.summary;
+  document.getElementById('kVerd').textContent='⚠️ '+k.consultantVerdict;
+  document.getElementById('sFlows').textContent=DATA.flows.length;
+  const tg=document.getElementById('kTags');
+  (k.strengths||[]).forEach(s=>{const x=document.createElement('span');x.className='ktag ok';x.textContent='✓ '+s;tg.appendChild(x);});
+  (k.risks||[]).forEach(r=>{const x=document.createElement('span');x.className='ktag ng';x.textContent='⚠ '+r;tg.appendChild(x);});
+  const ag=document.getElementById('dActs');
+  DATA.mandala.themes.forEach(th=>{
+    const top=th.items.filter(i=>i.priority===1)[0]; if(!top) return;
+    const col=th.color||TC[th.index];
+    const d=document.createElement('div'); d.className='act-item'; d.onclick=()=>goMatrix(th.index);
+    d.innerHTML=`<div class="act-dot" style="background:${col}"></div><div><div class="act-tx"><strong>${th.name}</strong></div><div class="act-sub">${top.text}</div></div>`;
+    ag.appendChild(d);
+  });
+  updatePct();
+}
+
+function updatePct() {
+  const c=checks();
+  const total=DATA.flows.reduce((s,f)=>s+f.steps.length,0)||1;
+  const done=Object.values(c).filter(Boolean).length;
+  const p=Math.round(done/total*100);
+  document.getElementById('hPct').textContent=p+'%';
+  document.getElementById('hFill').style.width=p+'%';
+  document.getElementById('sPct').textContent=p+'%';
+}
+
+const SG = [[0,0],[0,3],[0,6],[3,6],[6,6],[6,3],[6,0],[3,0]];
+const CP = [[3,3],[3,4],[3,5],[4,5],[5,5],[5,4],[5,3],[4,3]];
+const IO = [[0,0],[0,1],[0,2],[1,0],[1,2],[2,0],[2,1],[2,2]];
+
+function renderMandala() {
+  const grid=Array.from({length:9},()=>Array(9).fill({t:'empty'}));
+  grid[4][4]={t:'center'};
+  DATA.mandala.themes.forEach((th,ti)=>{
+    const [cr,cc]=CP[ti]; grid[cr][cc]={t:'theme',th,ti};
+    const [sr,sc]=SG[ti]; grid[sr+1][sc+1]={t:'tr',th,ti};
+    th.items.forEach((item,ii)=>{ const [or,oc]=IO[ii]; grid[sr+or][sc+oc]={t:'item',item,th,ti}; });
+  });
+  const g=document.getElementById('mGrid'); g.innerHTML='';
+  for(let r=0;r<9;r++) for(let c=0;c<9;c++){
+    const cell=grid[r][c], d=document.createElement('div'); d.className='mc';
+    if(cell.t==='center'){ d.classList.add('center'); d.textContent=DATA.mandala.center; }
+    else if(cell.t==='theme'){ const col=cell.th.color||TC[cell.ti]; d.classList.add('theme','cp'); d.style.background=col; d.textContent=cell.th.name; d.title=cell.th.description||''; d.onclick=()=>goMatrix(cell.ti); }
+    else if(cell.t==='tr'){ const col=cell.th.color||TC[cell.ti]; d.classList.add('tr','cp'); d.style.background=col; d.style.color='#fff'; d.textContent=cell.th.name; d.onclick=()=>goMatrix(cell.ti); }
+    else if(cell.t==='item'){ const bg=cell.th.bgLight||TBG[cell.ti]; d.classList.add('item'); d.style.background=bg; d.textContent=cell.item.text; d.title=cell.item.description||cell.item.text; }
+    else { d.classList.add('empty'); }
+    g.appendChild(d);
+  }
+}
+
+function renderMatrix(ti) {
+  curTheme=ti;
+  const th=DATA.mandala.themes[ti], mx=DATA.matrices[ti]||DATA.matrices[0];
+  document.getElementById('mxBcTh').textContent=th?th.name:'マトリクス';
+  const pp=document.getElementById('tPills'); pp.innerHTML='';
+  DATA.mandala.themes.forEach((t,i)=>{
+    const col=t.color||TC[i];
+    const p=document.createElement('div'); p.className='t-pill'+(i===ti?' on':'');
+    p.style.background=col; p.textContent=t.name;
+    const insight=(DATA.kai&&DATA.kai.themeInsights||[]).find(x=>x.index===i);
+    const tip=(insight&&insight.insight)||t.description||'';
+    if(tip) p.setAttribute('data-tip', tip);
+    p.onclick=()=>renderMatrix(i); pp.appendChild(p);
+  });
+  if(!mx) return;
+  document.getElementById('mxAy').innerHTML='<span class="ax-pole high">↑ '+(mx.yAxis?.highLabel||'高重要')+'</span><span class="ax-label">'+(mx.yAxis?.label||'重要度')+'</span><span class="ax-pole low">↓ '+(mx.yAxis?.lowLabel||'低重要')+'</span>';
+  document.getElementById('mxAx').innerHTML='<span class="ax-pole low">← '+(mx.xAxis?.lowLabel||'低緊急')+'</span><span class="ax-label">'+(mx.xAxis?.label||'緊急度')+'</span><span class="ax-pole high">'+(mx.xAxis?.highLabel||'高緊急')+' →</span>';
+  const g=document.getElementById('mxGrid');
+  Array.from(g.querySelectorAll('.quad')).forEach(q=>q.remove());
+  ['tl','tr','bl','br'].forEach(pos=>{
+    const qd=mx.quadrants.find(q=>q.pos===pos);
+    const d=document.createElement('div'); d.className='quad q-'+pos;
+    if(qd){
+      d.innerHTML=`<div class="quad-lbl">${qd.label}</div><div class="quad-desc">${qd.desc||''}</div>`;
+      (qd.items||[]).forEach(item=>{
+        const it=document.createElement('div'); it.className='qi';
+        it.innerHTML=`<div class="qi-tx">${item.text}${item.detail?`<div class="qi-dt">${item.detail}</div>`:''}</div><div class="qi-ar">→</div>`;
+        it.onclick=()=>goFlow(ti,qd.id,item.text);
+        d.appendChild(it);
+      });
+    }
+    g.appendChild(d);
+  });
+  const hasInsight=!!mx.kaiInsight;
+  const hasCore=DATA.kai&&(DATA.kai.coreIssue||DATA.kai.topPriority);
+  if(hasInsight) document.getElementById('mxKaiTx').textContent=mx.kaiInsight;
+  else document.getElementById('mxKaiTx').textContent='';
+  if(hasCore){
+    document.getElementById('mxCoreIssue').textContent=DATA.kai.coreIssue||'—';
+    document.getElementById('mxTopPrio').textContent=DATA.kai.topPriority||'—';
+    document.getElementById('mxCore').style.display='grid';
+  } else document.getElementById('mxCore').style.display='none';
+  document.getElementById('mxKai').style.display=(hasInsight||hasCore)?'block':'none';
+}
+
+const SICO = {
+  action: {bg:'rgba(165,42,42,.2)', col:'#7a1f1f', ic:'▶', cls:'fb-act', lbl:'アクション'},
+  decision: {bg:'rgba(245,158,11,.2)', col:'#92400e', ic:'◆', cls:'fb-dec', lbl:'判断'},
+  milestone: {bg:'rgba(16,185,129,.2)', col:'#065f46', ic:'★', cls:'fb-mil', lbl:'マイルストーン'},
+  warning: {bg:'rgba(239,68,68,.2)', col:'#991b1b', ic:'!', cls:'fb-wrn', lbl:'注意'}
+};
+
+function renderFlow(fl) {
+  const c=checks(), con=document.getElementById('flSteps'); con.innerHTML='';
+  document.getElementById('flEmpty').style.display='none';
+  fl.steps.forEach(step=>{
+    const si=SICO[step.type]||SICO.action;
+    const cid=fl.id+'-s'+step.order;
+    const ck=c[cid]||false;
+    const d=document.createElement('div'); d.className='fl-step';
+    d.innerHTML=`<div class="fl-icon" style="background:${si.bg};color:${si.col}">${si.ic}</div><div class="fl-card${ck?' done':''}"><div class="fl-ord">STEP ${step.order}</div><div class="fl-title">${step.title}</div><div class="fl-desc">${step.description}</div><div class="fl-meta"><span class="fbg ${si.cls}">${si.lbl}</span>${step.duration?`<span class="fbg fb-dur">⏱ ${step.duration}</span>`:''}${step.output?`<span class="fbg fb-out">📄 ${step.output}</span>`:''}</div>${step.kaiHint?`<div class="fl-hint">${step.kaiHint}</div>`:''}${buildFlowPromptHTML(step)}<label class="fl-check${ck?' done':''}"><input type="checkbox" ${ck?'checked':''} data-cid="${cid}" onchange="onCk(this)">完了としてマーク</label></div>`;
+    con.appendChild(d);
+  });
+  if(fl.kaiComment){ document.getElementById('flKaiTx').textContent=fl.kaiComment; document.getElementById('flKai').style.display='block'; }
+  else document.getElementById('flKai').style.display='none';
+}
+
+function onCk(el) {
+  saveCheck(el.dataset.cid, el.checked);
+  const card=el.closest('.fl-card'), lbl=el.closest('.fl-check');
+  el.checked ? (card.classList.add('done'),lbl.classList.add('done')) : (card.classList.remove('done'),lbl.classList.remove('done'));
+}
+
+function escHtml(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function buildFlowPromptHTML(step){
+  const prompt=`あなたは業務プロセス設計の専門家です。以下のタスクを、実践レベルの詳細フロー（Mermaid記法）と実行アドバイスにまで構造分解してください。\n\n【対象タスク】\nタイトル：${step.title}\n概要：${step.description}\n所要時間：${step.duration||'未定'}\n成果物：${step.output||'未定'}\nつまずきポイント：${step.kaiHint||'なし'}\n\n【出力フォーマット】\n1. Mermaid記法のflowchartコード（コードブロックで出力／draw.io互換）\n   - 5〜10サブステップ\n   - 分岐・判断ポイント（{}で表現）を含める\n2. 各サブステップの実行アドバイス（番号付きリスト）\n3. 失敗時のリカバリープラン（短く）`;
+  return `<details class="fl-prompt"><summary>🪄 詳細フロー作成プロンプトを取得（外部AIにコピペ）</summary><div class="fl-prompt-body"><p class="fl-prompt-desc">このプロンプトを Claude / ChatGPT / Gemini に貼り付けると、Mermaid形式のフロー図＋実行アドバイス＋チェックリスト＋リカバリープランが得られます。</p><pre class="fl-prompt-code">${escHtml(prompt)}</pre><div class="fl-prompt-actions"><button class="fl-prompt-btn" onclick="copyPrompt(this)">📋 プロンプトをコピー</button></div></div></details>`;
+}
+function copyPrompt(btn){
+  const code=btn.parentElement.previousElementSibling.textContent;
+  const done=()=>{btn.textContent='✅ コピー完了'; btn.classList.add('copied'); setTimeout(()=>{btn.textContent='📋 プロンプトをコピー'; btn.classList.remove('copied');},2000);};
+  if(navigator.clipboard) navigator.clipboard.writeText(code).then(done).catch(()=>{const ta=document.createElement('textarea'); ta.value=code; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); done();});
+  else {const ta=document.createElement('textarea'); ta.value=code; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); done();}
+}
+
+function renderGantt() {
+  const g=DATA.gantt, wk=g.totalWeeks||24;
+  document.getElementById('gtTitle').textContent=g.title||'実行タイムライン';
+  const con=document.getElementById('gtChart'); con.innerHTML='';
+  const hdr=document.createElement('div'); hdr.className='gt-hdr';
+  for(let w=1;w<=wk;w++){ const wd=document.createElement('div'); wd.className='gt-wk'; wd.textContent=(w%4===0)?'W'+w:''; hdr.appendChild(wd); }
+  con.appendChild(hdr);
+  g.phases.forEach(ph=>{
+    const pl=document.createElement('div'); pl.className='gt-phase';
+    const hasFlow=(ph.tasks||[]).some(t=>t.linkTo&&t.linkTo.type==='flow');
+    pl.innerHTML=ph.name+(hasFlow?'<span class="gt-exec-badge">実行フェーズ・詳細手順あり</span>':'');
+    con.appendChild(pl);
+    ph.tasks.forEach(task=>{
+      const row=document.createElement('div'); row.className='gt-row';
+      const nm=document.createElement('div'); nm.className='gt-name'; nm.textContent=task.name; nm.title=task.name; row.appendChild(nm);
+      const bw=document.createElement('div'); bw.className='gt-bars';
+      const bar=document.createElement('div');
+      bar.className='gt-bar'+(task.isCritical?' crit':'')+(task.milestone?' ms':'');
+      bar.style.left=((task.startWeek-1)/wk*100)+'%';
+      bar.style.width=(task.milestone?'18px':((task.endWeek-task.startWeek+1)/wk*100)+'%');
+      bar.style.background=task.isCritical?'var(--danger)':(task.milestone?'var(--success)':(ph.color||'var(--primary)'));
+      bar.textContent=task.milestone?'◆':task.name;
+      bar.title=task.name+': W'+task.startWeek+(task.milestone?'':'–W'+task.endWeek);
+      if(task.linkTo){ bar.onclick=()=>{ const lt=task.linkTo; if(lt.type==='matrix') goMatrix(lt.themeIndex||0); else if(lt.type==='flow') goFlow(lt.themeIndex||0, lt.quadrant||'', lt.sourceItem||''); else if(lt.type==='mandala') go('mandala', null); else if(lt.type==='dashboard') go('dashboard', null); }; }
+      bw.appendChild(bar); row.appendChild(bw); con.appendChild(row);
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+  initDash(); renderMandala();
+  if(DATA.matrices.length) renderMatrix(0);
+  document.getElementById('flEmpty').style.display='block';
+  document.getElementById('flSteps').innerHTML='';
+  document.getElementById('flKai').style.display='none';
+});
+
+// SCROLL HANDLER
+(function(){
+  var hdr=document.getElementById('hdr');var btn=document.getElementById('toTopBtn');
+  function onS(){var y=window.scrollY||0;if(hdr)hdr.classList.toggle('scrolled',y>20);if(btn)btn.classList.toggle('show',y>240);}
+  window.addEventListener('scroll',onS,{passive:true});
+  if(btn)btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+  onS();
+})();
+</script>
+</body>
+</html>
