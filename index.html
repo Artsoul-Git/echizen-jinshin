@@ -16,7 +16,7 @@ body{
   padding:clamp(20px,4vw,40px);
 }
 .serif{font-family:'Noto Serif JP',serif}
-.container{max-width:1400px;margin:0 auto}
+.container{max-width:1520px;margin:0 auto}
 .header{text-align:center;color:#fff;padding:clamp(30px,5vw,60px) 0}
 .header h1{
   font-family:'Noto Serif JP',serif;
@@ -32,12 +32,9 @@ body{
 }
 .cards{
   display:grid;gap:clamp(14px,2vw,22px);
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(220px,275px));
+  justify-content:center;
   margin-top:clamp(14px,2vw,22px);
-}
-/* 最大5列を担保（ワイド画面で6列以上に広がらないように制御） */
-@media(min-width:1280px){
-  .cards{grid-template-columns:repeat(5,minmax(0,1fr))}
 }
 
 /* フィルタタブ */
@@ -46,6 +43,7 @@ body{
   margin:clamp(20px,3vw,32px) 0 clamp(8px,1vw,12px);
 }
 .filter-btn{
+  position:relative;overflow:hidden;
   background:rgba(255,255,255,0.10);
   color:#f3ede2;
   border:1.5px solid rgba(216,183,119,0.4);
@@ -53,17 +51,19 @@ body{
   padding:9px 22px;font-size:.88rem;font-weight:700;
   letter-spacing:.05em;cursor:pointer;
   font-family:inherit;
-  transition:all .25s;
+  transition:all .25s cubic-bezier(.22,1,.36,1);
 }
 .filter-btn:hover{
   background:rgba(255,255,255,0.18);
   border-color:#b58a3b;
+  transform:translateY(-1px);
 }
 .filter-btn.is-active{
   background:linear-gradient(135deg,#b58a3b,#d8b777);
   color:#1a1a1a;
   border-color:#b58a3b;
-  box-shadow:0 4px 16px rgba(181,138,59,.35);
+  box-shadow:0 6px 20px rgba(181,138,59,.42);
+  transform:translateY(-1px) scale(1.03);
 }
 .filter-btn .count{
   display:inline-block;background:rgba(0,0,0,.15);
@@ -71,16 +71,45 @@ body{
   font-size:.72rem;margin-left:6px;font-weight:700;
 }
 .filter-btn.is-active .count{background:rgba(0,0,0,.18)}
+/* ripple */
+.filter-btn::after{
+  content:"";position:absolute;left:50%;top:50%;
+  width:8px;height:8px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,255,255,.55) 0%,rgba(255,255,255,0) 70%);
+  transform:translate(-50%,-50%) scale(.5);opacity:0;
+  pointer-events:none;
+}
+.filter-btn.is-clicked::after{
+  animation:btnRipple .6s cubic-bezier(.22,1,.36,1);
+}
+@keyframes btnRipple{
+  0%{transform:translate(-50%,-50%) scale(.5);opacity:.7}
+  100%{transform:translate(-50%,-50%) scale(16);opacity:0}
+}
 
-/* グループ見出し */
-.group{margin-top:clamp(20px,3vw,30px)}
-.group.is-hidden{display:none}
+/* グループ見出し（中央配置） */
+.group{
+  margin-top:clamp(20px,3vw,30px);
+  overflow:hidden;
+  transition:opacity .4s ease,max-height .55s cubic-bezier(.22,1,.36,1),margin .4s ease,transform .4s ease;
+  opacity:1;transform:translateY(0);
+  max-height:8000px;
+}
+.group.is-hidden{
+  opacity:0;
+  max-height:0;
+  margin-top:0;margin-bottom:0;
+  transform:translateY(-8px);
+  pointer-events:none;
+}
 .group-head{
-  display:flex;align-items:center;gap:14px;
+  display:flex;align-items:center;justify-content:center;gap:14px;
   color:#f3ede2;
-  padding:0 4px 8px;
+  padding:0 4px 10px;
   border-bottom:1px solid rgba(216,183,119,0.32);
-  margin-bottom:6px;
+  margin-bottom:10px;
+  text-align:center;
+  flex-wrap:wrap;
 }
 .group-head h2{
   font-family:'Noto Serif JP',serif;
@@ -96,8 +125,35 @@ body{
   flex-shrink:0;
 }
 .group-head .group-meta{
-  margin-left:auto;font-size:.78rem;opacity:.78;
+  font-size:.78rem;opacity:.85;
   letter-spacing:.04em;color:#d8b777;
+}
+
+/* リッチ：切替時のカードstagger fade-in */
+@keyframes cardEnter{
+  from{opacity:0;transform:translateY(16px) scale(.96)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+@keyframes headEnter{
+  from{opacity:0;transform:translateY(-8px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.group.is-entering .group-head{
+  animation:headEnter .42s cubic-bezier(.22,1,.36,1) both;
+}
+.group.is-entering .card{
+  animation:cardEnter .5s cubic-bezier(.22,1,.36,1) both;
+}
+.group.is-entering .card:nth-child(1){animation-delay:.05s}
+.group.is-entering .card:nth-child(2){animation-delay:.11s}
+.group.is-entering .card:nth-child(3){animation-delay:.17s}
+.group.is-entering .card:nth-child(4){animation-delay:.23s}
+.group.is-entering .card:nth-child(5){animation-delay:.29s}
+
+@media(prefers-reduced-motion:reduce){
+  .group,.card,.group-head,.filter-btn,.filter-btn::after{
+    transition:none!important;animation:none!important;
+  }
 }
 .card{
   background:#fff;border-radius:8px;
@@ -385,17 +441,45 @@ body{
   (function(){
     var btns = document.querySelectorAll('.filter-btn');
     var groups = document.querySelectorAll('.group');
+
+    // 初回ロード時に「すべて」のstaggerを一回流す
+    requestAnimationFrame(function(){
+      groups.forEach(function(g){
+        g.classList.add('is-entering');
+        setTimeout(function(){ g.classList.remove('is-entering'); }, 900);
+      });
+    });
+
     btns.forEach(function(b){
       b.addEventListener('click', function(){
+        // ripple
+        b.classList.remove('is-clicked');
+        // reflowで再アニメ起動
+        void b.offsetWidth;
+        b.classList.add('is-clicked');
+        setTimeout(function(){ b.classList.remove('is-clicked'); }, 650);
+
         var key = b.getAttribute('data-filter');
         btns.forEach(function(x){
           var on = x === b;
           x.classList.toggle('is-active', on);
           x.setAttribute('aria-selected', on ? 'true' : 'false');
         });
+
+        // 表示制御＋stagger再アニメ
         groups.forEach(function(g){
           var show = (key === 'all') || (g.getAttribute('data-group') === key);
+          var wasHidden = g.classList.contains('is-hidden');
           g.classList.toggle('is-hidden', !show);
+          if(show){
+            // 再アニメ：一旦クラス削除→reflow→再付与
+            g.classList.remove('is-entering');
+            void g.offsetWidth;
+            // 隠れていたものを開く場合は少し遅延（max-heightトランジションを先に流す）
+            var delay = wasHidden ? 120 : 0;
+            setTimeout(function(){ g.classList.add('is-entering'); }, delay);
+            setTimeout(function(){ g.classList.remove('is-entering'); }, delay + 900);
+          }
         });
       });
     });
