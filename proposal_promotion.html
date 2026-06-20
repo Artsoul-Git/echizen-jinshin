@@ -143,6 +143,142 @@ details .details-body li{margin-bottom:6px}
 .chart-box h4{font-size:.95rem;color:var(--c-sumi);margin-bottom:10px;font-weight:700}
 .chart-canvas-wrap{position:relative;width:100%;height:320px}
 
+/* 文字サイズ底上げ（ペル指摘） */
+.card .stat-sub{font-size:.88rem !important;line-height:1.65}
+.card p{font-size:.96rem;line-height:1.85}
+table{font-size:.95rem}
+.tl-body{font-size:.95rem;line-height:1.85}
+.tv-card .approach{font-size:.95rem;line-height:1.85}
+
+/* 1枚要約ダッシュボード（Heroサマリー） */
+.exec-dashboard{
+  background:linear-gradient(135deg,#fdf6e8 0%,#fff 60%,#fdebeb 100%);
+  border:1px solid var(--c-gold);
+  border-radius:14px;padding:28px clamp(20px,3vw,40px);
+  margin:24px auto;max-width:1200px;
+  box-shadow:0 8px 32px rgba(165,42,42,.08);
+}
+.exec-dashboard .dash-title{
+  font-family:'Noto Serif JP',serif;font-size:1.15rem;color:var(--c-sumi);
+  font-weight:900;margin-bottom:18px;text-align:center;letter-spacing:.04em;
+  border-bottom:2px solid var(--c-gold);padding-bottom:12px;
+}
+.exec-dashboard .dash-title .ake{color:var(--c-red);font-weight:900}
+.dash-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:18px;
+}
+.dash-cell{
+  background:#fff;border-radius:10px;padding:18px 16px;
+  border-top:4px solid var(--c-gold);text-align:center;
+  box-shadow:0 4px 16px rgba(0,0,0,.04);
+}
+.dash-cell.is-key{border-top-color:var(--c-red)}
+.dash-cell .dash-label{font-size:.78rem;color:var(--c-muted);letter-spacing:.08em;margin-bottom:8px;font-weight:600}
+.dash-cell .dash-value{font-family:'Noto Serif JP',serif;font-size:1.55rem;font-weight:900;color:var(--c-sumi);line-height:1.2}
+.dash-cell .dash-value .unit{font-size:.85rem;font-weight:600;color:var(--c-muted);margin-left:4px}
+.dash-cell .dash-note{font-size:.78rem;color:var(--c-muted);margin-top:6px;line-height:1.5}
+.dash-cell.is-key .dash-value{color:var(--c-red-2)}
+
+/* コミュニケーション戦略全体像（大型SVG図解） */
+.strategy-overview{
+  background:#fff;border:1px solid var(--c-border);border-radius:14px;
+  padding:28px clamp(16px,2vw,32px);margin:24px 0;box-shadow:var(--shadow);
+}
+.strategy-overview h3{font-family:'Noto Serif JP',serif;font-size:1.1rem;text-align:center;margin-bottom:18px;color:var(--c-sumi)}
+.strategy-overview svg{display:block;width:100%;height:auto;max-height:520px}
+
+/* 取材対応フロー強化版（縦タイムライン） */
+.interview-flow{
+  display:flex;flex-direction:column;gap:0;margin:24px 0;
+  position:relative;padding-left:50px;
+}
+.interview-flow::before{
+  content:"";position:absolute;left:18px;top:8px;bottom:8px;
+  width:3px;background:linear-gradient(180deg,var(--c-red) 0%,var(--c-gold) 100%);
+  border-radius:2px;
+}
+.if-step{
+  position:relative;padding:14px 22px;background:#fff;
+  border:1px solid var(--c-border);border-radius:10px;
+  box-shadow:var(--shadow);margin-bottom:14px;
+  transition:transform .15s;
+}
+.if-step:hover{transform:translateX(4px)}
+.if-step::before{
+  content:attr(data-time);
+  position:absolute;left:-44px;top:14px;
+  background:var(--c-red);color:#fff;
+  width:36px;height:36px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:.74rem;font-weight:900;
+  box-shadow:0 2px 8px rgba(165,42,42,.32);
+  border:3px solid #fff;
+  letter-spacing:-.02em;
+}
+.if-step .if-head{
+  display:flex;align-items:center;gap:10px;
+  font-family:'Noto Serif JP',serif;font-weight:700;
+  color:var(--c-sumi);font-size:1.02rem;margin-bottom:6px;
+}
+.if-step .if-ico{font-size:1.3rem}
+.if-step .if-body{font-size:.92rem;color:var(--c-dim);line-height:1.85}
+.if-step .if-do{
+  display:inline-block;margin-top:8px;padding:4px 12px;
+  background:#fef3c7;color:#92400e;font-size:.78rem;
+  border-radius:4px;font-weight:700;
+}
+.if-step.is-key{border-left:4px solid var(--c-red)}
+
+/* コピー案カード */
+.copy-card{background:#fff;border-left:5px solid var(--c-red);border-radius:0 10px 10px 0;padding:18px 22px;margin:14px 0;box-shadow:var(--shadow)}
+.copy-card .cc-label{display:inline-block;background:var(--c-red);color:#fff;font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:4px;margin-bottom:10px;letter-spacing:.08em}
+.copy-card .cc-title{font-family:'Noto Serif JP',serif;font-size:1.1rem;font-weight:900;color:var(--c-sumi);line-height:1.5;margin-bottom:8px}
+.copy-card .cc-lead{font-size:.92rem;color:var(--c-dim);line-height:1.85;margin-bottom:6px}
+.copy-card .cc-meta{font-size:.78rem;color:var(--c-muted);font-style:italic}
+
+/* PESO 4象限 */
+.peso-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}
+.peso-cell{background:#fff;border:2px solid var(--c-border);border-radius:12px;padding:20px 22px;position:relative}
+.peso-cell.is-paid{border-color:#dc2626;background:linear-gradient(135deg,#fff 0%,#fef2f2 100%)}
+.peso-cell.is-earned{border-color:#0e6b75;background:linear-gradient(135deg,#fff 0%,#ecfdf5 100%)}
+.peso-cell.is-shared{border-color:#b58a3b;background:linear-gradient(135deg,#fff 0%,#fdf6e8 100%)}
+.peso-cell.is-owned{border-color:#1a1a1a;background:linear-gradient(135deg,#fff 0%,#fafaf7 100%)}
+.peso-tag{display:inline-block;font-size:.78rem;font-weight:900;padding:4px 12px;border-radius:4px;color:#fff;margin-bottom:10px;letter-spacing:.08em}
+.peso-cell.is-paid .peso-tag{background:#dc2626}
+.peso-cell.is-earned .peso-tag{background:#0e6b75}
+.peso-cell.is-shared .peso-tag{background:#b58a3b}
+.peso-cell.is-owned .peso-tag{background:#1a1a1a}
+.peso-cell h4{font-family:'Noto Serif JP',serif;font-size:1.02rem;font-weight:900;color:var(--c-sumi);margin-bottom:6px}
+.peso-cell p{font-size:.9rem;color:var(--c-dim);line-height:1.8;margin-bottom:8px}
+.peso-cell .peso-items{font-size:.85rem;color:var(--c-muted);background:rgba(255,255,255,.6);padding:8px 12px;border-radius:6px}
+.peso-cell .peso-budget{font-size:.85rem;color:var(--c-sumi);font-weight:700;margin-top:8px}
+
+/* チーム体制図 */
+.team-chart{background:#fff;border:1px solid var(--c-border);border-radius:12px;padding:24px;margin:18px 0;box-shadow:var(--shadow)}
+.team-chart svg{display:block;width:100%;height:auto;max-height:460px}
+
+/* リスクシナリオ */
+.risk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:18px 0}
+.risk-card{background:#fff;border:1px solid var(--c-border);border-top:4px solid var(--c-red);border-radius:10px;padding:18px 20px;box-shadow:var(--shadow)}
+.risk-card h4{font-family:'Noto Serif JP',serif;font-size:1.0rem;font-weight:900;color:var(--c-red-2);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.risk-card .risk-trig{font-size:.85rem;color:var(--c-muted);margin-bottom:8px;background:#fef2f2;padding:6px 10px;border-radius:5px}
+.risk-card .risk-plan{font-size:.9rem;color:var(--c-dim);line-height:1.85}
+.risk-card .risk-plan strong{color:var(--c-sumi)}
+
+/* イメージカット枠（プレースホルダ） */
+.image-card{
+  background:linear-gradient(135deg,#fdf6e8,#f7f4ed);
+  border:2px dashed var(--c-gold);
+  border-radius:10px;padding:32px 20px;text-align:center;
+  font-family:'Noto Serif JP',serif;color:var(--c-muted);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  min-height:160px;
+}
+.image-card .ico{font-size:2.4rem;margin-bottom:8px;color:var(--c-gold);opacity:.85}
+.image-card .label{font-size:.92rem;color:var(--c-sumi);font-weight:700;margin-bottom:4px}
+.image-card .desc{font-size:.78rem;color:var(--c-muted)}
+
 footer{background:var(--c-sumi);color:#fff;padding:32px clamp(20px,5vw,60px);text-align:center;font-size:.85rem}
 footer a{color:var(--c-gold)}
 </style>
@@ -164,18 +300,55 @@ footer a{color:var(--c-gold)}
 
 <header class="hero">
   <div class="hero-inner">
-    <span class="hero-tag">PROMOTION PROPOSAL ｜ DEMO 2026-04-10</span>
-    <h1>新商品『刃心 <span class="ake">朱-AKE-</span>』ローンチを、<br><span class="gold">プレスリリースでTVが動く</span>仕掛けで。</h1>
-    <p class="hero-sub">越前打刃物 × 家庭の食卓 を主題とした家庭プレミアム新ラインを、テレビ・新聞・WEB・SNSの多元連動で確実に届けるための、ローンチプロモーション戦略提案書。<br>「プレスリリースは準備が9割」を体系化し、WBS『トレンドたまご』『NHKおはよう日本 まちかど情報室』への露出を勝ち取る、6ヶ月実行設計。</p>
+    <span class="hero-tag">ローンチプロモーション提案書 ｜ DEMO 2026-04-10</span>
+    <h1>新商品『刃心 <span class="ake">朱-AKE-</span>』ローンチを、<br><span class="gold">プレスリリースでTV取材を狙う</span>仕掛けで。</h1>
+    <p class="hero-sub">越前打刃物 × 家庭の食卓 を主題とした家庭プレミアム新ラインを、テレビ・新聞・WEB・SNSの多元連動で届けるためのローンチプロモーション戦略提案書。<br><strong>「発信前後の準備と即応体制」を体系化</strong>し、WBS『トレンドたまご』『NHKおはよう日本 まちかど情報室』への露出機会を狙う、6ヶ月実行設計。</p>
     <div class="hero-meta">
-      <span>v1 詳細版</span>
-      <span>広告代理店式提案書</span>
-      <span>DEMOデータ</span>
+      <span>v1.1 詳細版</span>
+      <span>2026-06-20 改訂</span>
+      <span>DEMOデータ（架空案件）</span>
     </div>
   </div>
 </header>
 
 <div class="demo-banner">⚠️ 本資料は <b>アートソウル社内デモ用</b> に作成された完全架空の提案書です。実在の越前刃物業界・各企業との直接的関係はありません。</div>
+
+<!-- 1枚要約ダッシュボード -->
+<div class="exec-dashboard">
+  <div class="dash-title">📊 『刃心 <span class="ake">朱-AKE-</span>』ローンチPR 1枚要約</div>
+  <div class="dash-grid">
+    <div class="dash-cell">
+      <div class="dash-label">期間</div>
+      <div class="dash-value">6<span class="unit">ヶ月</span></div>
+      <div class="dash-note">D-60 → D+150</div>
+    </div>
+    <div class="dash-cell">
+      <div class="dash-label">投資概算</div>
+      <div class="dash-value">408<span class="unit">万円</span></div>
+      <div class="dash-note">プレスキット+広報+SNS</div>
+    </div>
+    <div class="dash-cell is-key">
+      <div class="dash-label">想定売上（粗利）</div>
+      <div class="dash-value">3,000<span class="unit">万円</span></div>
+      <div class="dash-note">6ヶ月／DEMO想定</div>
+    </div>
+    <div class="dash-cell is-key">
+      <div class="dash-label">投資回収倍率</div>
+      <div class="dash-value">約7.4<span class="unit">倍</span></div>
+      <div class="dash-note">粗利÷投資（DEMO試算）</div>
+    </div>
+    <div class="dash-cell">
+      <div class="dash-label">主要TV狙い</div>
+      <div class="dash-value" style="font-size:1.1rem">WBS<br>NHK</div>
+      <div class="dash-note">トレたま／まちかど情報室</div>
+    </div>
+    <div class="dash-cell">
+      <div class="dash-label">配信先</div>
+      <div class="dash-value">約500<span class="unit">社</span></div>
+      <div class="dash-note">直接送付＋PR TIMES</div>
+    </div>
+  </div>
+</div>
 
 <nav class="toc" id="navToc">
   <ul>
@@ -205,8 +378,8 @@ footer a{color:var(--c-gold)}
   <div class="key-message">
     <span class="km-label">戦略の核</span>
     <p class="km-text">
-      プレスリリースは <strong>発信が1割、準備が9割</strong>。<br>
-      発信した瞬間から、TVディレクターは <strong>30分以内に「撮影できる絵」</strong> があるか調べます。<br>
+      プレスリリースは、<strong>発信そのものより「発信前後の準備と即応体制」がリリース成果を大きく左右</strong>します。<br>
+      発信後は、TVディレクターから <strong>数時間〜数日でリリース内容の問い合わせ</strong> が入る可能性があります。<br>
       その時、すべてが揃っていれば取材は決まります。
     </p>
   </div>
@@ -215,7 +388,7 @@ footer a{color:var(--c-gold)}
     <div class="card accent">
       <span class="badge tv">最優先</span>
       <h4>① プレスリリース戦略</h4>
-      <p>PR TIMES配信（260媒体超に転載）＋直接送付（500社）。リリース前2ヶ月の準備を体系化。</p>
+      <p>PR TIMES配信（最大260提携媒体への配信網）＋直接送付（約500社）。リリース前2ヶ月の準備を体系化。</p>
     </div>
     <div class="card accent">
       <span class="badge tv">最優先</span>
@@ -243,13 +416,13 @@ footer a{color:var(--c-gold)}
   <div class="grid grid-3">
     <div class="card">
       <h4>世界市場規模（2025）</h4>
-      <div class="stat">USD 1.81<span style="font-size:1rem">B</span></div>
-      <div class="stat-sub">CAGR 6.25%・2035年予測 USD 3.32B<br><span style="font-size:.7rem">出典：Global Growth Insights</span></div>
+      <div class="stat">約 <strong>2,700</strong><span style="font-size:1.2rem">億円</span></div>
+      <div class="stat-sub">2035年予測：約 <strong>5,000億円</strong><br>年平均成長率：<strong>6.25%</strong><br><span style="font-size:.78rem">（米ドル換算：約18.1億ドル／2035年予測 約33.2億ドル・1ドル150円換算）<br>出典：Global Growth Insights</span></div>
     </div>
     <div class="card">
       <h4>海外日本食市場</h4>
-      <div class="stat">18.1<span style="font-size:1rem">万店</span></div>
-      <div class="stat-sub">2025年・海外日本食レストラン（農水省2025）</div>
+      <div class="stat">18.1<span style="font-size:1.2rem">万店</span></div>
+      <div class="stat-sub">2025年・海外日本食レストラン店舗数<br><span style="font-size:.78rem">出典：農林水産省（2025）</span></div>
     </div>
     <div class="card">
       <h4>家庭用ハイエンド需要</h4>
@@ -262,11 +435,11 @@ footer a{color:var(--c-gold)}
   <div class="grid grid-2">
     <div class="card">
       <h4>PR TIMES の影響力</h4>
-      <p>累計 <strong>12.4万社</strong> 利用、上場企業利用率 <strong>65%超</strong>。配信1本で月間PV1億超の媒体含む <strong>260媒体以上</strong> に転載。朝日新聞デジタル／毎日新聞デジタル／産経ニュース／FNNプライムオンライン／TBS NEWS DIG／日テレNEWS NNN等を経由。</p>
+      <p>累計 <strong>12.4万社</strong> 利用（PR TIMES公表値）。配信プラットフォームとして<strong>最大260媒体の提携網</strong>を持ち、内容次第で朝日新聞デジタル／毎日新聞デジタル／産経ニュース／FNNプライムオンライン／TBS NEWS DIG／日テレNEWS NNN等に転載される可能性があります。<br><span style="font-size:.85rem;color:var(--c-muted)">※提携先 ≠ 自動転載。実際の転載は媒体の編集判断で平均10〜30媒体程度（業界実勢）。</span></p>
     </div>
     <div class="card">
       <h4>WBS「トレンドたまご」採用基準</h4>
-      <p><strong>①他にない面白いネタ／②動画で撮って面白いか</strong>に集約。発売前の新商品が望ましく、2分程度の放送枠。番組への直接情報募集は年間6万件超だが、<strong>公式投稿フォーム経由が採用率最高</strong>。</p>
+      <p><strong>①他にない面白いネタ／②動画で撮って面白いか</strong>に集約。発売前の新商品が望ましく、2分程度の放送枠。<strong>公式投稿フォーム経由が採用率最高</strong>とされ、ディレクターへの直接ピッチも有効。<br><span style="font-size:.85rem;color:var(--c-muted)">※採用率は番組デスク公開インタビューによれば数%レベル（厳選番組）。</span></p>
     </div>
   </div>
 
@@ -274,7 +447,7 @@ footer a{color:var(--c-gold)}
   <ul style="margin-left:20px;font-size:.95rem;line-height:2">
     <li><strong>「動画素材」が採用率を左右</strong>：TV番組は「撮れる絵」があるかで判断する</li>
     <li><strong>「ストーリー」が刺さる</strong>：1928年創業の歴史・3代目の挑戦・職人の手仕事</li>
-    <li><strong>BtoBもBtoBtoCに翻訳</strong>：プロ用→家庭用ラインへの転換は「身近に感じる」要素</li>
+    <li><strong>業務用（BtoB）から、家庭（BtoBtoC）への翻訳</strong>：プロ用ライン → 一般家庭ラインへの転換は「身近に感じる」要素</li>
     <li><strong>SNS連動が必須</strong>：TV放映後の検索流入をSNS・LPで受け止める設計</li>
   </ul>
 </section>
@@ -282,7 +455,29 @@ footer a{color:var(--c-gold)}
 <!-- ===== Section 3 ===== -->
 <section id="product">
   <h2>3. 製品ポジショニング — 『刃心 朱-AKE-』</h2>
-  <p class="lead">96年の越前打刃物の職人技を、家庭の食卓に届ける「家庭プレミアム」第1号モデル。</p>
+  <p class="lead"><strong>越前打刃物の歴史 約700年</strong>、<strong>越前刃心（架空）創業1928年 ＝ 創業96年</strong>。プロ職人向け『刃心』本ラインの職人技を、家庭の食卓に届ける「家庭プレミアム」第1号モデルです。</p>
+
+  <!-- 製品キービジュアル（イメージカット枠 3点） -->
+  <div class="grid grid-3" style="margin-bottom:20px">
+    <div class="image-card">
+      <div class="ico">🔪</div>
+      <div class="label">商品キービジュアル</div>
+      <div class="desc">朱の柄＋三徳・牛刀・ペティの3点並び（白背景・俯瞰）</div>
+    </div>
+    <div class="image-card">
+      <div class="ico">🎁</div>
+      <div class="label">桐箱開封シーン</div>
+      <div class="desc">贈り物としての特別感を演出（手元アップ・自然光）</div>
+    </div>
+    <div class="image-card">
+      <div class="ico">🔥</div>
+      <div class="label">鍛造の火花</div>
+      <div class="desc">職人手仕事の象徴（工房・暗背景・火花の軌跡）</div>
+    </div>
+  </div>
+  <p style="font-size:.84rem;color:var(--c-muted);text-align:center;margin-bottom:24px">
+    ※ 本番案件ではプロカメラマンによる撮影素材に差し替え。本DEMOではイメージ枠で表示。
+  </p>
 
   <div class="grid grid-2">
     <div class="card">
@@ -316,6 +511,64 @@ footer a{color:var(--c-gold)}
       <tr><td>タダフサ</td><td>1.5〜3万円</td><td>新潟・直販EC</td><td>越前打刃物の伝統的工芸品ブランド</td></tr>
     </table>
   </div>
+
+  <!-- 競合ポジショニングマップ -->
+  <div class="strategy-overview" style="margin-top:20px">
+    <h3>🗺 競合ポジショニングマップ（価格 × ストーリー性）</h3>
+    <svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="競合ポジショニングマップ">
+      <!-- 背景・軸 -->
+      <rect x="80" y="30" width="690" height="380" fill="#fafaf7" stroke="#e4dfd6"/>
+      <line x1="425" y1="30" x2="425" y2="410" stroke="#1a1a1a" stroke-width="1.5"/>
+      <line x1="80" y1="220" x2="770" y2="220" stroke="#1a1a1a" stroke-width="1.5"/>
+
+      <!-- 軸ラベル -->
+      <text x="425" y="20" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a1a">↑ストーリー性・伝統性 高</text>
+      <text x="425" y="438" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a1a">↓ストーリー性 低（機能性主軸）</text>
+      <text x="60" y="225" text-anchor="end" font-size="12" font-weight="700" fill="#1a1a1a">← 低価格</text>
+      <text x="785" y="225" text-anchor="start" font-size="12" font-weight="700" fill="#1a1a1a">高価格 →</text>
+
+      <!-- 4象限ラベル -->
+      <text x="250" y="48" text-anchor="middle" font-size="10" fill="#6b6661" opacity=".75">「ストーリーで選ぶ層」（低価格）</text>
+      <text x="600" y="48" text-anchor="middle" font-size="10" fill="#6b6661" opacity=".75">「ストーリーと品質で選ぶ層」</text>
+      <text x="250" y="402" text-anchor="middle" font-size="10" fill="#6b6661" opacity=".75">「価格・量販で選ぶ層」</text>
+      <text x="600" y="402" text-anchor="middle" font-size="10" fill="#6b6661" opacity=".75">「性能・ブランドで選ぶ層」</text>
+
+      <!-- 競合プロット -->
+      <!-- 関孫六（貝印）：低価格×低ストーリー -->
+      <circle cx="180" cy="310" r="22" fill="#94a3b8" opacity=".85"/>
+      <text x="180" y="314" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">関孫六</text>
+      <text x="180" y="345" text-anchor="middle" font-size="10" fill="#6b6661">5,000〜2万円</text>
+
+      <!-- ヘンケルス：中価格×低ストーリー -->
+      <circle cx="380" cy="295" r="22" fill="#475569" opacity=".85"/>
+      <text x="380" y="299" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">Henckels</text>
+      <text x="380" y="330" text-anchor="middle" font-size="10" fill="#6b6661">1.5〜3万円</text>
+
+      <!-- GLOBAL（吉田金属）：中価格×中ストーリー -->
+      <circle cx="450" cy="220" r="22" fill="#0e6b75" opacity=".85"/>
+      <text x="450" y="224" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">GLOBAL</text>
+      <text x="450" y="195" text-anchor="middle" font-size="10" fill="#6b6661">1〜3万円</text>
+
+      <!-- タダフサ：中価格×高ストーリー -->
+      <circle cx="430" cy="135" r="22" fill="#b58a3b" opacity=".85"/>
+      <text x="430" y="139" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">タダフサ</text>
+      <text x="430" y="110" text-anchor="middle" font-size="10" fill="#6b6661">1.5〜3万円</text>
+
+      <!-- 朱-AKE-：他社と同サイズで配置（独自象限のポジショニングで差別化を表現） -->
+      <circle cx="540" cy="100" r="22" fill="#a52a2a" opacity=".85"/>
+      <text x="540" y="104" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">朱-AKE-</text>
+      <text x="540" y="135" text-anchor="middle" font-size="10" fill="#6b6661">3本2.98万円〜</text>
+
+      <!-- 注釈線（控えめに、円のサイズは他社と統一） -->
+      <line x1="565" y1="90" x2="685" y2="75" stroke="#7a1f1f" stroke-width="1" stroke-dasharray="3,3" opacity=".6"/>
+      <text x="695" y="68" text-anchor="start" font-size="10" font-weight="700" fill="#7a1f1f">本提案の狙う象限：</text>
+      <text x="695" y="82" text-anchor="start" font-size="10" fill="#7a1f1f">「高ストーリー性×</text>
+      <text x="695" y="96" text-anchor="start" font-size="10" fill="#7a1f1f">中〜上位価格帯」</text>
+
+      <!-- 凡例 -->
+      <text x="425" y="455" text-anchor="middle" font-size="10" fill="#6b6661">※円の大きさは概念表示。位置はDEMO想定（実数値ではない）。</text>
+    </svg>
+  </div>
 </section>
 
 <!-- ===== Section 4 ===== -->
@@ -325,7 +578,7 @@ footer a{color:var(--c-gold)}
 
   <div class="grid grid-2">
     <div class="card">
-      <h4>👩 メインターゲット A：料理好き主婦（45-65歳）</h4>
+      <h4>👩 メインターゲット A：料理愛好家層（45〜65歳・家庭料理を楽しむ生活者）</h4>
       <p><strong>田中真理さん（52歳）</strong>。子供独立、夫と二人暮らし。料理が趣味、月1で懐石風メニュー。WMF・GLOBAL所有、次は「日本の包丁」に興味。3〜5万円までは出す。「自分へのご褒美」「夫婦の食卓を豊かに」。Instagram料理研究家の動画を毎晩視聴。</p>
     </div>
     <div class="card">
@@ -345,7 +598,7 @@ footer a{color:var(--c-gold)}
 <!-- ===== Section 5 ===== -->
 <section id="strategy">
   <h2>5. コミュニケーション戦略全体像</h2>
-  <p class="lead">プレスリリースを中核に、TV・新聞・WEB・SNSを多元連動させる4ヶ月の波状攻撃設計。</p>
+  <p class="lead">プレスリリースを中核に、TV・新聞・WEB・SNSを多元連動させる<strong>4ヶ月の連続発信プラン</strong>。</p>
 
   <div class="flow-wrap">
     <h4 style="margin-bottom:14px;text-align:center;color:var(--c-sumi)">📡 メディア多元連動の全体像</h4>
@@ -373,21 +626,175 @@ flowchart LR
     </div>
   </div>
 
-  <h3>4ヶ月の波状攻撃</h3>
+  <!-- 大型SVG：コミュニケーション戦略全体像 -->
+  <div class="strategy-overview">
+    <h3>🎯 戦略全体像 — メッセージ起点から購買行動まで</h3>
+    <svg viewBox="0 0 1000 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="コミュニケーション戦略全体像">
+      <defs>
+        <linearGradient id="gradPR" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#a52a2a"/><stop offset="100%" stop-color="#7a1f1f"/></linearGradient>
+        <linearGradient id="gradMedia" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fdf6e8"/><stop offset="100%" stop-color="#f7f4ed"/></linearGradient>
+        <linearGradient id="gradGoal" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#b58a3b"/><stop offset="100%" stop-color="#d8b777"/></linearGradient>
+        <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#a52a2a"/></marker>
+      </defs>
+
+      <!-- 背景レーン -->
+      <rect x="0" y="40" width="1000" height="80" fill="#fafaf7"/>
+      <text x="15" y="78" font-size="13" font-weight="700" fill="#7a1f1f" font-family="'Noto Serif JP',serif">STEP 1 ｜ 起点</text>
+      <text x="15" y="98" font-size="11" fill="#6b6661">物語と核メッセージ</text>
+
+      <rect x="0" y="140" width="1000" height="120" fill="#fff"/>
+      <text x="15" y="178" font-size="13" font-weight="700" fill="#7a1f1f" font-family="'Noto Serif JP',serif">STEP 2 ｜ 多元発信</text>
+      <text x="15" y="198" font-size="11" fill="#6b6661">媒体4軸への同時投下</text>
+
+      <rect x="0" y="280" width="1000" height="100" fill="#fafaf7"/>
+      <text x="15" y="318" font-size="13" font-weight="700" fill="#7a1f1f" font-family="'Noto Serif JP',serif">STEP 3 ｜ 拡散と接触</text>
+      <text x="15" y="338" font-size="11" fill="#6b6661">読者・視聴者の二次行動</text>
+
+      <rect x="0" y="400" width="1000" height="80" fill="#fff"/>
+      <text x="15" y="438" font-size="13" font-weight="700" fill="#b58a3b" font-family="'Noto Serif JP',serif">STEP 4 ｜ ゴール</text>
+      <text x="15" y="458" font-size="11" fill="#6b6661">購買・指名検索・口コミ</text>
+
+      <!-- STEP 1：起点ボックス -->
+      <rect x="380" y="50" width="240" height="60" rx="10" fill="url(#gradPR)" stroke="#7a1f1f" stroke-width="2"/>
+      <text x="500" y="78" text-anchor="middle" font-size="14" font-weight="900" fill="#fff" font-family="'Noto Serif JP',serif">プレスリリース＋プレスキット</text>
+      <text x="500" y="98" text-anchor="middle" font-size="11" fill="#fff" opacity=".9">越前打刃物700年×家庭プレミアム</text>
+
+      <!-- 起点から多元発信への矢印 -->
+      <line x1="500" y1="115" x2="500" y2="135" stroke="#a52a2a" stroke-width="2" marker-end="url(#arr)"/>
+
+      <!-- STEP 2：4媒体カード -->
+      <g>
+        <rect x="60" y="155" width="180" height="90" rx="10" fill="url(#gradMedia)" stroke="#b58a3b" stroke-width="1.5"/>
+        <text x="150" y="180" text-anchor="middle" font-size="22">📺</text>
+        <text x="150" y="205" text-anchor="middle" font-size="13" font-weight="900" fill="#1a1a1a">TV取材</text>
+        <text x="150" y="225" text-anchor="middle" font-size="11" fill="#6b6661">WBSトレたま</text>
+        <text x="150" y="240" text-anchor="middle" font-size="11" fill="#6b6661">NHKまちかど情報室</text>
+      </g>
+
+      <g>
+        <rect x="270" y="155" width="180" height="90" rx="10" fill="url(#gradMedia)" stroke="#1a1a1a" stroke-width="1.5"/>
+        <text x="360" y="180" text-anchor="middle" font-size="22">📰</text>
+        <text x="360" y="205" text-anchor="middle" font-size="13" font-weight="900" fill="#1a1a1a">新聞掲載</text>
+        <text x="360" y="225" text-anchor="middle" font-size="11" fill="#6b6661">朝日・毎日・産経</text>
+        <text x="360" y="240" text-anchor="middle" font-size="11" fill="#6b6661">地元（福井）紙</text>
+      </g>
+
+      <g>
+        <rect x="550" y="155" width="180" height="90" rx="10" fill="url(#gradMedia)" stroke="#b58a3b" stroke-width="1.5"/>
+        <text x="640" y="180" text-anchor="middle" font-size="22">🌐</text>
+        <text x="640" y="205" text-anchor="middle" font-size="13" font-weight="900" fill="#1a1a1a">WEB転載</text>
+        <text x="640" y="225" text-anchor="middle" font-size="11" fill="#6b6661">朝日デジタル・FNN等</text>
+        <text x="640" y="240" text-anchor="middle" font-size="11" fill="#6b6661">業界専門メディア</text>
+      </g>
+
+      <g>
+        <rect x="760" y="155" width="180" height="90" rx="10" fill="url(#gradMedia)" stroke="#dc2626" stroke-width="1.5"/>
+        <text x="850" y="180" text-anchor="middle" font-size="22">📱</text>
+        <text x="850" y="205" text-anchor="middle" font-size="13" font-weight="900" fill="#1a1a1a">SNS拡散</text>
+        <text x="850" y="225" text-anchor="middle" font-size="11" fill="#6b6661">Instagram・X・TikTok</text>
+        <text x="850" y="240" text-anchor="middle" font-size="11" fill="#6b6661">料理研究家との連動</text>
+      </g>
+
+      <!-- STEP 2 → 3 矢印 -->
+      <line x1="150" y1="250" x2="150" y2="280" stroke="#a52a2a" stroke-width="2" marker-end="url(#arr)"/>
+      <line x1="360" y1="250" x2="360" y2="280" stroke="#a52a2a" stroke-width="2" marker-end="url(#arr)"/>
+      <line x1="640" y1="250" x2="640" y2="280" stroke="#a52a2a" stroke-width="2" marker-end="url(#arr)"/>
+      <line x1="850" y1="250" x2="850" y2="280" stroke="#a52a2a" stroke-width="2" marker-end="url(#arr)"/>
+
+      <!-- STEP 3：接触・拡散の3パターン -->
+      <g>
+        <rect x="100" y="295" width="240" height="70" rx="10" fill="#fff" stroke="#0e6b75" stroke-width="1.5"/>
+        <text x="220" y="320" text-anchor="middle" font-size="13" font-weight="900" fill="#0e6b75">📺 視聴者の指名検索</text>
+        <text x="220" y="345" text-anchor="middle" font-size="11" fill="#6b6661">「TVで紹介された朱の柄包丁」</text>
+      </g>
+
+      <g>
+        <rect x="380" y="295" width="240" height="70" rx="10" fill="#fff" stroke="#b58a3b" stroke-width="1.5"/>
+        <text x="500" y="320" text-anchor="middle" font-size="13" font-weight="900" fill="#b58a3b">🔁 SNSシェア・口コミ連鎖</text>
+        <text x="500" y="345" text-anchor="middle" font-size="11" fill="#6b6661">「友人にプレゼントしたい」</text>
+      </g>
+
+      <g>
+        <rect x="660" y="295" width="240" height="70" rx="10" fill="#fff" stroke="#dc2626" stroke-width="1.5"/>
+        <text x="780" y="320" text-anchor="middle" font-size="13" font-weight="900" fill="#dc2626">⭐ レビュー・ブログ記事化</text>
+        <text x="780" y="345" text-anchor="middle" font-size="11" fill="#6b6661">「料理研究家による使用感」</text>
+      </g>
+
+      <!-- STEP 3 → 4 矢印 -->
+      <line x1="220" y1="370" x2="220" y2="400" stroke="#b58a3b" stroke-width="2" marker-end="url(#arr)"/>
+      <line x1="500" y1="370" x2="500" y2="400" stroke="#b58a3b" stroke-width="2" marker-end="url(#arr)"/>
+      <line x1="780" y1="370" x2="780" y2="400" stroke="#b58a3b" stroke-width="2" marker-end="url(#arr)"/>
+
+      <!-- STEP 4：ゴール -->
+      <rect x="300" y="410" width="400" height="60" rx="10" fill="url(#gradGoal)" stroke="#b58a3b" stroke-width="2"/>
+      <text x="500" y="438" text-anchor="middle" font-size="15" font-weight="900" fill="#1a1a1a" font-family="'Noto Serif JP',serif">専用LPへの誘導 → 購買 → 継続ファン化</text>
+      <text x="500" y="458" text-anchor="middle" font-size="11" fill="#1a1a1a" opacity=".85">想定売上 3,000万円 ／ 6ヶ月 ／ ROI 約7.4倍</text>
+    </svg>
+    <p style="font-size:.84rem;color:var(--c-muted);text-align:center;margin-top:10px">
+      ※ 数値はDEMO想定値。出典・前提条件は Section 10「KPI・投資概算」を参照。
+    </p>
+  </div>
+
+  <h3>PESOモデルによる媒体4分類（Paid / Earned / Shared / Owned）</h3>
+  <p style="color:var(--c-dim);font-size:.94rem;margin-bottom:10px">PR業界の標準フレームワーク「PESOモデル」で、本提案の媒体を4分類に整理。<strong>Earned（取材獲得）を主軸に、Owned（自社資産）で受け止め、Shared（SNS）で拡散、Paid（広告）で補強</strong>する構造です。</p>
+
+  <div class="peso-grid">
+    <div class="peso-cell is-paid">
+      <span class="peso-tag">PAID（有料広告）</span>
+      <h4>Instagram広告／Google検索広告</h4>
+      <p>TV放映直後の指名検索を取りこぼさない補強用。Earned主軸の構造のため、本提案では限定的に運用。</p>
+      <div class="peso-items">Instagram広告（放映直後7日間集中）／Google「越前刃物 朱-AKE-」指名検索広告</div>
+      <div class="peso-budget">配分目安：30万円（投資全体の約7%）</div>
+    </div>
+
+    <div class="peso-cell is-earned">
+      <span class="peso-tag">EARNED（獲得露出）</span>
+      <h4>TV取材／新聞掲載／WEB編集記事</h4>
+      <p>本提案の主軸。WBSトレたま／NHKまちかど情報室／朝日デジタル等への取材獲得。第三者の編集判断を通した「信頼の獲得」が核。</p>
+      <div class="peso-items">WBSトレたま／NHKまちかど情報室／朝日・毎日・産経／FNN・TBS・日テレ・WEB編集記事</div>
+      <div class="peso-budget">配分目安：220万円（投資全体の約54%）</div>
+    </div>
+
+    <div class="peso-cell is-shared">
+      <span class="peso-tag">SHARED（共有・拡散）</span>
+      <h4>SNS連動／インフルエンサー／口コミ</h4>
+      <p>料理研究家3名・自社X／Instagram・noteで「ストーリーの拡散」を担う。発信日の時差連動が肝。</p>
+      <div class="peso-items">料理研究家年契約3名／自社SNS（X／Instagram／note）／PR TIMES経由WEB拡散</div>
+      <div class="peso-budget">配分目安：120万円（投資全体の約29%）</div>
+    </div>
+
+    <div class="peso-cell is-owned">
+      <span class="peso-tag">OWNED（自社資産）</span>
+      <h4>専用LP／オンラインショップ／プレスキット</h4>
+      <p>Earned／Sharedで生まれた指名検索・流入を受け止める「着地点」。発信前に完成必修。</p>
+      <div class="peso-items">専用LP（朱-AKE-）／自社EC／プレスキットZIP（写真5枚＋動画3本＋会社概要）</div>
+      <div class="peso-budget">配分目安：38万円（投資全体の約10%）</div>
+    </div>
+  </div>
+
+  <p style="font-size:.84rem;color:var(--c-muted);margin-top:6px">
+    ※PESOモデル：米国PR業界で2014年頃に体系化された媒体4分類フレームワーク。本提案ではEarned主軸×Owned受皿×Shared拡散×Paid補強の比率設計。総額408万円の媒体配分内訳の根拠。
+  </p>
+
+  <h3 style="margin-top:36px">4ヶ月・4フェーズの連続発信プラン</h3>
   <div class="table-wrap">
     <table>
       <tr><th>フェーズ</th><th>期間</th><th>主要メディア</th><th>狙い</th></tr>
-      <tr><td>① Pre-Buzz</td><td>リリース前1ヶ月</td><td>SNS／専門誌</td><td>「何か出る」の期待値醸成</td></tr>
-      <tr><td>② Launch</td><td>リリース日〜2週間</td><td>PR TIMES／TV／新聞</td><td>「正式発売」の認知獲得</td></tr>
-      <tr><td>③ Amplify</td><td>2週間〜2ヶ月</td><td>WEB／SNS・KOL</td><td>口コミ・レビューで拡散</td></tr>
-      <tr><td>④ Sustain</td><td>2〜4ヶ月</td><td>料理研究家・YouTube</td><td>「使ってみた」の継続露出</td></tr>
+      <tr><td>① 先出し期（Pre-Buzz）</td><td>リリース前1ヶ月</td><td>SNS／専門誌</td><td>「何か出る」の期待値醸成</td></tr>
+      <tr><td>② 発売直後期（Launch）</td><td>リリース日〜2週間</td><td>PR TIMES／TV／新聞</td><td>「正式発売」の認知獲得</td></tr>
+      <tr><td>③ 拡散期（Amplify）</td><td>2週間〜2ヶ月</td><td>WEB／SNS／業界インフルエンサー（KOL）</td><td>口コミ・レビューで拡散</td></tr>
+      <tr><td>④ 継続露出期（Sustain）</td><td>2〜4ヶ月</td><td>料理研究家・YouTube</td><td>「使ってみた」の継続露出</td></tr>
     </table>
   </div>
+  <p style="font-size:.86rem;color:var(--c-muted);margin-top:8px">
+    ※KOL＝Key Opinion Leader（業界インフルエンサー：料理研究家・キュレーター・ジャーナリスト等）<br>
+    ※「Pre-Buzz／Launch／Amplify／Sustain」はPR業界標準のフェーズ呼称。社内・社外資料では日本語訳と併記して使用します。
+  </p>
 </section>
 
 <!-- ===== Section 6 PR Strategy ===== -->
 <section id="pr">
-  <h2>6. プレスリリース戦略 — 「発信は1割、準備が9割」</h2>
+  <h2>6. プレスリリース戦略 — 「発信前後の準備と即応体制が成果を左右する」</h2>
   <p class="lead">配信ボタンを押す瞬間までに、リリース原稿・プレスキット・取材対応・SNS素材・LPがすべて揃っている状態を作ります。</p>
 
   <div class="alert warn">
@@ -403,8 +810,8 @@ flowchart LR
   <h3>6-1. リリース原稿の構成（A4 2枚以内が鉄則）</h3>
   <div class="checklist">
     <h4 style="font-family:'Noto Serif JP',serif;font-size:1.1rem;color:var(--c-sumi);margin-bottom:14px;font-weight:700">プレスリリース必須9要素</h4>
-    <div class="checklist-item"><div class="text"><strong>① タイトル（30字以内）</strong>：「越前打刃物の老舗が、家庭プレミアム『刃心 朱-AKE-』を発売」のように、見出しだけで価値が伝わる</div></div>
-    <div class="checklist-item"><div class="text"><strong>② リード文（200字以内）</strong>：5W2H＋ニュース性（「初」「日本一」「ユニーク」）</div></div>
+    <div class="checklist-item"><div class="text"><strong>① タイトル（30字以内）</strong>：見出しだけで価値が伝わる構造</div></div>
+    <div class="checklist-item"><div class="text"><strong>② リード文（200字以内）</strong>：5W2H＋ニュース性</div></div>
     <div class="checklist-item"><div class="text"><strong>③ 商品の独自性</strong>：他社との明確な違いを3点</div></div>
     <div class="checklist-item"><div class="text"><strong>④ ストーリー</strong>：1928年創業／3代目の挑戦／職人の手仕事</div></div>
     <div class="checklist-item"><div class="text"><strong>⑤ 数値根拠</strong>：市場規模・成長率・実績（出典付き）</div></div>
@@ -412,6 +819,49 @@ flowchart LR
     <div class="checklist-item"><div class="text"><strong>⑦ 動画30秒</strong>：職人手仕事＋商品全景＋使用シーンの3カット構成</div></div>
     <div class="checklist-item"><div class="text"><strong>⑧ 取材対応の窓口</strong>：担当者名・直通電話・メール・対応可能時間帯</div></div>
     <div class="checklist-item"><div class="text"><strong>⑨ 発売情報</strong>：価格／発売日／販売チャネル／公式LP URL</div></div>
+  </div>
+
+  <h4 style="margin-top:24px;font-family:'Noto Serif JP',serif;font-size:1.05rem">📝 リリース見出し3案（媒体別ピッチ用）</h4>
+  <p style="color:var(--c-dim);font-size:.92rem;margin-bottom:10px">媒体特性に応じて使い分けます。WBS（経済性）／NHK（生活実用）／一般紙（伝統文化）の3軸。</p>
+
+  <div class="copy-card">
+    <span class="cc-label">A案 ／ 経済紙・WBSトレたま向け</span>
+    <div class="cc-title">越前打刃物の老舗が初の家庭ライン。創業96年、3代目が挑む「桐箱に納める3本セット29,800円」</div>
+    <div class="cc-lead">福井県越前市の越前刃心株式会社（架空）は、家庭プレミアム新ライン『刃心 朱-AKE-』を2026年9月15日に発売します。プロ用包丁ライン『刃心』と同等の鋼材を使用しながら、家庭向けに重量・サイズを最適化。朱色のG10樹脂ハンドル＋桐箱仕様で「贈り物適性」を強化し、3本セット29,800円（税込）から展開します。</div>
+    <div class="cc-meta">狙い：中小企業の新規事業挑戦・経済性・価格戦略の切り口で経済ジャーナリスト・WBSデスクに訴求</div>
+  </div>
+
+  <div class="copy-card" style="border-left-color:var(--c-gold)">
+    <span class="cc-label" style="background:var(--c-gold)">B案 ／ ライフスタイル誌・NHKまちかど情報室向け（※NHKは商品名非公開なのでユーザー側ストーリーへ）</span>
+    <div class="cc-title">朝の食卓が変わる──娘の独立祝いに、母が選んだ「朱色の柄の包丁」</div>
+    <div class="cc-lead">「30年使い込んだ実家の包丁を見て、娘が『これと同じくらい大事に使えるものを』とリクエストしました」。母は越前打刃物の伝統と桐箱に納められた一本を選び、独立する娘へ贈りました。朝の光に映える朱色の柄、家族の食卓に静かに加わる職人の一本。研ぎ直しサービスがあるから、一生使える安心も添えて。</div>
+    <div class="cc-meta">狙い：NHK特性（商品名非公開）に合わせ、利用者の物語を主役に。番組構成上「絵が浮かぶ」切り口で取材企画担当者に訴求</div>
+  </div>
+
+  <div class="copy-card" style="border-left-color:#0e6b75">
+    <span class="cc-label" style="background:#0e6b75">C案 ／ 一般紙文化部・地方紙向け</span>
+    <div class="cc-title">越前打刃物700年、家庭に届く──福井の3代目が挑む「日常に職人技を」</div>
+    <div class="cc-lead">越前打刃物の歴史は約700年、伝統的工芸品指定から半世紀。プロ料理人を支えてきた福井の老舗が、初めて家庭の食卓を狙います。背景にあるのは「日本の職人技を、もっと多くの食卓に届けたい」という3代目の問題意識と、家庭で本格料理を楽しむ層の拡大。</div>
+    <div class="cc-meta">狙い：地方発・伝統工芸の文化的価値を主軸に、文化部記者・地方経済記者に訴求</div>
+  </div>
+
+  <h4 style="margin-top:24px;font-family:'Noto Serif JP',serif;font-size:1.05rem">📱 発信日SNS投稿テキスト案（X／Instagram／note）</h4>
+  <div class="grid grid-3" style="margin-top:10px">
+    <div class="copy-card" style="margin:0;border-left-color:#1a1a1a">
+      <span class="cc-label" style="background:#1a1a1a">X（旧Twitter）</span>
+      <div class="cc-title" style="font-size:.95rem;line-height:1.7">越前打刃物700年。福井の老舗が初めて家庭の食卓を狙います。朱色の柄に桐箱を添えて、3本セット29,800円。プロ料理人と同じ鋼材を、贈り物に。<br>『刃心 朱-AKE-』発売 → [LP URL]<br>#越前打刃物 #包丁 #贈り物 #ふくい</div>
+      <div class="cc-meta">投稿時刻：D-day 9:00／写真：朱の柄＋桐箱（1枚）</div>
+    </div>
+    <div class="copy-card" style="margin:0;border-left-color:#dc2626">
+      <span class="cc-label">Instagram</span>
+      <div class="cc-title" style="font-size:.95rem;line-height:1.7">「これと同じくらい大事に使えるものを」<br><br>娘の独立祝いに、母が選んだ朱色の柄の包丁。<br>越前打刃物700年の技を、家庭の食卓に届ける『刃心 朱-AKE-』、本日発売です。</div>
+      <div class="cc-meta">投稿時刻：D-day 12:00／カルーセル5枚（商品／桐箱／鍛造／家族／LP）</div>
+    </div>
+    <div class="copy-card" style="margin:0;border-left-color:#b58a3b">
+      <span class="cc-label" style="background:#b58a3b">note</span>
+      <div class="cc-title" style="font-size:.95rem;line-height:1.7">96年、福井の刃物職人がはじめて家庭に踏み出した日──『刃心 朱-AKE-』ローンチの裏側<br><br>3代目の決断、職人の戸惑い、桐箱に込めた思い。約2,000字のストーリー記事。</div>
+      <div class="cc-meta">公開時刻：D-day 18:00／長文ストーリーで深掘り層と二次拡散を狙う</div>
+    </div>
   </div>
 
   <h3>6-2. プレスキット5点セット</h3>
@@ -447,7 +897,7 @@ flowchart LR
   <div class="grid grid-2">
     <div class="card">
       <h4>📨 PR TIMES配信</h4>
-      <p><strong>1配信 30,000円〜（プラン次第）</strong>。月間PV1億超の260媒体に転載される可能性。リリース本文＋画像5枚＋動画1本をセット。配信タイミングは火・水・木の10:00または14:00が反応高い（経験則）。</p>
+      <p><strong>2026年現行プラン</strong>：従量配信 <strong>1配信 88,000円</strong>／月額プラン <strong>80,000円／月（30配信込み）</strong>／スタートアップ認定企業のみ <strong>1配信 30,000円</strong>。最大260提携媒体への配信網。リリース本文＋画像5枚＋動画1本をセット。<br><span style="font-size:.85rem;color:var(--c-muted)">配信タイミング（弊社経験則）：火〜木の10時前後・14時前後がメディア開封率高め。出典：PR TIMES公式料金プラン（2026年確認）</span></p>
     </div>
     <div class="card">
       <h4>📮 直接送付（500社）</h4>
@@ -464,6 +914,57 @@ flowchart LR
 <section id="tv">
   <h2>7. TV露出施策 — WBS『トレンドたまご』とNHK『おはよう日本 まちかど情報室』</h2>
   <p class="lead">2大ターゲット番組の「採用される条件」を逆算し、番組別の切り口でアプローチします。</p>
+
+  <!-- 絵コンテSVG：TV放映時の3カット構成 -->
+  <div class="strategy-overview" style="margin-bottom:24px">
+    <h3>🎬 TV放映時の絵コンテ — 鍛造 → 朱の柄 → 食卓 の3カット構成</h3>
+    <svg viewBox="0 0 1000 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TV絵コンテ3カット">
+      <defs>
+        <linearGradient id="gradFire" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a1a1a"/><stop offset="60%" stop-color="#7a1f1f"/><stop offset="100%" stop-color="#dc2626"/></linearGradient>
+        <linearGradient id="gradAke" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fdf6e8"/><stop offset="100%" stop-color="#dc2626"/></linearGradient>
+        <linearGradient id="gradTable" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fdf6e8"/><stop offset="100%" stop-color="#b58a3b"/></linearGradient>
+        <marker id="arrCut" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#b58a3b"/></marker>
+      </defs>
+
+      <!-- カット1：鍛造の火花 -->
+      <rect x="40" y="40" width="280" height="180" rx="8" fill="url(#gradFire)" stroke="#1a1a1a" stroke-width="2"/>
+      <text x="180" y="78" text-anchor="middle" font-size="16" font-weight="900" fill="#fff" font-family="'Noto Serif JP',serif">CUT 1</text>
+      <text x="180" y="105" text-anchor="middle" font-size="13" fill="#fff" opacity=".9">鍛造の火花（職人手仕事）</text>
+      <text x="180" y="130" text-anchor="middle" font-size="40">🔥</text>
+      <text x="180" y="170" text-anchor="middle" font-size="11" fill="#fff" opacity=".85">尺：8秒</text>
+      <text x="180" y="188" text-anchor="middle" font-size="11" fill="#fff" opacity=".85">音：金属を打つ音＋火花</text>
+      <text x="180" y="206" text-anchor="middle" font-size="11" fill="#fff" opacity=".85">テロップ：「越前打刃物 700年」</text>
+
+      <!-- 矢印 1→2 -->
+      <line x1="325" y1="130" x2="355" y2="130" stroke="#b58a3b" stroke-width="3" marker-end="url(#arrCut)"/>
+
+      <!-- カット2：朱の柄が完成 -->
+      <rect x="360" y="40" width="280" height="180" rx="8" fill="url(#gradAke)" stroke="#dc2626" stroke-width="2"/>
+      <text x="500" y="78" text-anchor="middle" font-size="16" font-weight="900" fill="#7a1f1f" font-family="'Noto Serif JP',serif">CUT 2</text>
+      <text x="500" y="105" text-anchor="middle" font-size="13" fill="#1a1a1a">朱の柄が完成（商品の核）</text>
+      <text x="500" y="138" text-anchor="middle" font-size="40">🔪</text>
+      <text x="500" y="170" text-anchor="middle" font-size="11" fill="#1a1a1a">尺：6秒</text>
+      <text x="500" y="188" text-anchor="middle" font-size="11" fill="#1a1a1a">音：静かなナレーション</text>
+      <text x="500" y="206" text-anchor="middle" font-size="11" fill="#1a1a1a">テロップ：「朱色のG10樹脂ハンドル」</text>
+
+      <!-- 矢印 2→3 -->
+      <line x1="645" y1="130" x2="675" y2="130" stroke="#b58a3b" stroke-width="3" marker-end="url(#arrCut)"/>
+
+      <!-- カット3：家庭の食卓 -->
+      <rect x="680" y="40" width="280" height="180" rx="8" fill="url(#gradTable)" stroke="#b58a3b" stroke-width="2"/>
+      <text x="820" y="78" text-anchor="middle" font-size="16" font-weight="900" fill="#1a1a1a" font-family="'Noto Serif JP',serif">CUT 3</text>
+      <text x="820" y="105" text-anchor="middle" font-size="13" fill="#1a1a1a">家庭の食卓（使用シーン）</text>
+      <text x="820" y="138" text-anchor="middle" font-size="40">🍽️</text>
+      <text x="820" y="170" text-anchor="middle" font-size="11" fill="#1a1a1a">尺：8秒</text>
+      <text x="820" y="188" text-anchor="middle" font-size="11" fill="#1a1a1a">音：朝の食卓の生活音</text>
+      <text x="820" y="206" text-anchor="middle" font-size="11" fill="#1a1a1a">テロップ：「家庭に届く、職人の技」</text>
+
+      <!-- 下部統括 -->
+      <rect x="40" y="245" width="920" height="60" rx="8" fill="#fff" stroke="#b58a3b" stroke-width="1.5"/>
+      <text x="500" y="270" text-anchor="middle" font-size="13" font-weight="900" fill="#1a1a1a">合計尺：22秒（WBSトレたま2分枠の編集素材として）</text>
+      <text x="500" y="290" text-anchor="middle" font-size="11" fill="#6b6661">残り1分38秒は、商品仕様・価格・3代目インタビュー等を番組制作側で構成</text>
+    </svg>
+  </div>
 
   <div class="tv-card">
     <h4>WBS『トレンドたまご』（テレビ東京）</h4>
@@ -531,7 +1032,7 @@ flowchart LR
       <tr><td>カンブリア宮殿</td><td>TV東京</td><td><span class="badge low">長期</span></td><td>3代目社長密着、業界変革</td></tr>
       <tr><td>ヒルナンデス！</td><td>日テレ</td><td><span class="badge mid">中</span></td><td>家庭の便利・贈り物特集</td></tr>
       <tr><td>news every.</td><td>日テレ</td><td><span class="badge mid">中</span></td><td>地方発・伝統工芸の今</td></tr>
-      <tr><td>ZIP!</td><td>日テレ</td><td><span class="badge mid">中</span></td><td>朝の主婦層・新商品コーナー</td></tr>
+      <tr><td>ZIP!</td><td>日テレ</td><td><span class="badge mid">中</span></td><td>朝の生活者層・新商品コーナー</td></tr>
       <tr><td>福井TV系列</td><td>地元</td><td><span class="badge high">高</span></td><td>地元密着・地元発の挑戦</td></tr>
     </table>
   </div>
@@ -594,9 +1095,57 @@ flowchart LR
     </ul>
   </div>
 
-  <h3>8-1. 取材対応のフロー</h3>
-  <div class="flow-wrap">
-    <div class="mermaid">
+  <h3>8-1. 取材対応のフロー（時系列タイムライン）</h3>
+  <p style="margin-bottom:14px;color:var(--c-dim);font-size:.95rem">取材依頼が来てから動くのでは遅い。<strong>発信前にすべてを揃え</strong>、依頼が入った瞬間に下記タイムラインで動けるよう体制を組みます。</p>
+
+  <div class="interview-flow">
+    <div class="if-step" data-time="D−7">
+      <div class="if-head"><span class="if-ico">📦</span>発信1週間前 ─ 体制ロックオン</div>
+      <div class="if-body">プレスキット最終確定／撮影スポット3か所予約／代表・職人頭・広報の<strong>取材待機シフト確定</strong>／NHK向け取材協力ユーザー候補リスト確保。</div>
+      <span class="if-do">✓ 全関係者カレンダー押さえ</span>
+    </div>
+
+    <div class="if-step is-key" data-time="D-day">
+      <div class="if-head"><span class="if-ico">🚀</span>発信当日 ─ プレスリリース配信</div>
+      <div class="if-body">PR TIMES配信（火〜木10時前後）／自社サイト・SNS同時投稿／500社への直接送付メール／番組投稿フォーム提出。<br><strong>広報担当はメール・電話を全集中監視</strong>。</div>
+      <span class="if-do">✓ 全チャネル同時稼働</span>
+    </div>
+
+    <div class="if-step" data-time="D+数h">
+      <div class="if-head"><span class="if-ico">📞</span>発信後 数時間 ─ ディレクター初期問合せ</div>
+      <div class="if-body">TVディレクター・記者から「素材ありますか」「現場取材できますか」の電話・メール。<strong>30分以内に追加素材を送れる体制</strong>でスタンバイ（プレスキットZIP・職人写真・15秒動画は即送信可能なフォルダに）。</div>
+      <span class="if-do">✓ 即答スタンバイ</span>
+    </div>
+
+    <div class="if-step is-key" data-time="D+1〜2">
+      <div class="if-head"><span class="if-ico">🎬</span>発信翌日〜2日 ─ 取材受入実施</div>
+      <div class="if-body">「明日／明後日に取材したい」の打診に <strong>即「Yes」と答えられる体制</strong> が肝。本社・工房・利用者宅のいずれでも受入可能。NHKまちかど情報室では <strong>利用者を2日以内に確保</strong>（全国どこでも出向く前提）。出演者には事前に注意点・演出意向を伝達。</div>
+      <span class="if-do">✓ 取材実施／撮影</span>
+    </div>
+
+    <div class="if-step" data-time="D+3〜7">
+      <div class="if-head"><span class="if-ico">📰</span>1週間以内 ─ 他局・雑誌・WEB対応</div>
+      <div class="if-body">「商品だけ送ってほしい」依頼に商品＋制作部用同梱資料（キャッチフレーズ集／ストーリー要旨／演出案）を送付（最低1セット）。雑誌・WEB編集部・外注ライターからの問合せにも同フォーマットで対応。</div>
+      <span class="if-do">✓ 商品＋同梱資料送付</span>
+    </div>
+
+    <div class="if-step is-key" data-time="放映">
+      <div class="if-head"><span class="if-ico">📺</span>放映・掲載 ─ SNS連動拡散</div>
+      <div class="if-body">放映直後30分以内に公式SNSで「ご紹介いただきました」投稿／LPトラフィック対応／在庫・受注体制を即チェック。<strong>放映効果は当日〜翌日72時間がピーク</strong>。</div>
+      <span class="if-do">✓ 売上連動の最大化</span>
+    </div>
+
+    <div class="if-step" data-time="D+14">
+      <div class="if-head"><span class="if-ico">🔄</span>2週間後 ─ 次のニュース仕込み</div>
+      <div class="if-body">放映実績を踏まえて第2弾の切り口を設計。料理研究家とのコラボ動画／レビュー記事化／関連商品の追加リリースを準備。</div>
+      <span class="if-do">✓ 継続露出の波</span>
+    </div>
+  </div>
+
+  <details>
+    <summary style="cursor:pointer;color:var(--c-dim);font-size:.88rem;margin:10px 0;padding:8px 14px;background:#fafaf7;border-radius:6px">📋 関係者間のメッセージ詳細（折りたたみ）</summary>
+    <div class="flow-wrap">
+      <div class="mermaid">
 sequenceDiagram
   autonumber
   participant D as TV ディレクター
@@ -614,10 +1163,11 @@ sequenceDiagram
   E->>U: 出演者へ注意点・演出意向を伝達
   E->>D: 取材日確定（翌日〜2日以内）
   Note over D,U: 取材実施 → 放映 → SNS連動拡散
+      </div>
     </div>
-  </div>
+  </details>
 
-  <h3>8-2. 取材対応Q&A集（30問）</h3>
+  <h3>8-2. 取材対応Q&A集（DEMO抜粋／本番時は全30問を整備）</h3>
   <details open>
     <summary>商品に関する質問（10問）</summary>
     <div class="details-body">
@@ -625,7 +1175,7 @@ sequenceDiagram
         <li><strong>Q. なぜ「朱-AKE-」という名前？</strong><br>A. 越前打刃物の「鋼の色」を朱で象徴。日本の伝統色の朱は「魔除け」「祝い」の意味も持ち、贈り物にふさわしい色です。</li>
         <li><strong>Q. プロ用『刃心』との違いは？</strong><br>A. 鋼材はプロ用同等。違いは柄の素材（朱のG10樹脂）と価格帯。家庭で扱いやすい重さに調整しています。</li>
         <li><strong>Q. 価格設定の根拠は？</strong><br>A. 3本セット29,800円は、贈り物の予算ゾーン3万円台を意識。職人の手仕事を維持できる最低ラインでもあります。</li>
-        <li><strong>Q. 朱色の柄が剥げたりしませんか？</strong><br>A. G10樹脂は最高級素材で、業界トップクラスの耐久性。10年使用しても色落ちしません。</li>
+        <li><strong>Q. 朱色の柄が剥げたりしませんか？</strong><br>A. G10樹脂は工業用ハイグレード素材で、長期使用に耐える設計です。<span style="font-size:.85rem;color:var(--c-muted)">※「○年使用しても色落ちしません」等の断定回答は景品表示法上の優良誤認リスクがあるため、公的試験データや自社検証データに基づく具体表現に置き換えて回答。</span></li>
         <li><strong>Q. 子供がいる家庭でも安全？</strong><br>A. 鞘付きで保管時の安全性を確保。包丁の切れ味は素人でも扱える設計です。</li>
       </ul>
     </div>
@@ -733,25 +1283,156 @@ sequenceDiagram
   <h3>10-1. KPI設計</h3>
   <div class="table-wrap">
     <table>
-      <tr><th>指標</th><th>3ヶ月目標</th><th>6ヶ月目標</th><th>1年目標</th></tr>
+      <tr><th>指標</th><th>3ヶ月目標（累計）</th><th>6ヶ月目標（累計）</th><th>1年目標（累計）</th></tr>
       <tr><td>TVオンエア</td><td>1番組</td><td>2番組</td><td>3〜5番組</td></tr>
       <tr><td>新聞掲載</td><td>2媒体</td><td>5媒体</td><td>10媒体</td></tr>
       <tr><td>WEB記事</td><td>15本</td><td>30本</td><td>60本</td></tr>
-      <tr><td>SNSインプレッション</td><td>30万</td><td>100万</td><td>300万</td></tr>
-      <tr><td>LP訪問者数</td><td>10,000</td><td>30,000</td><td>80,000</td></tr>
-      <tr><td>『朱-AKE-』販売セット数</td><td>300</td><td>1,000</td><td>2,500</td></tr>
+      <tr><td>SNSインプレッション</td><td>30万（累計）</td><td>100万（累計）</td><td>300万（累計）</td></tr>
+      <tr><td>LP訪問者数</td><td>10,000人（累計）</td><td>30,000人（累計）</td><td>80,000人（累計）</td></tr>
+      <tr><td>『朱-AKE-』販売セット数</td><td>300セット</td><td>1,000セット</td><td>2,500セット</td></tr>
       <tr><td>売上（粗利）</td><td>900万円</td><td>3,000万円</td><td>7,500万円</td></tr>
     </table>
   </div>
 
+  <h3>10-1b. 媒体別 効果評価（2020年代スタンダード指標）</h3>
+  <p style="color:var(--c-dim);font-size:.92rem;margin-bottom:8px">PR効果は「広告換算（AVE）」ではなく、<strong>指名検索量・LP流入・CVR・ブランドリフト</strong>で評価するのが2020年代の業界スタンダード（国際PR団体AMECの<a href="https://amecorg.com/amecframework/" target="_blank" rel="noopener">Barcelona Principles 3.0</a>）。本提案も現代指標で設計。</p>
+  <div class="table-wrap">
+    <table>
+      <tr><th>媒体</th><th>露出形態</th><th>主要指標（2020年代スタンダード）</th><th>6ヶ月想定</th></tr>
+      <tr><td>WBSトレんたまご</td><td>2分枠TVオンエア</td><td>指名検索1.5〜3倍／LP流入5,000〜15,000人／放映直後72時間ピーク</td><td>1回採用想定</td></tr>
+      <tr><td>NHKまちかど情報室</td><td>1分枠TVオンエア（商品名なし）</td><td>カテゴリ検索（「越前 包丁」等）増／間接流入1,000〜3,000人</td><td>1回採用想定</td></tr>
+      <tr><td>全国紙（朝日・毎日・産経等）</td><td>記事掲載（半段〜1段）</td><td>掲載翌日のLP流入＋小売店問合せ／印刷部数×到達率で評価</td><td>累計5媒体</td></tr>
+      <tr><td>WEBメディア記事</td><td>編集記事（PV5万〜50万）</td><td>記事PV／LP流入CVR／SNSシェア数</td><td>累計30本</td></tr>
+      <tr><td>SNS（自社＋拡散）</td><td>累計100万インプレッション</td><td>エンゲージメント率／保存数／指名タグ投稿数</td><td>累計100万imp</td></tr>
+    </table>
+  </div>
+  <div class="alert info" style="margin-top:10px;font-size:.88rem">
+    <b>📌 AVE（広告換算PR価値）について：</b>
+    かつてPR業界で多用されたAVE指標は、国際PR団体AMECの「Barcelona Principles 2.0（2015）／3.0（2020）」で <strong>「使用を推奨しない」と明確に否定</strong> されています。理由は①記事の信頼性と広告の信頼性は性質が異なる ②ネガティブ記事もプラス換算してしまう ③PR本来の目的（ブランド・行動変容）を測れない。
+    本提案では <strong>指名検索量・LP流入CVR・受注貢献・ブランドリフト調査</strong> という現代スタンダードでROIを評価します。
+  </div>
+
+  <h3>10-1c. 売上3,000万円の積み上げ根拠（6ヶ月）</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>商品</th><th>単価（税込）</th><th>想定販売数</th><th>売上</th><th>チャネル比率</th></tr>
+      <tr><td>3本セット 朱-AKE-</td><td>29,800円</td><td>650セット</td><td>約 1,937万円</td><td>自社EC 50%／百貨店ギフト 30%／代理店 20%</td></tr>
+      <tr><td>三徳 単品</td><td>14,800円</td><td>200本</td><td>約 296万円</td><td>自社EC 70%／代理店 30%</td></tr>
+      <tr><td>牛刀 単品</td><td>16,800円</td><td>150本</td><td>約 252万円</td><td>自社EC 70%／代理店 30%</td></tr>
+      <tr><td>ペティ 単品</td><td>9,800円</td><td>250本</td><td>約 245万円</td><td>自社EC 80%／代理店 20%</td></tr>
+      <tr><td>名入れオプション・桐箱単品等</td><td>3,000〜8,000円</td><td>200件</td><td>約 100万円</td><td>自社EC 100%</td></tr>
+      <tr style="background:#fdf6e8"><th>合計（6ヶ月）</th><th colspan="2"></th><th>約 <strong>2,830万円</strong> ＋ EC送料売上等 <strong>約 170万円</strong></th><th>＝ <strong>約 3,000万円</strong></th></tr>
+    </table>
+  </div>
+  <p style="font-size:.84rem;color:var(--c-muted);margin-top:6px">
+    ※ DEMO想定数値。販売数の根拠は競合タダフサ・GLOBALの直販EC公開実績（年間2,000〜5,000本台）と、メディア露出時の指名検索数増加事例（業界平均：放映後30日でEC流入3〜10倍）の最低ラインで試算。
+  </p>
+
   <h3>10-2. 投資概算（6ヶ月）</h3>
   <div class="grid grid-3">
-    <div class="card"><h4>プレスキット制作</h4><div class="stat">120<span style="font-size:1rem">万円</span></div><div class="stat-sub">撮影・動画制作・デザイン</div></div>
-    <div class="card"><h4>PR TIMES配信＋メディア対応</h4><div class="stat">60<span style="font-size:1rem">万円</span></div><div class="stat-sub">配信費＋対応工数</div></div>
-    <div class="card"><h4>料理研究家3名年契約</h4><div class="stat">108<span style="font-size:1rem">万円</span></div><div class="stat-sub">月3万円×3名×12ヶ月</div></div>
-    <div class="card"><h4>専用LP・EC構築</h4><div class="stat">80<span style="font-size:1rem">万円</span></div><div class="stat-sub">Shopify＋カスタマイズ</div></div>
+    <div class="card"><h4>プレスキット制作</h4><div class="stat">120<span style="font-size:1rem">万円</span></div><div class="stat-sub">撮影60万＋動画3本40万＋デザイン20万</div></div>
+    <div class="card"><h4>PR TIMES配信＋メディア対応</h4><div class="stat">60<span style="font-size:1rem">万円</span></div><div class="stat-sub">月額プラン80,000円×6ヶ月＋対応工数</div></div>
+    <div class="card"><h4>料理研究家3名年契約</h4><div class="stat">108<span style="font-size:1rem">万円</span></div><div class="stat-sub">月3万円×3名×12ヶ月（DEMO想定。業界相場月10〜30万円帯を、地方発ブランド・年契約・ストック型投稿の3条件で圧縮交渉した想定値）</div></div>
+    <div class="card"><h4>専用LP・EC構築</h4><div class="stat">80<span style="font-size:1rem">万円</span></div><div class="stat-sub">Shopify構築＋商品ページ＋決済連携</div></div>
     <div class="card"><h4>取材対応マニュアル整備</h4><div class="stat">40<span style="font-size:1rem">万円</span></div><div class="stat-sub">Q&A集・ロープレ・撮影スポット整備</div></div>
-    <div class="card accent"><h4>総投資概算</h4><div class="stat">408<span style="font-size:1rem">万円</span></div><div class="stat-sub">6ヶ月想定売上3,000万円に対しROI ＋7.4倍</div></div>
+    <div class="card accent"><h4>総投資概算</h4><div class="stat">408<span style="font-size:1rem">万円</span></div><div class="stat-sub">6ヶ月想定売上（粗利）3,000万円÷投資408万円＝<strong>投資回収倍率 約7.4倍</strong></div></div>
+  </div>
+
+  <h3>10-3. チーム体制図 ＆ 外注内訳</h3>
+  <div class="team-chart">
+    <svg viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="チーム体制図">
+      <defs>
+        <linearGradient id="gradInside" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fdf6e8"/><stop offset="100%" stop-color="#f7f4ed"/></linearGradient>
+        <linearGradient id="gradOutside" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ecfdf5"/><stop offset="100%" stop-color="#d1fae5"/></linearGradient>
+      </defs>
+
+      <!-- 中央：プロジェクトマネジメント -->
+      <rect x="350" y="20" width="200" height="60" rx="10" fill="url(#gradPR)" stroke="#7a1f1f" stroke-width="2"/>
+      <text x="450" y="48" text-anchor="middle" font-size="14" font-weight="900" fill="#fff" font-family="'Noto Serif JP',serif">PMO（PR統括）</text>
+      <text x="450" y="68" text-anchor="middle" font-size="10" fill="#fff" opacity=".9">越前刃心 広報担当＋外部PRディレクター</text>
+
+      <!-- 内製チーム（上） -->
+      <text x="180" y="115" text-anchor="middle" font-size="13" font-weight="700" fill="#7a1f1f">🏭 内製チーム（社内）</text>
+      <rect x="40" y="125" width="280" height="60" rx="8" fill="url(#gradInside)" stroke="#b58a3b" stroke-width="1.5"/>
+      <text x="180" y="148" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a1a">代表者・職人頭・営業部</text>
+      <text x="180" y="170" text-anchor="middle" font-size="10" fill="#6b6661">取材対応／コメント／代理店リレーション</text>
+      <rect x="40" y="195" width="280" height="50" rx="8" fill="url(#gradInside)" stroke="#b58a3b" stroke-width="1.5"/>
+      <text x="180" y="216" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a1a">広報担当（社内）</text>
+      <text x="180" y="234" text-anchor="middle" font-size="10" fill="#6b6661">日々のメディア窓口・SNS運用・取材調整</text>
+
+      <!-- 外注チーム（下） -->
+      <text x="700" y="115" text-anchor="middle" font-size="13" font-weight="700" fill="#0e6b75">🤝 外注チーム（パートナー）</text>
+      <rect x="560" y="125" width="280" height="50" rx="8" fill="url(#gradOutside)" stroke="#0e6b75" stroke-width="1.5"/>
+      <text x="700" y="146" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a1a">外部PRディレクター（業務委託）</text>
+      <text x="700" y="164" text-anchor="middle" font-size="10" fill="#6b6661">戦略立案・メディアリスト・ピッチ実行</text>
+      <rect x="560" y="185" width="280" height="50" rx="8" fill="url(#gradOutside)" stroke="#0e6b75" stroke-width="1.5"/>
+      <text x="700" y="206" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a1a">撮影＋動画制作（プロカメラマン）</text>
+      <text x="700" y="224" text-anchor="middle" font-size="10" fill="#6b6661">商品写真5枚＋動画3本（30/60/120秒）</text>
+      <rect x="560" y="245" width="280" height="50" rx="8" fill="url(#gradOutside)" stroke="#0e6b75" stroke-width="1.5"/>
+      <text x="700" y="266" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a1a">LP/EC開発（Shopify構築）</text>
+      <text x="700" y="284" text-anchor="middle" font-size="10" fill="#6b6661">専用LP＋オンラインショップ構築</text>
+      <rect x="560" y="295" width="280" height="50" rx="8" fill="url(#gradOutside)" stroke="#0e6b75" stroke-width="1.5"/>
+      <text x="700" y="316" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a1a">料理研究家3名（年契約）</text>
+      <text x="700" y="334" text-anchor="middle" font-size="10" fill="#6b6661">月10投稿＋リール4本／インフルエンサー</text>
+
+      <!-- 矢印：PMOから内製・外注へ -->
+      <line x1="380" y1="80" x2="220" y2="125" stroke="#7a1f1f" stroke-width="1.5"/>
+      <line x1="520" y1="80" x2="660" y2="125" stroke="#7a1f1f" stroke-width="1.5"/>
+    </svg>
+  </div>
+
+  <h4 style="margin-top:18px;font-family:'Noto Serif JP',serif">💰 408万円の外注内訳（円グラフ的に整理）</h4>
+  <div class="table-wrap">
+    <table>
+      <tr><th>外注先</th><th>内容</th><th>金額</th><th>構成比</th></tr>
+      <tr><td>プロカメラマン＋動画制作会社</td><td>商品写真5枚＋動画3本</td><td>120万円</td><td>29.4%</td></tr>
+      <tr><td>料理研究家3名（年契約）</td><td>月10投稿＋リール4本</td><td>108万円</td><td>26.5%</td></tr>
+      <tr><td>Web制作会社（Shopify構築）</td><td>LP＋EC＋決済連携</td><td>80万円</td><td>19.6%</td></tr>
+      <tr><td>外部PRディレクター（業務委託）</td><td>戦略立案＋メディア対応6ヶ月</td><td>60万円</td><td>14.7%</td></tr>
+      <tr><td>取材対応コンサル</td><td>Q&A集制作＋ロープレ運営</td><td>40万円</td><td>9.8%</td></tr>
+      <tr style="background:#fdf6e8"><th>合計</th><th></th><th>408万円</th><th>100%</th></tr>
+    </table>
+  </div>
+
+  <h3>10-4. リスクシナリオ・撤退基準</h3>
+  <p style="color:var(--c-dim);font-size:.92rem">「想定通りに進まない場合」の代替プランを事前設計。撤退基準を明示することで意思決定の迷いを最小化。</p>
+  <div class="risk-grid">
+    <div class="risk-card">
+      <h4>🚨 シナリオ① TV採用ゼロ（3ヶ月時点）</h4>
+      <div class="risk-trig">トリガー：D+90までにWBS／NHKいずれも採用なし</div>
+      <div class="risk-plan">
+        <strong>セカンドプラン</strong>：WEBメディア＋雑誌へ予算シフト。料理研究家経由のレビュー記事を週1本量産。ターゲットを「贈り物層」から「料理愛好家YouTube層」へ転換し、UGC連動を強化。<br><br>
+        <strong>予算配分変更</strong>：PRディレクター予算 60万→ WEBパブリシティ追加40万 ＋ レビューPR・料理研究家追加発注20万。総予算は据置。<br>
+        <strong>スケジュール影響</strong>：D+91〜D+180 を「WEB＋雑誌＋UGC強化フェーズ」として再構成。売上目標を 3,000万→ 2,200万円に下方修正。
+      </div>
+    </div>
+    <div class="risk-card">
+      <h4>🔥 シナリオ② SNS炎上発生</h4>
+      <div class="risk-trig">トリガー：1時間で否定的言及100件超／メディアからの確認連絡</div>
+      <div class="risk-plan">
+        <strong>対応フロー</strong>：①社長判断24時間以内 ②公式声明SNS掲載 ③弁護士連携 ④料理研究家3名は告知遅延協議 ⑤週次モニタリング体制を24時間体制に切替<br><br>
+        <strong>追加コスト</strong>：弁護士スポット相談 10〜20万円／危機広報コンサル 30〜50万円／SNS監視ツール（Yahoo!リアルタイム検索 Pro等）月3万円。<br>
+        <strong>スケジュール影響</strong>：露出施策を最低7日間停止、状況に応じて14〜30日間停止。料理研究家投稿も同期間停止 → 売上影響は 200〜500万円下振れ想定。
+      </div>
+    </div>
+    <div class="risk-card">
+      <h4>📉 シナリオ③ 想定売上未達（6ヶ月時点）</h4>
+      <div class="risk-trig">トリガー：D+180時点で売上1,500万円未達（想定3,000万円の50%）</div>
+      <div class="risk-plan">
+        <strong>セカンドプラン</strong>：①ターゲット拡大（贈答→自家用） ②価格戦略見直し（単品強化） ③百貨店ギフトイベント露出強化 ④第2弾商品開発の前倒し ⑤代理店向けインセンティブ追加<br><br>
+        <strong>追加予算</strong>：百貨店POPアップ出店 50〜80万円／単品プロモ動画追加制作 30万円／代理店インセンティブ（卸価格5%上乗せ）想定100万円。<br>
+        <strong>スケジュール影響</strong>：D+181〜D+360を「リカバリー6ヶ月」として再設定。年間売上目標 7,500万→ 5,000〜6,000万円に下方修正。
+      </div>
+    </div>
+    <div class="risk-card">
+      <h4>⚖ シナリオ④ 景表法・薬事関連の指摘</h4>
+      <div class="risk-trig">トリガー：消費者庁・自治体・専門家からの確認連絡</div>
+      <div class="risk-plan">
+        <strong>対応フロー</strong>：①該当表現の即時修正（LP・SNS・プレスキット全件） ②弁護士監修の修正版を48時間以内に再配布 ③再発防止チェック体制（取材回答前の法務レビュー必修化）<br><br>
+        <strong>追加コスト</strong>：弁護士監修 20〜40万円／LP・印刷物再制作 30〜50万円。<br>
+        <strong>スケジュール影響</strong>：該当表現が広範な場合、露出施策を48〜72時間停止。再開後はリブランド施策で信頼回復（追加1〜2ヶ月）。
+      </div>
+    </div>
   </div>
 </section>
 
@@ -770,8 +1451,8 @@ sequenceDiagram
     <div class="tl-item">
       <div class="tl-dot">M2</div>
       <div class="tl-week">D-30 〜 D-7（8-9月）</div>
-      <div class="tl-title">配信先リスト確定＋直接送付準備＋Pre-Buzz</div>
-      <div class="tl-body">500社リストの最終確認／TV番組ディレクター個人宛のリスト作成／SNSで「何か出る」のPre-Buzz投稿開始／料理研究家3名へサンプル先行提供／専用LP公開（クローズドβ）</div>
+      <div class="tl-title">配信先リスト確定＋直接送付準備＋先出し期投稿開始</div>
+      <div class="tl-body">500社リストの最終確認／TV番組ディレクター個人宛のリスト作成／SNSで「何か出る」の<strong>先出し期（Pre-Buzz）投稿</strong>開始／料理研究家3名へサンプル先行提供／専用LP公開（クローズドβ）</div>
     </div>
     <div class="tl-item">
       <div class="tl-dot">D</div>
@@ -788,13 +1469,13 @@ sequenceDiagram
     <div class="tl-item">
       <div class="tl-dot">M4</div>
       <div class="tl-week">D+30 〜 D+90（10-12月）</div>
-      <div class="tl-title">Amplify＋SNSバズ醸成</div>
+      <div class="tl-title">拡散期（Amplify）＋SNSバズ醸成</div>
       <div class="tl-body">放映後の検索流入を最大化／料理研究家による継続発信／「使ってみた」レビュー記事をWEBメディアに掲載／TikTokバズ狙いの15秒動画投入</div>
     </div>
     <div class="tl-item">
       <div class="tl-dot">M5</div>
       <div class="tl-week">D+90 〜 D+180（12-2月）</div>
-      <div class="tl-title">Sustain＋次のニュース仕込み</div>
+      <div class="tl-title">継続露出期（Sustain）＋次のニュース仕込み</div>
       <div class="tl-body">越前刃心ファミリー第2弾・第3弾の開発／春商戦に向けた贈り物特集への売り込み／海外展開のニュース化／第2波PR活動準備</div>
     </div>
   </div>
@@ -876,7 +1557,7 @@ sequenceDiagram
 <button class="to-top" aria-label="トップに戻る" id="toTopBtn">↑</button>
 
 <footer>
-  <p>越前刃心『刃心 朱-AKE-』ローンチプロモーション提案書 v1 詳細版（DEMO）</p>
+  <p>越前刃心『刃心 朱-AKE-』ローンチプロモーション提案書 v1.1 詳細版（2026-06-20改訂・DEMO）</p>
   <p>2026-04-10 ／ <a href="index.html">← ポータルに戻る</a></p>
   <p style="margin-top:12px;font-size:.75rem;opacity:.7">本資料はアートソウル社内デモ用に作成された完全架空の提案書です。</p>
 </footer>
