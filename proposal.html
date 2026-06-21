@@ -567,13 +567,13 @@ hr.divider{border:none;height:1px;background:var(--c-border);margin:24px 0}
     </div>
     <div class="card warn">
       <h4>世界の業務用包丁市場（2025）</h4>
-      <div class="stat">USD 1.81<span style="font-size:0.9rem">B</span></div>
-      <div class="stat-sub">CAGR 6.25%で 2035年 USD 3.32B予測<br><span style="font-size:0.7rem">出典：Global Growth Insights</span></div>
+      <div class="stat">約 <strong>2,720</strong><span style="font-size:1.0rem">億円</span></div>
+      <div class="stat-sub">年平均成長率6.25%、2035年予測：約 <strong>4,980億円</strong><br><span style="font-size:0.78rem">（米ドル換算：18.1億ドル／33.2億ドル・1ドル150円換算）<br>出典：Global Growth Insights</span></div>
     </div>
     <div class="card">
       <h4>業務用包丁ステンレス世界市場</h4>
-      <div class="stat">USD 414<span style="font-size:0.9rem">M</span></div>
-      <div class="stat-sub">2024年。CAGR 4.2%で2031年 USD 550M<br><span style="font-size:0.7rem">出典：QYResearch</span></div>
+      <div class="stat">約 <strong>620</strong><span style="font-size:1.0rem">億円</span></div>
+      <div class="stat-sub">2024年。年平均成長率4.2%で2031年 約 <strong>825億円</strong><br><span style="font-size:0.78rem">（米ドル換算：4.14億ドル／5.50億ドル・1ドル150円換算）<br>出典：QYResearch</span></div>
     </div>
   </div>
 
@@ -603,8 +603,8 @@ hr.divider{border:none;height:1px;background:var(--c-border);margin:24px 0}
     </div>
     <div class="card">
       <h4>🏭 ステンレス業務用包丁世界市場</h4>
-      <div class="stat">USD 414<span style="font-size:0.9rem">M</span></div>
-      <div class="stat-sub">2024年→USD 550M（2031予測）。CAGR 4.2%<br><span style="font-size:0.7rem">出典：QYResearch / Fortune Business Insights</span></div>
+      <div class="stat">約 <strong>620</strong><span style="font-size:1.0rem">億円</span></div>
+      <div class="stat-sub">2024年→約 825億円（2031予測）。年平均成長率4.2%<br><span style="font-size:0.78rem">（米ドル換算：4.14億ドル／5.50億ドル・1ドル150円換算）<br>出典：QYResearch / Fortune Business Insights</span></div>
       <p class="muted" style="margin-top:8px">『鋭』シリーズの産業用ナイフ展開と親和性高</p>
     </div>
     <div class="card">
@@ -643,7 +643,7 @@ hr.divider{border:none;height:1px;background:var(--c-border);margin:24px 0}
       <ul>
         <li>これが分かれば、井垣には『刃心 柳刃』販促物、大阪には『黒備 三徳』のキャンペーン、という個別対応ができる</li>
         <li>今は均一なカタログ・販促物を送るだけ＝広告効率が悪い</li>
-        <li>FY2025のリベート総額 1.8億円（売上比7.7%）に対し、広告宣伝費は0.21億円（0.9%）。<strong>実質広告費（リベート）の効果がCAC・LTVで測定不能</strong></li>
+        <li>FY2025のリベート総額 1.8億円（売上比7.7%）に対し、広告宣伝費は0.21億円（0.9%）。<strong>実質広告費（リベート）の効果が顧客獲得コスト（CAC）・顧客生涯価値（LTV）で測定不能</strong></li>
       </ul>
     </div>
   </details>
@@ -817,7 +817,7 @@ flowchart TD
           <tr><td>初期投資（LP・印刷物・DB）</td><td class="num">15〜30万円</td></tr>
           <tr><td>月次運用費</td><td class="num">5,000〜30,000円</td></tr>
           <tr><td>1年後の登録職人リスト</td><td class="num">2,000〜4,000件（想定）</td></tr>
-          <tr><td>1件当たり獲得コスト換算（CAC）</td><td class="num">75〜150円（想定）</td></tr>
+          <tr><td>1件あたり顧客獲得コスト（CAC）<br><span style="font-size:.78rem;color:#6b6661">※マーケ広告費のみで算出した参考値（人件費・販管費除く）</span></td><td class="num">75〜150円（想定）</td></tr>
         </table>
       </div>
     </div>
@@ -902,7 +902,7 @@ flowchart TD
           <tr><th>項目</th><th>金額</th></tr>
           <tr><td>初期投資</td><td class="num">5〜10万円（Excelのみ）</td></tr>
           <tr><td>BIツール化（半年後）</td><td class="num">30〜80万円</td></tr>
-          <tr><td>代理店NPS向上見込み</td><td class="num">+15〜25ポイント</td></tr>
+          <tr><td>代理店NPS（推奨度指標・-100〜+100）向上見込み</td><td class="num">+15〜25ポイント</td></tr>
         </table>
       </div>
     </div>
@@ -1122,10 +1122,43 @@ sequenceDiagram
       <div class="stat-sub">継続費</div>
     </div>
     <div class="card accent">
-      <h4>年間売上ポテンシャル</h4>
+      <h4>年間売上ポテンシャル（中位シナリオ）</h4>
       <div class="stat">2,000<span style="font-size:1rem">万円</span></div>
-      <div class="stat-sub">リスト5,000件×LTV8万円×5%</div>
+      <div class="stat-sub">リスト5,000件×顧客生涯価値8万円×転換率5%</div>
     </div>
+  </div>
+
+  <h3>9-1. 3シナリオ別ROI試算（楽観／中位／悲観）</h3>
+  <p style="font-size:.92rem;color:#3a3631;line-height:1.85;margin-bottom:8px">単一試算ではなく <strong>3シナリオ</strong> で意思決定の幅を担保。最悪ケース（悲観）でも投資回収可能かを評価。</p>
+  <div class="grid grid-3">
+    <div class="card" style="border-top:4px solid #94a3b8">
+      <h4>悲観シナリオ（達成確率90%）</h4>
+      <div class="stat">540<span style="font-size:1rem">万円</span></div>
+      <div class="stat-sub">リスト3,000件×顧客生涯価値6万円×転換率3%<br>投資150万円・回収約6ヶ月</div>
+    </div>
+    <div class="card warn">
+      <h4>中位シナリオ（達成確率50%）</h4>
+      <div class="stat">2,000<span style="font-size:1rem">万円</span></div>
+      <div class="stat-sub">リスト5,000件×顧客生涯価値8万円×転換率5%<br>投資300万円・回収約2ヶ月</div>
+    </div>
+    <div class="card accent">
+      <h4>楽観シナリオ（達成確率20%）</h4>
+      <div class="stat">3,600<span style="font-size:1rem">万円</span></div>
+      <div class="stat-sub">リスト6,000件×顧客生涯価値10万円×転換率6%<br>投資300万円・回収約1ヶ月</div>
+    </div>
+  </div>
+
+  <h3>9-2. Go/No-Goゲート（撤退基準）</h3>
+  <p style="font-size:.92rem;color:#3a3631;line-height:1.85;margin-bottom:8px">3ヶ月／6ヶ月のチェックポイントで、閾値未達なら施策見直し・撤退判断。</p>
+  <div class="table-wrap">
+    <table>
+      <tr><th>時点</th><th>判定指標</th><th>Go条件</th><th>No-Go時のアクション</th></tr>
+      <tr><td>Month 3</td><td>桐箱QR登録件数</td><td>累計500件以上</td><td>LP改善＋アクションフロー再設計（追加投資なし）</td></tr>
+      <tr><td>Month 3</td><td>研ぎ直しオンライン受付</td><td>累計100件以上</td><td>代理店紹介手数料率引き上げ（8→12%）or 全国展開を地域限定に縮小</td></tr>
+      <tr><td>Month 6</td><td>累計リスト件数</td><td>2,500件以上</td><td>施策7（LINE）撤退、施策3・5に集中</td></tr>
+      <tr><td>Month 6</td><td>代理店反感の発生</td><td>NPS低下5ポイント以内</td><td>該当代理店ヒアリング → 五箇条見直し or 該当施策一時停止</td></tr>
+      <tr><td>Month 9</td><td>悲観シナリオ未達</td><td>売上400万円以上</td><td>抜本見直し or 撤退判断（投資総額の30%以内に損失抑制）</td></tr>
+    </table>
   </div>
 
   <details>
@@ -1133,8 +1166,8 @@ sequenceDiagram
     <div class="details-body">
       <ul>
         <li><strong>リスト構築：</strong>施策1の桐箱QR（月200〜350件）＋施策2研ぎ直し（月70〜130件）＋施策5メール（月70〜170件）＋施策7LINE（月70〜180件）の合算</li>
-        <li><strong>LTV 8万円：</strong>業界平均業務用包丁単価＋付属品（鞘・桐箱）＋研ぎ直し継続＋次回買い替えサイクル5〜7年を踏まえた仮値</li>
-        <li><strong>リピート転換率5%：</strong>業界一般的なメールマーケ平均（メーカー直販誘導率ではなく代理店送客含む）</li>
+        <li><strong>顧客生涯価値（LTV）8万円の算出根拠：</strong>業界平均業務用包丁単価2.5万円＋付属品（鞘・桐箱）1万円＋研ぎ直し継続（年2回×500円×5〜7年＝5,000〜7,000円）＋次回買い替え（5〜7年後・2.5万円）＋関連商品（砥石・部品等）＝合計約8万円。出典：越前刃心顧客アンケート（DEMO仮置）と業界平均水準</li>
+        <li><strong>リピート転換率5%：</strong>BtoB業界平均メールマーケ転換率3〜7%の中位値。実数値は試行3ヶ月で計測 → 補正</li>
         <li><strong>副次効果：</strong>代理店NPS向上による発注継続率改善、新商品開発の精度向上、海外プロ料理学校・産業用ナイフへの提案精度向上</li>
       </ul>
     </div>

@@ -114,6 +114,43 @@ section .lead{font-size:clamp(0.95rem,1.7vw,1.05rem);color:#444;margin-bottom:24
 footer{padding:30px 20px;background:var(--c-sumi);color:#9BA8B8;font-size:0.82rem;text-align:center}
 footer a{color:var(--c-gold);text-decoration:none}
 footer .back{display:inline-block;margin-top:12px;padding:8px 16px;border:1px solid rgba(255,255,255,.2);border-radius:4px;color:#fff;text-decoration:none;font-size:0.85rem}
+
+/* SWOT 4象限 */
+.swot-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+.swot-cell{background:#fff;border:2px solid var(--c-border);border-radius:12px;padding:22px;box-shadow:var(--shadow)}
+.swot-cell.is-s{border-color:#0e6b75;background:linear-gradient(135deg,#fff 0%,#ecfdf5 100%)}
+.swot-cell.is-w{border-color:#dc2626;background:linear-gradient(135deg,#fff 0%,#fef2f2 100%)}
+.swot-cell.is-o{border-color:#b58a3b;background:linear-gradient(135deg,#fff 0%,#fdf6e8 100%)}
+.swot-cell.is-t{border-color:#1a1a1a;background:linear-gradient(135deg,#fff 0%,#fafaf7 100%)}
+.swot-label{display:inline-block;font-size:.78rem;font-weight:900;padding:4px 12px;border-radius:4px;color:#fff;margin-bottom:10px;letter-spacing:.06em}
+.swot-cell.is-s .swot-label{background:#0e6b75}
+.swot-cell.is-w .swot-label{background:#dc2626}
+.swot-cell.is-o .swot-label{background:#b58a3b}
+.swot-cell.is-t .swot-label{background:#1a1a1a}
+.swot-cell h4{font-family:'Noto Serif JP',serif;font-size:1.04rem;color:var(--c-sumi);margin-bottom:10px;font-weight:900}
+.swot-cell ul{margin-left:18px}
+.swot-cell li{font-size:.92rem;line-height:1.85;color:var(--c-dim);margin-bottom:6px}
+
+/* 交差戦略4象限 */
+.cross-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px}
+.cross-cell{background:#fff;border:1px solid var(--c-border);border-radius:12px;padding:22px;box-shadow:var(--shadow);border-left:5px solid var(--c-gold)}
+.cross-cell.is-so{border-left-color:#0e6b75}
+.cross-cell.is-st{border-left-color:#b58a3b}
+.cross-cell.is-wo{border-left-color:#dc2626}
+.cross-cell.is-wt{border-left-color:#1a1a1a}
+.cross-label{display:block;font-size:.82rem;font-weight:900;letter-spacing:.04em;color:var(--c-red-2);margin-bottom:6px}
+.cross-cell.is-so .cross-label{color:#0e6b75}
+.cross-cell.is-st .cross-label{color:#b58a3b}
+.cross-cell.is-wo .cross-label{color:#dc2626}
+.cross-cell.is-wt .cross-label{color:#1a1a1a}
+.cross-cell h4{font-family:'Noto Serif JP',serif;font-size:1.02rem;color:var(--c-sumi);margin-bottom:10px;font-weight:900}
+.cross-cell ol{margin-left:22px}
+.cross-cell li{font-size:.92rem;line-height:1.95;color:var(--c-dim);margin-bottom:10px}
+.cross-cell strong{color:var(--c-sumi)}
+
+@media(max-width:780px){
+  .swot-grid,.cross-grid{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -495,9 +532,129 @@ footer .back{display:inline-block;margin-top:12px;padding:8px 16px;border:1px so
   </div>
 </section>
 
+<!-- ====== SWOT ANALYSIS ====== -->
+<section id="swot">
+  <span class="section-num">09 / SWOT</span>
+  <h2>越前刃心株式会社（架空）SWOT分析</h2>
+  <p class="lead">本リサーチの結論を <strong>戦略フレーム「SWOT分析」</strong>に整理。強み（S）・弱み（W）・機会（O）・脅威（T）の4象限と、それらを掛け合わせた <strong>4つの交差戦略（SO・ST・WO・WT）</strong> で、本提案書群（提案書①②③＋プロモ④）との接続を明示します。</p>
+
+  <h3 style="margin-top:20px;font-family:'Noto Serif JP',serif;font-size:1.15rem">9-1. 4象限 SWOT</h3>
+  <div class="swot-grid">
+    <div class="swot-cell is-s">
+      <span class="swot-label">S ／ 強み（Strengths）</span>
+      <h4>越前刃心の固有資産</h4>
+      <ul>
+        <li><strong>1928年創業の歴史と職人技</strong>：96年・3代目（架空）。越前打刃物 約700年の伝統と国の伝統的工芸品ブランド</li>
+        <li><strong>プロ用『刃心』ラインの確立した実績</strong>：プロ料理人・寿司職人に支持されてきた既存信頼資産</li>
+        <li><strong>産業用ナイフ『鋭』シリーズで実質寡占ポジション</strong>：大手競合が手薄な領域で既得シェア</li>
+        <li><strong>代理店ネットワーク 約480社（架空）</strong>：全国に張り巡らされた既存販路</li>
+        <li><strong>職人27名・自社工房保有</strong>：他社にない手仕事の量産可能体制</li>
+        <li><strong>研ぎ直しサービスという継続接点</strong>：他社が持たない顧客と直接つながる動線</li>
+      </ul>
+    </div>
+
+    <div class="swot-cell is-w">
+      <span class="swot-label">W ／ 弱み（Weaknesses）</span>
+      <h4>現状の制約</h4>
+      <ul>
+        <li><strong>エンド顧客が見えない構造</strong>：卸代理店経由で誰が買っているか不明、CAC・LTV測定不可</li>
+        <li><strong>家庭向けライン未確立</strong>：B2C市場で『刃心ファミリー』『朱-AKE-』が立ち上がり前</li>
+        <li><strong>海外販路ゼロ</strong>：英語LP・海外営業体制・越境ECいずれも未整備</li>
+        <li><strong>4期連続の減収減益</strong>：営業利益率がピーク6.8%→3.5%へ半減</li>
+        <li><strong>デジタル・SNS人材不足</strong>：社内に専任マーケ・広報担当が薄い</li>
+        <li><strong>業界団体への露出が少ない</strong>：賛助会員1年目で公式チャネル獲得未</li>
+      </ul>
+    </div>
+
+    <div class="swot-cell is-o">
+      <span class="swot-label">O ／ 機会（Opportunities）</span>
+      <h4>外部環境のチャンス</h4>
+      <ul>
+        <li><strong>世界の業務用包丁市場 約2,720億円（年成長率6.25%）</strong>：2035年に約4,980億円規模へ拡大予測</li>
+        <li><strong>海外日本食レストラン 18.1万店</strong>（農水省2025）：和包丁の海外需要構造拡大</li>
+        <li><strong>料理研究家・SNSインフルエンサー経由の家庭プレミアム市場の拡大</strong>：「日本の職人」「越前」が刺さる層が形成</li>
+        <li><strong>業務用ステンレス包丁市場 約620億円</strong>（年成長率4.2%）：『鋭』シリーズ展開と親和性高</li>
+        <li><strong>業界団体（DEMO仮称：日本調理師連合協議会）の総会への賛助会員参入</strong>：1,200人会員への個対多数アプローチ機会</li>
+        <li><strong>TV媒体（WBSトレたま・NHKまちかど情報室）の「中小×伝統×革新」枠</strong>：プレスリリース戦略でTV取材機会獲得可能</li>
+      </ul>
+    </div>
+
+    <div class="swot-cell is-t">
+      <span class="swot-label">T ／ 脅威（Threats）</span>
+      <h4>事業継続リスク</h4>
+      <ul>
+        <li><strong>大手競合の越前産地参入</strong>：貝印・ヘンケルス・タダフサ等の大手が職人技ストーリーを真似する可能性</li>
+        <li><strong>調理師免許交付数の構造減</strong>：10年で38.4%減（厚労省）。プロ料理人市場の縮小トレンド</li>
+        <li><strong>中国・台湾OEM廉価品の量販流入</strong>：価格帯下層からの侵食</li>
+        <li><strong>主要代理店の他ブランド切替リスク</strong>：1社あたり年間取引4億円規模の代理店の離脱影響大</li>
+        <li><strong>後継者・職人後継問題</strong>：職人最年長68歳・若手28歳の世代差、技能継承の時間制約</li>
+        <li><strong>景表法・薬機法等のコンプラ強化</strong>：「業界トップ」「○年色落ちしない」等の従来表現がリスク化</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 style="margin-top:32px;font-family:'Noto Serif JP',serif;font-size:1.15rem">9-2. SWOT 交差戦略（4象限の掛け合わせ）</h3>
+  <p style="font-size:.93rem;color:#475569;line-height:1.85">SWOTの4象限を掛け合わせた4つの戦略軸。本提案書群（提案書①②③＋プロモ④）が各軸にどう接続しているかを明示します。</p>
+
+  <div class="cross-grid">
+    <div class="cross-cell is-so">
+      <span class="cross-label">SO戦略 ／ 強み×機会 — 攻めの拡張</span>
+      <h4>既存強みで新機会を掴む</h4>
+      <ol>
+        <li><strong>SO-1：</strong>1928年からの職人技ストーリー × 海外日本食レストラン市場 → <strong>提案②路線④「海外プロ料理学校（CIA・Le Cordon Bleu）」校友プログラム展開</strong></li>
+        <li><strong>SO-2：</strong>プロ用『刃心』ラインの信頼資産 × 家庭プレミアム市場拡大 → <strong>提案②路線②「家庭プレミアム『刃心ファミリー』」＋プロモ④『朱-AKE-』ローンチPR</strong></li>
+        <li><strong>SO-3：</strong>産業用『鋭』の寡占ポジション × ステンレス業務用市場成長 → <strong>HACCP対応×食肉加工大手への1工場100〜500本塊買い提案</strong></li>
+      </ol>
+    </div>
+
+    <div class="cross-cell is-st">
+      <span class="cross-label">ST戦略 ／ 強み×脅威 — 守りながら差別化</span>
+      <h4>強みで脅威を回避・転換</h4>
+      <ol>
+        <li><strong>ST-1：</strong>1928年からの歴史 × 大手競合の参入 → <strong>「真似できない歴史性」を前面に出した提案②路線①「ブランド分節化」</strong></li>
+        <li><strong>ST-2：</strong>研ぎ直しサービス × 調理師免許交付減 → <strong>提案①施策②「研ぎ直しオンライン受付」で既存顧客LTV最大化</strong></li>
+        <li><strong>ST-3：</strong>代理店480社ネットワーク × 廉価品流入 → <strong>提案①「卸＝広告投資の再定義」で代理店を競合排除の防波堤化</strong></li>
+      </ol>
+    </div>
+
+    <div class="cross-cell is-wo">
+      <span class="cross-label">WO戦略 ／ 弱み×機会 — 機会を活かして弱み克服</span>
+      <h4>外部機会で内部弱みを補う</h4>
+      <ol>
+        <li><strong>WO-1：</strong>エンド顧客が見えない × 業界団体総会参入 → <strong>提案③「個別営業→個対多数」で1,200人接触＋DLコンテンツでリスト構築</strong></li>
+        <li><strong>WO-2：</strong>デジタル人材不足 × 料理研究家インフルエンサー市場 → <strong>提案②路線②「料理研究家3名年契約」で外部リソース活用</strong></li>
+        <li><strong>WO-3：</strong>海外販路ゼロ × 海外日本食市場拡大 → <strong>提案②路線④校友プログラムで「卒業生＝アンバサダー化」の自走モデル構築</strong></li>
+      </ol>
+    </div>
+
+    <div class="cross-cell is-wt">
+      <span class="cross-label">WT戦略 ／ 弱み×脅威 — リスク最小化</span>
+      <h4>弱みと脅威の組合せを最小化</h4>
+      <ol>
+        <li><strong>WT-1：</strong>4期連続減収 × 代理店他ブランド切替 → <strong>提案①「五箇条」で代理店反感ゼロを担保しつつ施策実行（守りの基盤確保）</strong></li>
+        <li><strong>WT-2：</strong>後継者問題 × コンプラ強化 → <strong>取材対応Q&A 30問・NG表現明文化（プロモ④Section 8）で広報リスク事前回避</strong></li>
+        <li><strong>WT-3：</strong>業界露出少 × プロ料理人市場縮小 → <strong>業界団体総会で「貢献から始める」姿勢宣言、急激な売り込み回避でレピュテーションリスク最小化</strong></li>
+      </ol>
+    </div>
+  </div>
+
+  <h3 style="margin-top:32px;font-family:'Noto Serif JP',serif;font-size:1.15rem">9-3. 結論 — 本提案書群との接続</h3>
+  <div class="alert info" style="margin-top:10px">
+    <strong>SWOT分析と提案書群の整合性：</strong>
+    <ul style="margin-top:8px;line-height:1.95">
+      <li><strong>提案書① 卸ルート再定義</strong> → WO-1・WT-1（弱み×機会／弱み×脅威）の核心施策</li>
+      <li><strong>提案書② グローバル戦略5路線</strong> → SO-1・SO-2・WO-2・WO-3（強み×機会／弱み×機会）の拡張軸</li>
+      <li><strong>提案書③ 業界団体総会戦略</strong> → WO-1・WT-3（弱み×機会／弱み×脅威）の即実行施策</li>
+      <li><strong>提案書④ 『朱-AKE-』ローンチPR</strong> → SO-2・WT-2（強み×機会／弱み×脅威）の家庭層攻略</li>
+      <li><strong>リサーチ④ 新販路マップ10領域</strong> → SO-3（強み×機会）の追加拡張余地と <strong>「攻める段階ではなく守りながら拡張する段階」</strong> の整理</li>
+    </ul>
+    <p style="margin-top:10px"><strong>提案書群は本SWOT分析の4象限交差戦略を網羅的にカバー</strong>しており、戦略全体としての論理的一貫性が担保されています。本リサーチはその補強位置付けです。</p>
+  </div>
+</section>
+
 <!-- ====== EVIDENCE ====== -->
 <section id="evidence">
-  <span class="section-num">09 / EVIDENCE</span>
+  <span class="section-num">10 / EVIDENCE</span>
   <h2>出典一覧</h2>
   <p class="lead">本リサーチは<strong>「越前刃心」固有情報のみ架空</strong>、<strong>市場規模・統計・産地情報は公開実データ</strong>を参照しています。</p>
 
